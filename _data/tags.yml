@@ -1,0 +1,12 @@
+jekyll :
+  name: jekyll
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+spring :
+  name: spring
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+economy :
+  name: economy
+  description: False
+  cover: assets/built/images/background-frontend.jpg
