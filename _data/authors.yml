@@ -3,9 +3,9 @@ BBInJunHwang :
   name: BBInJunHwang        # user full name : Martin Luther King
   url_full:             # Homepage url
   url:
-  bio: 
+  bio: 백엔드 개발자
                         # 회사정보
-  picture: assets/built/images/economy-author-logo.jpg   # author image
+  picture: assets/images/user/user.jpg   # 유저의 아이콘
   facebook:             # facebook ID
   twitter:              # twitter ID
   cover: False

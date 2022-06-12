@@ -6,6 +6,7 @@ disqus: false
 ---
 
 <!-- default -->
+<!-- 블로그글이 올라갈 시 전체 모양 담당 -->
 
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
@@ -41,10 +42,14 @@ into the {body} of the default.hbs template -->
                 <h1 class="post-full-title">{{ page.title }}</h1>
             </header>
 
+            <!-- 글 상세 들어갈 때 맨처음 나오는 이미지
+            가독성을 위해서 없애주자 -->
+            <!--
             {% if page.cover %}
             <figure class="post-full-image" style="background-image: url({{ site.baseurl }}{{ page.cover }})">
             </figure>
             {% endif %}
+            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
@@ -53,6 +58,8 @@ into the {body} of the default.hbs template -->
             </section>
 
             <!-- Email subscribe form at the bottom of the page -->
+           <!-- describe 화면 이것도 주석 하자-->
+           <!--
             {% if site.subscribers %}
                 <section class="subscribe-form">
                     <h3 class="subscribe-form-title">Subscribe to {{ site.title }}</h3>
@@ -60,6 +67,7 @@ into the {body} of the default.hbs template -->
                     {% include subscribe-form.html placeholder="youremail@example.com" %}
                 </section>
             {% endif %}
+            -->
 
             <footer class="post-full-footer">
                 <!-- Everything inside the #author tags pulls data from the author -->

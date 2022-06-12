@@ -5,10 +5,10 @@ markdown: kramdown
 
 # MyData
 owner:
-  name:           injun hwang
+  name:          injun hwang
   avatar:         photo.jpg 
   #파일명만 넣으면됨
-  bio:            "경력/이력"
+  bio:            "java / back-end"
   email:          rhdqor333@naver.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
@@ -36,7 +36,7 @@ paginate: 20
 language: 'en-uk'
 # 언어 설정
 
-url: https://BBInJunHwang.github.io/
+url: https://bbinjunhwang.github.io
 # Google Search Console에서 사용하는 sitemap.xml 생성시
 # 이 url key값이 존재하지 않으면 sitemap.xml이
 # 정상적으로 생성되지 않는다.
@@ -53,21 +53,22 @@ title: junny blogs
 description: 백엔드
 # blog home에 표시될 blog에 대한 전반적인 설명.
 
-cover: assets/built/images/blog-cover1.png
+cover: assets/images/blog/blog-cover.jpg
 # blog home에 표시될 blog cover image.
 #첫화면 커버
 
 logo:
 logo_dark:
 
-favicon: assets/built/images/favicon.jpg
+favicon: assets/images/blog/favicon.jpg
 # favicon으로 사용할 image
+# 브라우저에서 보이는 아이콘
 
-production_url: https://BBInJunHwang.github.io/
+production_url: https://bbinjunhwang.github.io
 # 최종적으로 blog가 운영될 url
 
-source_url: 
-# blogmaker(jekyll source folder)에 대한 github repository
+source_url: https://github.com/BBInJunHwang/BBInJunHwang.github.io
+# blogmaker(jekyll source folder)에 대한 github repository 주소
 
 # Social info
 navigation: True
@@ -105,16 +106,17 @@ permalink: /:title
 
 # gems and other configs
 plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
+# 플러그인 설치 목록?
 
 feed:
   path: feed.xml
 
-# Travis-CI 설정입니다.
+# Travis-CI 설정입니다. 자동화? 배포 빌드
 safe: False
 lsi: False
 
 username: BBInJunHwang
-repo: GitHubPageMaker
+repo: BBInJunHwang.github.io
 # username : travis-ci와 연동하는 github의 username
 # repo: travis-ci와 연동하는 github의 repository이름
 # https://github.com/<username>/<repository>
@@ -144,13 +146,8 @@ exclude:
   - vendor
   - .travis.yml
   - node_modules
-  - assets/css
-  - assets/images
-  - _posts/angular
-  - _posts/et-cetera
-#  - _posts/python
-  - _posts/typescript
-#  - _posts/jekyll
-  - _posts/iot
-  - _posts/r
-  - _posts/economy
+  # - assets/css
+  # - assets/images
+  #- _posts/spring
+  #- _posts/infra
+  #- _posts/jekyll
