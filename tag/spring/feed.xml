@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/spring/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-06-28T13:40:12+09:00</updated>
+  <updated>2022-06-28T14:10:35+09:00</updated>
   <id>http://localhost:4000/tag/spring/feed.xml</id>
 
   
@@ -40,11 +40,27 @@
       <content type="html" xml:base="http://localhost:4000/spring-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;spring 입니다.&lt;/p&gt;</content>
+&lt;p&gt;[스프링] Bean 개념 및 생성&lt;br /&gt;
+스프링 빈이란?&lt;br /&gt;
+-&amp;gt; 스프링 IOC 컨테이너가 관리하는 자바객체&lt;br /&gt;
+-&amp;gt; New로 생성한 객체가 아님&lt;br /&gt;
+-&amp;gt; ApplicationContext 로 얻을 수 있음&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;스프링 빈 xml 등록 방법&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;xml 등록&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;xml 설정에서 다음과 같이 설정한다.&lt;/p&gt;
+&lt;bean id=&quot;bean id&quot; classs=&quot;클래스경로&quot;&gt;
+	&amp;lt;property name=&quot;userId&quot; value=&quot;값&quot; / &amp;gt;
+&lt;/bean&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/spring/spring01/ch01_bean_xml.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
 
       
       
@@ -65,7 +81,7 @@
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) spring 시작하기(2)</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2)</summary>
       
 
       
@@ -81,7 +97,7 @@
       <content type="html" xml:base="http://localhost:4000/spring-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -106,7 +122,7 @@
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) spring 시작하기(2)</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2)</summary>
       
 
       
