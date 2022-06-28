@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/author/BBInJunHwang/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-06-28T13:24:50+09:00</updated>
+  <id>http://localhost:4000/author/BBInJunHwang/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">junny blogs | </title>
+  
+
+  
+    <subtitle>백엔드</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Github 블로그 jekyll 이용하기</title>
+      <link href="http://localhost:4000/jekyll-01_basic" rel="alternate" type="text/html" title="Github 블로그 jekyll 이용하기" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/jekyll-01_basic</id>
+      <content type="html" xml:base="http://localhost:4000/jekyll-01_basic">&lt;p&gt;Github 블로그 만들기 위한 jekyll 이용해보자&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="jekyll" />
+      
+
+      
+        <summary type="html">Github 블로그 만들기 위한 jekyll 이용해보자</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">spring 시작하기(1)</title>
+      <link href="http://localhost:4000/spring-01_basic" rel="alternate" type="text/html" title="spring 시작하기(1)" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/spring-01_basic</id>
+      <content type="html" xml:base="http://localhost:4000/spring-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;spring 입니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) spring 시작하기(2)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">spring 시작하기(2)</title>
+      <link href="http://localhost:4000/spring-02_basic" rel="alternate" type="text/html" title="spring 시작하기(2)" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/spring-02_basic</id>
+      <content type="html" xml:base="http://localhost:4000/spring-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;spring2 입니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) spring 시작하기(2)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">infra 시작하기</title>
+      <link href="http://localhost:4000/infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/infra-01_basic</id>
+      <content type="html" xml:base="http://localhost:4000/infra-01_basic">&lt;p&gt;infra 시작해보자&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="infra" />
+      
+
+      
+        <summary type="html">infra 시작해보자</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -2,6 +2,7 @@
     "name": "blog",
     "description": "",
     "version": "1.0.0",
+    "private": true,
     "engines": {
         "ghost": ">=1.2.0"
     },
