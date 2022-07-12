@@ -11,7 +11,7 @@
 
 
 
-    <title>spring 시작하기(2)</title>
+    <title>spring 시작하기(2) @annotation</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -45,17 +45,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="spring 시작하기(2)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    spring 시작하기(1) bean 생성
-    spring 시작하기(2)
-
-
-spring2 입니다.
-
-" />
+    <meta property="og:title" content="spring 시작하기(2) @annotation" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] @Annotation - @Autowired / @Resource Annotation은 자바 소스 코드에 추가하여 사용할 수" />
     <meta property="og:url" content="http://localhost:4000/spring-02_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,17 +55,8 @@ spring2 입니다.
     <meta property="article:modified_time" content="2022-06-12T03:00:00+09:00" />
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="spring 시작하기(2)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    spring 시작하기(1) bean 생성
-    spring 시작하기(2)
-
-
-spring2 입니다.
-
-" />
+    <meta name="twitter:title" content="spring 시작하기(2) @annotation" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] @Annotation - @Autowired / @Resource Annotation은 자바 소스 코드에 추가하여 사용할 수" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -106,16 +88,7 @@ spring2 입니다.
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-02_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    spring 시작하기(1) bean 생성
-    spring 시작하기(2)
-
-
-spring2 입니다.
-
-"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] @Annotation - @Autowired / @Resource Annotation은 자바 소스 코드에 추가하여 사용할 수"
 }
     </script>
 
@@ -128,7 +101,7 @@ spring2 입니다.
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="spring 시작하기(2)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="spring 시작하기(2) @annotation" href="/feed.xml" />
 
 
 </head>
@@ -156,9 +129,9 @@ into the {body} of the default.hbs template -->
 <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
-    <li class="nav-jekyll" role="menuitem"><a href="/tag/jekyll/">Jekyll</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/spring/">Spring</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/infra/">Infra</a></li>
+    <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
+    <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -203,7 +176,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">spring 시작하기(2)</h1>
+                <h1 class="post-full-title">spring 시작하기(2) @annotation</h1>
             </header>
 
             <!-- 글 상세 들어갈 때 맨처음 나오는 이미지
@@ -221,11 +194,43 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
     <li><a href="./spring-01_basic">spring 시작하기(1) bean 생성</a></li>
-    <li><a href="./spring-02_basic">spring 시작하기(2)</a></li>
+    <li><a href="./spring-02_basic">spring 시작하기(2) @annotation</a></li>
+    <li><a href="./spring-03_basic">spring 시작하기(3) @datasource</a></li>
+    <li><a href="./spring-04_basic">spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</a></li>
+    <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
+    <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
+    <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
 </ul>
+<p><br /></p>
+<h2>[스프링] @Annotation - @Autowired / @Resource</h2>
+<p><br /></p>
+<p>
+Annotation은 자바 소스 코드에 추가하여 사용할 수 있는 메타데이터의 일종
+@Autowired 스프링에서 빈 인스턴스가 생성된 이후 @Autowired를 설정한 메서드가 자동으로 호출되고, 인스턴스가 자동으로 주입
+</p>
+<p>xml 설정과 같이 기존 service 에 주입되던 dao 빈을 주석처리 해도 정상적으로 주입이 가능하다.</p>
 
-<p>spring2 입니다.</p>
+<p>@Autowired로 의존 관계를 주입받을 경우, context:component scan  태그를 사용해야한다.
+<img data-action="zoom" src="/assets/images/spring/spring02/ch02_bean_xml_01.PNG" alt="absolute" /></p>
 
+<p>
+생성자 주입 / setter 주입 등 생략이 되어도 @Autowired 통해 필드에 주입 후 사용이 가능하다. 
+-&gt; 차후 생성자,setter,필드 주입간의 차이점 추가할 예정이며, 생성자 주입을 사용을 권장한다.
+</p>
+<p><img data-action="zoom" src="/assets/images/spring/spring02/ch02_bean_class_01.PNG" alt="absolute" /></p>
+
+<p>@Autowired / @Resource</p>
+
+<p>@Autowired는 타입(class 타입)으로 의존성 주입하며, 변수, 생성자, Setter메서드, 일반 메서드 사용 가능하다.
+타입 &gt; name 순으로 찾기 떄문에 같은 타입 2개이상 빈이 존재하면 에러가 발생한다.
+bean id=”test1” class=”com.ijhwang.userDao”
+bean id=”test2” class=”com.ijhwang.userDao”</p>
+
+<p>해당 부분 해결을 위한 @Qualifier(“test1”) 이용해서 사용할 빈 설정이 가능하며, required=false 값을 통해 빈이 검색되지 않았을 시 에러도 방지한다.</p>
+
+<p>@Resource는 이름으로 주입하며, 변수, Setter메서드등에 적용 가능하다.
+@Resource(name=”빈명”) 으로 사용 가능
+만약 name 설정이 없다면 name &gt; 타입 순으로 찾아준다.</p>
 
                 </div>
             </section>
@@ -285,7 +290,7 @@ into the {body} of the default.hbs template -->
                         var disqus_config = function () {
                             var this_page_url = 'http://localhost:4000/spring-02_basic';
                             var this_page_identifier = '/spring-02_basic';
-                            var this_page_title = 'spring 시작하기(2)';
+                            var this_page_title = 'spring 시작하기(2) @annotation';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -329,6 +334,15 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
+                                        
                                     
                                   
                                 
@@ -336,11 +350,43 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/spring-01_basic">spring 시작하기(1)</a></li>
+                                            <li><a href="/spring-06_basic">spring 시작하기(6) AOP</a></li>
                                         
                                     
                                   
                                 
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -352,7 +398,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 1 posts  →
+                                    See all 6 posts  →
                                 
                             </a>
                         </footer>
@@ -361,6 +407,55 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/spring-03_basic">
+                <div class="post-card-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/spring-03_basic">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Spring</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">spring 시작하기(3) @datasource</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/user/user.jpg" alt="BBInJunHwang" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/BBInJunHwang/">BBInJunHwang</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -384,18 +479,11 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">spring 시작하기(1)</h2>
+                    <h2 class="post-card-title">spring 시작하기(1) bean 생성</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    spring 시작하기(1) bean 생성
-    spring 시작하기(2)
-
-
-</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
                     
                 </section>
             </a>
@@ -435,13 +523,13 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">spring 시작하기(2)</div>
+    <div class="floating-header-title">spring 시작하기(2) @annotation</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=spring+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%282%29&amp;url=https://bbinjunhwang.github.io/spring-02_basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=spring+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%282%29+%40annotation&amp;url=https://bbinjunhwang.github.io/spring-02_basic"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 

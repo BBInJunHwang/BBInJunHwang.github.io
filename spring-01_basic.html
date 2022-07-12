@@ -11,7 +11,7 @@
 
 
 
-    <title>spring 시작하기(1)</title>
+    <title>spring 시작하기(1) bean 생성</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -45,8 +45,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="spring 시작하기(1)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체 -&gt; New로 생성한 객체가 아님 -&gt; ApplicationContext 로 얻을 수 있음 스프링 빈 xml 등록 방법 xml 등록 xml 설정에서 다음과 같이 설정한다. &lt;property name="userId"" />
+    <meta property="og:title" content="spring 시작하기(1) bean 생성" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체" />
     <meta property="og:url" content="http://localhost:4000/spring-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -55,8 +55,8 @@
     <meta property="article:modified_time" content="2022-06-12T03:00:00+09:00" />
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="spring 시작하기(1)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체 -&gt; New로 생성한 객체가 아님 -&gt; ApplicationContext 로 얻을 수 있음 스프링 빈 xml 등록 방법 xml 등록 xml 설정에서 다음과 같이 설정한다. &lt;property name="userId"" />
+    <meta name="twitter:title" content="spring 시작하기(1) bean 생성" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체 -&gt; New로 생성한 객체가 아님 -&gt; ApplicationContext 로 얻을 수 있음 스프링 빈 xml 등록 방법 xml 등록 xml 설정에서 다음과 같이 설정한다. &lt;property name="userId""
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체"
 }
     </script>
 
@@ -101,7 +101,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="spring 시작하기(1)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="spring 시작하기(1) bean 생성" href="/feed.xml" />
 
 
 </head>
@@ -129,9 +129,9 @@ into the {body} of the default.hbs template -->
 <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
-    <li class="nav-jekyll" role="menuitem"><a href="/tag/jekyll/">Jekyll</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/spring/">Spring</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/infra/">Infra</a></li>
+    <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
+    <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -176,7 +176,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">spring 시작하기(1)</h1>
+                <h1 class="post-full-title">spring 시작하기(1) bean 생성</h1>
             </header>
 
             <!-- 글 상세 들어갈 때 맨처음 나오는 이미지
@@ -194,26 +194,39 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
     <li><a href="./spring-01_basic">spring 시작하기(1) bean 생성</a></li>
-    <li><a href="./spring-02_basic">spring 시작하기(2)</a></li>
+    <li><a href="./spring-02_basic">spring 시작하기(2) @annotation</a></li>
+    <li><a href="./spring-03_basic">spring 시작하기(3) @datasource</a></li>
+    <li><a href="./spring-04_basic">spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</a></li>
+    <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
+    <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
+    <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
 </ul>
-
-<p>[스프링] Bean 개념 및 생성<br />
+<p><br /></p>
+<h2>[스프링] Bean 개념 및 생성</h2>
+<p><br />
 스프링 빈이란?<br />
 -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체<br />
 -&gt; New로 생성한 객체가 아님<br />
 -&gt; ApplicationContext 로 얻을 수 있음<br /></p>
 
 <p>스프링 빈 xml 등록 방법</p>
-<ol>
-  <li>xml 등록</li>
-</ol>
 
-<p>xml 설정에서 다음과 같이 설정한다.</p>
-<bean id="bean id" classs="클래스경로">
-	&lt;property name="userId" value="값" / &gt;
-</bean>
+<p>xml 설정에서 다음과 같이 설정한다.
+bean id 값, bean class 경로 지정 후 
+<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_01.PNG" alt="absolute" /></p>
 
-<p><img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml.PNG" alt="absolute" /></p>
+<p>property 를 통해서  setter method 이용한 주입이 가능하다.
+set메서드명 -&gt; name값으로 치환되며 
+ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식한다.
+<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_01.PNG" alt="absolute" /></p>
+
+<p>DAO &lt;-&gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.</p>
+
+<p>Dao를 빈으로 생성 후 Service빈에 constructor-arg ref=빈명 을 통해서 넘겨줄 수 있다.
+<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_02.PNG" alt="absolute" /></p>
+
+<p>Service 쪽 생성자에 dao를 넘겨 받아 생성한다.
+<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_02.PNG" alt="absolute" /></p>
 
                 </div>
             </section>
@@ -273,7 +286,7 @@ into the {body} of the default.hbs template -->
                         var disqus_config = function () {
                             var this_page_url = 'http://localhost:4000/spring-01_basic';
                             var this_page_identifier = '/spring-01_basic';
-                            var this_page_title = 'spring 시작하기(1)';
+                            var this_page_title = 'spring 시작하기(1) bean 생성';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -317,18 +330,59 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
+                                
+                                  
+                                
+                                  
                                     
                                         
                                         
-                                            <li><a href="/spring-02_basic">spring 시작하기(2)</a></li>
+                                            <li><a href="/spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
                                         
                                     
                                   
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/spring-06_basic">spring 시작하기(6) AOP</a></li>
+                                        
+                                    
                                   
                                 
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -340,7 +394,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 1 posts  →
+                                    See all 6 posts  →
                                 
                             </a>
                         </footer>
@@ -369,18 +423,11 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">spring 시작하기(2)</h2>
+                    <h2 class="post-card-title">spring 시작하기(2) @annotation</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    spring 시작하기(1) bean 생성
-    spring 시작하기(2)
-
-
-</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
                     
                 </section>
             </a>
@@ -413,26 +460,26 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/jekyll-01_basic">
-                <div class="post-card-image" style="background-image: url(/assets/images/jekyll/2022-06-12-jekyll-01_basic.jpg)"></div>
+            <a class="post-card-image-link" href="/infra-01_basic">
+                <div class="post-card-image" style="background-image: url(/assets/images/infra/2022-06-12-infra-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/jekyll-01_basic">
+            <a class="post-card-content-link" href="/infra-01_basic">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Jekyll</span>
+                                <span class="post-card-tags">Infra</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Github 블로그 jekyll 이용하기</h2>
+                    <h2 class="post-card-title">infra 시작하기</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Github 블로그 만들기 위한 jekyll 이용해보자
+                        <p>infra 시작해보자
 </p>
                     
                 </section>
@@ -473,13 +520,13 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">spring 시작하기(1)</div>
+    <div class="floating-header-title">spring 시작하기(1) bean 생성</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=spring+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%281%29&amp;url=https://bbinjunhwang.github.io/spring-01_basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=spring+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%281%29+bean+%EC%83%9D%EC%84%B1&amp;url=https://bbinjunhwang.github.io/spring-01_basic"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 

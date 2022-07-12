@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/springboot/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-07-11T13:28:03+09:00</updated>
+  <id>http://localhost:4000/tag/springboot/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">junny blogs | </title>
+  
+
+  
+    <subtitle>백엔드</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">springBoot 시작하기(1)</title>
+      <link href="http://localhost:4000/springBoot-01_basic" rel="alternate" type="text/html" title="springBoot 시작하기(1)" />
+      <published>2022-07-11T13:00:00+09:00</published>
+      <updated>2022-07-11T13:00:00+09:00</updated>
+      <id>http://localhost:4000/springBoot-01_basic</id>
+      <content type="html" xml:base="http://localhost:4000/springBoot-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] yml 설정파일 &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;스프링 프레임워크에서 사용했던 xml 파일과 같이 
+.yml 혹은 .properties 확장자를 설정파일로 사용한다. 
+프로젝트 진입전에 .yml 파일을 읽고 시작한다.&lt;/p&gt;
+
+&lt;p&gt;.properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다.&lt;/p&gt;
+
+&lt;p&gt;비해 .yml 파일은 가독성이 좋으며, 중복 코드 제거 가능하다. 사용방법은 아래와 같이
+key :  공백 두번 필요하다.&lt;/p&gt;
+
+&lt;p&gt;서버 설정으로 포트, 인코딩 등 가능하며
+prefix suffix 설정 및 데이터 소스 설정
+JPA, Spring security 등 여러가지 설정이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;특히 jpa 설정에서는 ddl-auto create/update 가있으며, create 는 조심해야한다.
+서버 시작 시 기존 drop 후 create&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot01/ch01_yml_01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="springBoot" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] yml 설정파일</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">springBoot 시작하기(2)</title>
+      <link href="http://localhost:4000/springBoot-02_basic" rel="alternate" type="text/html" title="springBoot 시작하기(2)" />
+      <published>2022-07-11T13:00:00+09:00</published>
+      <updated>2022-07-11T13:00:00+09:00</updated>
+      <id>http://localhost:4000/springBoot-02_basic</id>
+      <content type="html" xml:base="http://localhost:4000/springBoot-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] model &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;@Data - getter / setter을 자동으로 완성
+@getter, @setter 로 개별로 설정도 가능하다.&lt;/p&gt;
+
+&lt;p&gt;@NoArgsConstructor - 빈생성자 자동 완성
+@AllArgsConstructor - 전체 생성자 자동 완성
+@Builder - 빌더 패턴 적용
+@Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다.
+@DynamicInsert - insert 시 null 필드 제외한다.&lt;/p&gt;
+
+&lt;p&gt;등 @ 어노테이션을 이용한 여러가지 설정을 편하게 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;@GeneratedValue(strategy = GenerationType.IDENTITY) 
+프로젝트에 연결된 DB의 넘버링 전략을 따라간다 (시퀀스 사용)&lt;/p&gt;
+
+&lt;p&gt;@ID - pk 적용한다.
+@Column(nullable = true/false , length = 숫자) - null 여부 및 사이즈 설정 가능하다.&lt;/p&gt;
+
+&lt;p&gt;@Enumerated(EnumType.STRING) - Enum 사용시 DB는 Enum 타입이 없기 때문에 해당 타입이 String 이라고 알려준다.&lt;/p&gt;
+
+&lt;p&gt;@CreationTimestamp - 현재 시간 입력한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot01/ch02_model_01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot01/ch02_model_02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="springBoot" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] model</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
