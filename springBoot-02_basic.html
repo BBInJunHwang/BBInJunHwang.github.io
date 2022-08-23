@@ -46,7 +46,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="springBoot 시작하기(2)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용 @Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다." />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용" />
     <meta property="og:url" content="http://localhost:4000/springBoot-02_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +56,7 @@
     <meta property="article:tag" content="Springboot" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="springBoot 시작하기(2)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용 @Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다." />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/springBoot-02_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용 @Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다."
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] model @Data - getter / setter을 자동으로 완성 @getter, @setter 로 개별로 설정도 가능하다. @NoArgsConstructor - 빈생성자 자동 완성 @AllArgsConstructor - 전체 생성자 자동 완성 @Builder - 빌더 패턴 적용"
 }
     </script>
 
@@ -131,6 +131,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
     <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-businessLogic" role="menuitem"><a href="/tag/businessLogic/">businessLogic</a></li>
     <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -194,19 +195,26 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
     <li><a href="./springBoot-01_basic">springBoot 시작하기(1)</a></li>
+    <li><a href="./springBoot-02_basic">springBoot 시작하기(2)</a></li>
+    <li><a href="./springBoot-03_basic">springBoot 시큐리티(1)</a></li>
+    <li><a href="./springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+    <li><a href="./springBoot-05_basic">springBoot 시큐리티(3)</a></li>
+    <li><a href="./springBoot-06_basic">springBoot JPA 전략(1)</a></li>
 </ul>
 <p><br /></p>
 <h2>[스프링부트] model </h2>
 <p><br /></p>
 
-<p>@Data - getter / setter을 자동으로 완성
-@getter, @setter 로 개별로 설정도 가능하다.</p>
+<p>
+@Data - getter / setter을 자동으로 완성
+@getter, @setter 로 개별로 설정도 가능하다.
 
-<p>@NoArgsConstructor - 빈생성자 자동 완성
-@AllArgsConstructor - 전체 생성자 자동 완성
-@Builder - 빌더 패턴 적용
-@Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다.
-@DynamicInsert - insert 시 null 필드 제외한다.</p>
+@NoArgsConstructor - 빈생성자 자동 완성<br />
+@AllArgsConstructor - 전체 생성자 자동 완성<br />
+@Builder - 빌더 패턴 적용<br />
+@Entity - 해당 클래스 (UserTB)가 서비스 실행 시 DB 테이블 생성된다.<br />
+@DynamicInsert - insert 시 null 필드 제외한다.<br />
+</p>
 
 <p>등 @ 어노테이션을 이용한 여러가지 설정을 편하게 할 수 있다.</p>
 
@@ -220,8 +228,19 @@ into the {body} of the default.hbs template -->
 
 <p>@CreationTimestamp - 현재 시간 입력한다.</p>
 
-<p><img data-action="zoom" src="/assets/images/springBoot/springBoot01/ch02_model_01.PNG" alt="absolute" />
-<img data-action="zoom" src="/assets/images/springBoot/springBoot01/ch02_model_02.PNG" alt="absolute" /></p>
+<p><img data-action="zoom" src="/assets/images/springBoot/springBoot02/ch02_model_01.PNG" alt="absolute" /></p>
+
+<p>@Lob - 대용량 데이터 설정
+@ColumDefault(“‘문자’”) - ““안에 숫자면 그대로, 문자면 ‘‘감싸서 default 값 적용가능</p>
+
+<p>@ManyToOne(fetch = FethchType.EAGER) - 반드시 찾는다.
+@JoinColumn(name=”필드명”) - 선언된 필드(모델 테이블 클래스)와 
+name으로 선언된 필드를 FK로 설정한다. (자동생성)
+예시로 사용자 1명은 여러개 게시글을 작성 가능하다.</p>
+
+<p>@OneToMany(mappedBy = “필드명”) - 예시로 게시글 1개에는 여러개 답글을 달 수 있다. mappedBy는 FK 생성이 아닌 단순 조인을 위한 필드 일뿐이다.</p>
+
+<p><img data-action="zoom" src="/assets/images/springBoot/springBoot02/ch02_model_02.PNG" alt="absolute" /></p>
 
 
                 </div>
@@ -327,15 +346,55 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/springBoot-06_basic">springBoot JPA 전략(1)</a></li>
+                                        
+                                    
                                   
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/springBoot-01_basic">springBoot 시작하기(1)</a></li>
+                                            <li><a href="/springBoot-05_basic">springBoot 시큐리티(3)</a></li>
                                         
                                     
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
                                   
                                 
                                   
@@ -361,7 +420,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/springboot/">
                                 
-                                    See all 1 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -370,6 +429,65 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/infra-01_basic">
+                <div class="post-card-image" style="background-image: url(/assets/images/infra/2022-06-12-infra-01_basic.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/infra-01_basic">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Infra</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">infra 시작하기(1)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
+
+    
+    Infra (1) Nginx
+    Infra (2) Nginx
+
+
+[Nginx] Nginx 설정하기
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/user/user.jpg" alt="BBInJunHwang" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/BBInJunHwang/">BBInJunHwang</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -401,6 +519,11 @@ into the {body} of the default.hbs template -->
 
     
     springBoot 시작하기(1)
+    springBoot 시작하기(2)
+    springBoot 시큐리티(1)
+    springBoot 시큐리티(2)
+    springBoot 시큐리티(3)
+    springBoot JPA 전략(1)
 
 
 [스프링부트] yml 설정파일 

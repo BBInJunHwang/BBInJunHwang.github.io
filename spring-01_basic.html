@@ -46,7 +46,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="spring 시작하기(1) bean 생성" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링" />
     <meta property="og:url" content="http://localhost:4000/spring-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +56,7 @@
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="spring 시작하기(1) bean 생성" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링 IOC 컨테이너가 관리하는 자바객체"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] Bean 개념 및 생성 스프링 빈이란? -&gt; 스프링"
 }
     </script>
 
@@ -131,6 +131,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
     <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-businessLogic" role="menuitem"><a href="/tag/businessLogic/">businessLogic</a></li>
     <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -200,33 +201,37 @@ into the {body} of the default.hbs template -->
     <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
     <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
     <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
+    <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
 </ul>
-<p><br /></p>
-<h2>[스프링] Bean 개념 및 생성</h2>
-<p><br />
-스프링 빈이란?<br />
--&gt; 스프링 IOC 컨테이너가 관리하는 자바객체<br />
--&gt; New로 생성한 객체가 아님<br />
--&gt; ApplicationContext 로 얻을 수 있음<br /></p>
+<div>
+<br />
+<h2>[스프링] Bean 개념 및 생성</h2><br />
+<p>스프링 빈이란?</p>
+<p align="justify">
+<font size="3">
+-&gt;  스프링 IOC 컨테이너가 관리하는 자바객체<br />
+-&gt;  New로 생성한 객체가 아님<br />
+-&gt;  ApplicationContext 로 얻을 수 있음
+</font></p>
 
-<p>스프링 빈 xml 등록 방법</p>
+스프링 빈 xml 등록 방법
+<p><font size="3">
+xml 파일에서 빈으로 등록 할 id , 빈 클래스 경로 선언<br />
+bean 태그 내 property 를 통해서 setter method 이용한 주입이 가능하다.
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_01.PNG" alt="absolute" />
+setter 메서드 동작 방식 : set메서드명 -&gt; name값으로 치환 되며<br />
+ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식한다.<br />
 
-<p>xml 설정에서 다음과 같이 설정한다.
-bean id 값, bean class 경로 지정 후 
-<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_01.PNG" alt="absolute" /></p>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_01.PNG" alt="absolute" /><br />
+DAO &lt;-&gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.<br />
+Dao 클래스를 빈으로 생성 후 Service 빈에 constructor-arg ref= 빈id를 통해서 넘겨 줄 수 있다.<br />
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_02.PNG" alt="absolute" /><br />
+Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_02.PNG" alt="absolute" />
 
-<p>property 를 통해서  setter method 이용한 주입이 가능하다.
-set메서드명 -&gt; name값으로 치환되며 
-ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식한다.
-<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_01.PNG" alt="absolute" /></p>
+</font></p>
+</div>
 
-<p>DAO &lt;-&gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.</p>
-
-<p>Dao를 빈으로 생성 후 Service빈에 constructor-arg ref=빈명 을 통해서 넘겨줄 수 있다.
-<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_02.PNG" alt="absolute" /></p>
-
-<p>Service 쪽 생성자에 dao를 넘겨 받아 생성한다.
-<img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_02.PNG" alt="absolute" /></p>
 
                 </div>
             </section>
@@ -334,6 +339,27 @@ ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식�
                                   
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                     
                                         
                                         
@@ -355,8 +381,6 @@ ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식�
                                     
                                         
                                         
-                                            <li><a href="/spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
-                                        
                                     
                                   
                                 
@@ -383,6 +407,8 @@ ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식�
                                 
                                   
                                     
+                                  
+                                
                                   
                                 
                                   
@@ -394,7 +420,7 @@ ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식�
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -460,26 +486,35 @@ ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식�
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/infra-01_basic">
+            <a class="post-card-image-link" href="/businessLogic-02_basic">
                 <div class="post-card-image" style="background-image: url(/assets/images/infra/2022-06-12-infra-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/infra-01_basic">
+            <a class="post-card-content-link" href="/businessLogic-02_basic">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Infra</span>
+                                <span class="post-card-tags">Businesslogic</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">infra 시작하기</h2>
+                    <h2 class="post-card-title">Toss Payment 연동</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>infra 시작해보자
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
+
+    
+    BusinessLogic(1) AWS MIG
+    BusinessLogic(2) TOSS payment
+
+
+[스프링] Toss Payment 연동
+
+
 </p>
                     
                 </section>

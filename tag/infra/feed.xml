@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/infra/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-07-11T13:28:03+09:00</updated>
+  <updated>2022-08-23T14:08:31+09:00</updated>
   <id>http://localhost:4000/tag/infra/feed.xml</id>
 
   
@@ -32,12 +32,41 @@
 
   
     <entry>
-      <title type="html">infra 시작하기</title>
-      <link href="http://localhost:4000/infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기" />
-      <published>2022-06-12T03:00:00+09:00</published>
-      <updated>2022-06-12T03:00:00+09:00</updated>
+      <title type="html">infra 시작하기(1)</title>
+      <link href="http://localhost:4000/infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기(1)" />
+      <published>2022-08-22T03:00:00+09:00</published>
+      <updated>2022-08-22T03:00:00+09:00</updated>
       <id>http://localhost:4000/infra-01_basic</id>
-      <content type="html" xml:base="http://localhost:4000/infra-01_basic">&lt;p&gt;infra 시작해보자&lt;/p&gt;</content>
+      <content type="html" xml:base="http://localhost:4000/infra-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/nginx 아래는 conf.d , nginx.conf 존재&lt;/p&gt;
+
+&lt;p&gt;vi nginx.conf &lt;br /&gt;
+로그,에러로그 경로&lt;br /&gt;
+버퍼 사이즈 설정&lt;br /&gt;
+첨부파일 용량 설정&lt;br /&gt;
+추가 설정파일 include 경로 -&amp;gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;vi /etc/nginx/conf.d/xxx.conf&lt;br /&gt;
+client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br /&gt;
+80,443 포트에 대해서 서버 포트로 설정 &lt;br /&gt;
+80접속 시 443으로 redirect 설정&lt;br /&gt;
+443대한 SSL 인증서 적용&lt;br /&gt;
+SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br /&gt;
+CORS 정책 적용 가능&lt;br /&gt;
+Static 파일에 대한 설정 가능 &lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config03.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
 
       
       
@@ -58,7 +87,67 @@
       
 
       
-        <summary type="html">infra 시작해보자</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">infra 시작하기(2)</title>
+      <link href="http://localhost:4000/infra-02_basic" rel="alternate" type="text/html" title="infra 시작하기(2)" />
+      <published>2022-08-22T03:00:00+09:00</published>
+      <updated>2022-08-22T03:00:00+09:00</updated>
+      <id>http://localhost:4000/infra-02_basic</id>
+      <content type="html" xml:base="http://localhost:4000/infra-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[Nginx] Nginx SSL 인증서 적용하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;인증서 설정&lt;br /&gt;
+외부에서 접속 불가능한 경로에 인증서 파일 구비 &lt;br /&gt;
+domain 인증서 -&amp;gt; cert.pem&lt;br /&gt;
+chain 인증서 -&amp;gt; ThawteDigiCert-Newchain.pem&lt;br /&gt;
+root 인증서 -&amp;gt; ThawteDigiCert-Root-sha1.pem&lt;br /&gt;
+nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트 순)&lt;br /&gt;
+cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert.pem(합칠 파일명 자유롭게)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;인증서가 합쳐지면 반드시 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;-END CERTIFICATE- 라인과 다음 인증서 시작 라인&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;-BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra02/ch02_nginx_ssl_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="infra" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기</summary>
       
 
       

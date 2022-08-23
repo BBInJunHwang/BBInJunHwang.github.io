@@ -8,12 +8,200 @@
     
       
       <item>
+        <title>springBoot JPA 전략(1)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] JPA 전략 &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 13:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/springBoot-06_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/springBoot-06_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>springBoot 시큐리티(3)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] Security Jwt &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 13:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/springBoot-05_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/springBoot-05_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>springBoot 시큐리티(2)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] Security Service &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 13:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/springBoot-04_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/springBoot-04_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>springBoot 시큐리티(1)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링부트] Security &lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 13:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/springBoot-03_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/springBoot-03_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>spring 시작하기(8) Spring Profile</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2) @annotation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-03_basic&quot;&gt;spring 시작하기(3) @datasource&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-04_basic&quot;&gt;spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] Spring Profile&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/spring-08_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/spring-08_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>infra 시작하기(2)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[Nginx] Nginx SSL 인증서 적용하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/infra-02_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/infra-02_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>infra 시작하기(1)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Aug 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/infra-01_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/infra-01_basic</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>springBoot 시작하기(2)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] model &lt;/h2&gt;
@@ -36,6 +224,11 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] yml 설정파일 &lt;/h2&gt;
@@ -64,6 +257,7 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] AOP PointCut&lt;/h2&gt;
@@ -92,6 +286,7 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] AOP&lt;/h2&gt;
@@ -120,11 +315,12 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링] DI 3가지 방법&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;h2&gt;[스프링] DI 3가지 방법&lt;/h2&gt;&lt;br /&gt;
 
+&lt;/div&gt;
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
@@ -148,6 +344,7 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI&lt;/h2&gt;
@@ -176,9 +373,10 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링] @JDBC 설정&lt;/h2&gt;
+&lt;h2&gt;[스프링] @datasource 설정&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 </description>
@@ -204,16 +402,13 @@
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링] @Annotation - @Autowired / @Resource&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;
-Annotation은 자바 소스 코드에 추가하여 사용할 수 있는 메타데이터의 일종
-@Autowired 스프링에서 빈 인스턴스가 생성된 이후 @Autowired를 설정한 메서드가 자동으로 호출되고, 인스턴스가 자동으로 주입
-&lt;/p&gt;
-&lt;p&gt;xml 설정과 같이 기존 service 에 주입되던 dao 빈을 주석처리 해도 정상적으로 주입이 가능하다.&lt;/p&gt;
+&lt;div&gt;
+&lt;br /&gt;
+&lt;h2&gt;[스프링] @Autowired / @Resource&lt;/h2&gt;&lt;br /&gt;
 
+&lt;/div&gt;
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
@@ -237,15 +432,20 @@ Annotation은 자바 소스 코드에 추가하여 사용할 수 있는 메타�
     &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링] Bean 개념 및 생성&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-스프링 빈이란?&lt;br /&gt;
--&amp;gt; 스프링 IOC 컨테이너가 관리하는 자바객체&lt;br /&gt;
--&amp;gt; New로 생성한 객체가 아님&lt;br /&gt;
--&amp;gt; ApplicationContext 로 얻을 수 있음&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;br /&gt;
+&lt;h2&gt;[스프링] Bean 개념 및 생성&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;스프링 빈이란?&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;
+&lt;font size=&quot;3&quot;&gt;
+-&amp;gt;  스프링 IOC 컨테이너가 관리하는 자바객체&lt;br /&gt;
+-&amp;gt;  New로 생성한 객체가 아님&lt;br /&gt;
+-&amp;gt;  ApplicationContext 로 얻을 수 있음
+&lt;/font&gt;&lt;/p&gt;
 
+&lt;/div&gt;
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
@@ -257,15 +457,47 @@ Annotation은 자바 소스 코드에 추가하여 사용할 수 있는 메타�
     
       
       <item>
-        <title>infra 시작하기</title>
+        <title>Toss Payment 연동</title>
         
-          <description>&lt;p&gt;infra 시작해보자&lt;/p&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] Toss Payment 연동&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/infra-01_basic</link>
-        <guid isPermaLink="true">http://localhost:4000/infra-01_basic</guid>
+        http://localhost:4000/businessLogic-02_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-02_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>AWS MIG 구현</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] on premise -&amp;gt; CDN migration&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-01_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-01_basic</guid>
       </item>
       
     

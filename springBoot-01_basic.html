@@ -46,7 +46,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="springBoot 시작하기(1)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해 .yml 파일은 가독성이 좋으며, 중복 코드 제거 가능하다. 사용방법은 아래와 같이" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해" />
     <meta property="og:url" content="http://localhost:4000/springBoot-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +56,7 @@
     <meta property="article:tag" content="Springboot" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="springBoot 시작하기(1)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해 .yml 파일은 가독성이 좋으며, 중복 코드 제거 가능하다. 사용방법은 아래와 같이" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/springBoot-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해 .yml 파일은 가독성이 좋으며, 중복 코드 제거 가능하다. 사용방법은 아래와 같이"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] yml 설정파일 스프링 프레임워크에서 사용했던 xml 파일과 같이 .yml 혹은 .properties 확장자를 설정파일로 사용한다. 프로젝트 진입전에 .yml 파일을 읽고 시작한다. .properties 파일은 자동완성은 지원하지만 비슷한 부분은 계속 선언 해줘야한다. 비해"
 }
     </script>
 
@@ -131,6 +131,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
     <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-businessLogic" role="menuitem"><a href="/tag/businessLogic/">businessLogic</a></li>
     <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -194,6 +195,11 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
     <li><a href="./springBoot-01_basic">springBoot 시작하기(1)</a></li>
+    <li><a href="./springBoot-02_basic">springBoot 시작하기(2)</a></li>
+    <li><a href="./springBoot-03_basic">springBoot 시큐리티(1)</a></li>
+    <li><a href="./springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+    <li><a href="./springBoot-05_basic">springBoot 시큐리티(3)</a></li>
+    <li><a href="./springBoot-06_basic">springBoot JPA 전략(1)</a></li>
 </ul>
 <p><br /></p>
 <h2>[스프링부트] yml 설정파일 </h2>
@@ -323,7 +329,45 @@ JPA, Spring security 등 여러가지 설정이 가능하다.</p>
                                     
                                         
                                         
-                                            <li><a href="/springBoot-02_basic">springBoot 시작하기(2)</a></li>
+                                            <li><a href="/springBoot-06_basic">springBoot JPA 전략(1)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/springBoot-05_basic">springBoot 시큐리티(3)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
                                         
                                     
                                   
@@ -350,12 +394,14 @@ JPA, Spring security 등 여러가지 설정이 가능하다.</p>
                                 
                                   
                                 
+                                  
+                                
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
                             <a href="/tag/springboot/">
                                 
-                                    See all 1 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -392,6 +438,11 @@ JPA, Spring security 등 여러가지 설정이 가능하다.</p>
 
     
     springBoot 시작하기(1)
+    springBoot 시작하기(2)
+    springBoot 시큐리티(1)
+    springBoot 시큐리티(2)
+    springBoot 시큐리티(3)
+    springBoot JPA 전략(1)
 
 
 [스프링부트] model 

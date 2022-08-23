@@ -46,7 +46,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="spring 시작하기(7) AOP PointCut" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될 수 있도록 (JoinPoint가 될" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될" />
     <meta property="og:url" content="http://localhost:4000/spring-07_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +56,7 @@
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="spring 시작하기(7) AOP PointCut" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될 수 있도록 (JoinPoint가 될" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-07_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될 수 있도록 (JoinPoint가 될"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP PointCut PointCuts -&gt; 원하는 method만 weving 될"
 }
     </script>
 
@@ -131,6 +131,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
     <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-businessLogic" role="menuitem"><a href="/tag/businessLogic/">businessLogic</a></li>
     <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -200,6 +201,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
     <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
     <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
+    <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
 </ul>
 <p><br /></p>
 <h2>[스프링] AOP PointCut</h2>
@@ -364,6 +366,27 @@ around advice를 적용한다.
                                   
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                     
                                   
                                 
@@ -389,8 +412,6 @@ around advice를 적용한다.
                                     
                                         
                                         
-                                            <li><a href="/spring-04_basic">spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</a></li>
-                                        
                                     
                                   
                                 
@@ -413,6 +434,8 @@ around advice를 적용한다.
                                         
                                         
                                     
+                                  
+                                
                                   
                                 
                                   
@@ -424,7 +447,7 @@ around advice를 적용한다.
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -461,6 +484,11 @@ around advice를 적용한다.
 
     
     springBoot 시작하기(1)
+    springBoot 시작하기(2)
+    springBoot 시큐리티(1)
+    springBoot 시큐리티(2)
+    springBoot 시큐리티(3)
+    springBoot JPA 전략(1)
 
 
 [스프링부트] yml 설정파일 

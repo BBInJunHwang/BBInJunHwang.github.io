@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/businesslogic/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-08-23T14:08:31+09:00</updated>
+  <id>http://localhost:4000/tag/businesslogic/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">junny blogs | </title>
+  
+
+  
+    <subtitle>백엔드</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">AWS MIG 구현</title>
+      <link href="http://localhost:4000/businessLogic-01_basic" rel="alternate" type="text/html" title="AWS MIG 구현" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/businessLogic-01_basic</id>
+      <content type="html" xml:base="http://localhost:4000/businessLogic-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] on premise -&amp;gt; CDN migration&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;기존 온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시&lt;/p&gt;
+
+&lt;p&gt;변경사항&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;파일 업로드&lt;br /&gt;
+AS-IS &lt;br /&gt;
+기존 웹 서버 + window 서버용 CDN dll 파일 통한 파일 업로드&lt;br /&gt; 
+TO-BE&lt;br /&gt; 
+FTP 업로드 + S3 업로드 &lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;고려사항&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;기존 CDN dll 파일 제거 및 window 서버용 로직 제거 &lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;영상 업로드, PDF 업로드 분리 및 PDF -&amp;gt; 이미지 변환&lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;영상인경우 &lt;br /&gt;
+웹 서버 업로드 대체 s3 putObject 메서드 구현&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CDN 직접 영상 파일 업로드를 위한 FTP 업로드 로직 구현 
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_ftp_upload_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PDF 경우 &lt;br /&gt;
+웹 서버 업로드 대체 s3 pubOjbect 이미지 메서드 구현&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PDF -&amp;gt; IMG 변경 위한 메서드 구현&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;pdfbox.lib 에서 제공하는 PDFImageWriter.class 내 writeImage 이미지는 &lt;br /&gt;
+단순히 IO를 통해 읽은 이미지를 서버내 특정경로에 저장만 시키기 때문에 &lt;br /&gt;
+읽은 후  s3 업로드를 위해서는 재정의가 필요하다&lt;br /&gt;
+IO 작업 후 s3 업로드 로직 추가&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_class02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;정상적으로 PDF 파일 장수만큼 이미지 파일로 변경완료&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_result01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;최종적으로 사용자에게 보여주기 위한 pre-signedUrl 생성&lt;br /&gt;
+&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_signedUrl_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="businessLogic" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) TOSS payment [스프링] on premise -&amp;gt; CDN migration</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Toss Payment 연동</title>
+      <link href="http://localhost:4000/businessLogic-02_basic" rel="alternate" type="text/html" title="Toss Payment 연동" />
+      <published>2022-06-12T03:00:00+09:00</published>
+      <updated>2022-06-12T03:00:00+09:00</updated>
+      <id>http://localhost:4000/businessLogic-02_basic</id>
+      <content type="html" xml:base="http://localhost:4000/businessLogic-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] Toss Payment 연동&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Toss 결제 모듈 연동&lt;/p&gt;
+
+&lt;p&gt;Toss용 lib 및 jsp 등 사용해 비지니스 설계&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;고려사항&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;모바일에서 토스결제 모듈 연동 (간편 결제 / 키인 결제) &lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;서버에서는 유효한 사용자 체크 후 결제 진행 및 DB 데이터 처리 + 전표 SAP 연동&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;모바일에서 사용자가 결제 내역 조회 가능&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;관리자에서 모든 사용자 결제 내역 조회 및 환불 (전체/부분) 기능 &lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;서버에서는 관리자에서 환불 기능 API 제공 &lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;DB 설계&lt;/p&gt;
+
+&lt;p&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>BBInJunHwang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="businessLogic" />
+      
+
+      
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) TOSS payment [스프링] Toss Payment 연동</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

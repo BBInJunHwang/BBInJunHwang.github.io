@@ -46,7 +46,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList 형으로 빈 생성 가능하며" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList" />
     <meta property="og:url" content="http://localhost:4000/spring-04_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +56,7 @@
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList 형으로 빈 생성 가능하며" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-04_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList 형으로 빈 생성 가능하며"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI ArrayList"
 }
     </script>
 
@@ -131,6 +131,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-springBoot" role="menuitem"><a href="/tag/springBoot/">SpringBoot</a></li>
     <li class="nav-spring" role="menuitem"><a href="/tag/spring/">Spring</a></li>
+    <li class="nav-businessLogic" role="menuitem"><a href="/tag/businessLogic/">businessLogic</a></li>
     <li class="nav-infra" role="menuitem"><a href="/tag/infra/">Infra</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -200,31 +201,38 @@ into the {body} of the default.hbs template -->
     <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
     <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
     <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
+    <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
 </ul>
 <p><br /></p>
 <h2>[스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</h2>
 <p><br /></p>
 
-<p>ArrayList 형으로 빈 생성 가능하며
-아래와 같이 userList bean 생성 로직이다.
--&gt; class=java.util.ArrayList 로 List형의 빈이며, 절대로 UserVO 타입의 빈이 아니다.
-<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_xml_01.PNG" alt="absolute" /></p>
+<p align="justify">
+<font size="3">
+ArrayList 형으로 빈 생성 가능하며 아래와 같이 userList bean 생성 로직이다.<br />
+-&gt; class=java.util.ArrayList 로 List형의 빈이며, 절대로 UserVO 타입의 빈이 아니다.<br />
+<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_xml_01.PNG" alt="absolute" />
 
-<p>다음과 같이  applicationContext에서 bean을 가져올때 bean id 와 type 모두 가져올 수 있지만
-List.class 타입을 가진 bean이 2개 존재 -&gt; userList, userList2 해당 경우는 에러가 발생할 수 있다.
--&gt; 타입으로 찾게되면 동일 타입 빈 중 어떤걸 가져와야 할지 몰라서, 그렇기 때문에 명시 해주자.
-<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_class_01.PNG" alt="absolute" /></p>
+다음과 같이  applicationContext에서 빈을 가져올때 빈 id 와 type 모두 가져올 수 있지만<br />
+List.class 타입을 가진 bean이 2개 존재 -&gt; userList, userList2 해당 경우는 에러가 발생할 수 있다.<br />
+-&gt; 타입으로 찾게되면 동일 타입 빈 중 어떤걸 가져와야 할지 모르기 떄문, 그렇기 때문에 명시 해주자.<br />
+<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_class_01.PNG" alt="absolute" />
 
-<p>아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등 빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.
-<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_xml_02.PNG" alt="absolute" /></p>
 
-<p>base package에 선언된 dao,service 클래스들은 모두 빈으로 등록되었으며, <br />
+아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등<br />
+빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.
+<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_xml_02.PNG" alt="absolute" />
+
+base package에 선언된 dao,service 클래스들은 모두 빈으로 등록되었으며, <br />
 service -&gt; @Autowired를 통한 dao 클래스 의존성 주입<br />
 dao -&gt; @Autowired 통한 List빈이 주입<br />
 main 클래스에서 getBean을 통해 service 빈을 가져온 후 최종 return
 <img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_dao_class_01.PNG" alt="absolute" />
 <img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_service_class_01.PNG" alt="absolute" />
-<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_main_class_01.PNG" alt="absolute" /></p>
+<img data-action="zoom" src="/assets/images/spring/spring04/ch04_bean_main_class_01.PNG" alt="absolute" />
+
+</font>
+</p>
 
                 </div>
             </section>
@@ -332,6 +340,27 @@ main 클래스에서 getBean을 통해 service 빈을 가져온 후 최종 retur
                                   
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                     
                                         
                                         
@@ -353,8 +382,6 @@ main 클래스에서 getBean을 통해 service 빈을 가져온 후 최종 retur
                                     
                                         
                                         
-                                            <li><a href="/spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
-                                        
                                     
                                   
                                 
@@ -381,6 +408,8 @@ main 클래스에서 getBean을 통해 service 빈을 가져온 후 최종 retur
                                         
                                         
                                     
+                                  
+                                
                                   
                                 
                                   
@@ -392,7 +421,7 @@ main 클래스에서 getBean을 통해 service 빈을 가져온 후 최종 retur
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
