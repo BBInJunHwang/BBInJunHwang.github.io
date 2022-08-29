@@ -20,10 +20,11 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링부트] JPA 전략 &lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;br /&gt;
+&lt;h2&gt;[스프링부트] JPA 전략 &lt;/h2&gt;&lt;br /&gt;
 
+&lt;/div&gt;
 </description>
         
         <pubDate>Mon, 22 Aug 2022 13:00:00 +0900</pubDate>
@@ -47,7 +48,8 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] Security Jwt &lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -74,7 +76,8 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] Security Service &lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -101,7 +104,8 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] Security &lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -130,7 +134,8 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] Spring Profile&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -153,7 +158,8 @@
     &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[Nginx] Nginx SSL 인증서 적용하기&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -176,7 +182,8 @@
     &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -203,7 +210,8 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] model &lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -230,7 +238,8 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링부트] yml 설정파일 &lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -259,7 +268,8 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] AOP PointCut&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -288,7 +298,8 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] AOP&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -317,10 +328,10 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div&gt;
-&lt;h2&gt;[스프링] DI 3가지 방법&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] DI 3가지 방법&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;/div&gt;
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
@@ -346,7 +357,8 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] ArrayList 빈생성 및 component 스캔과 Service-dao간 DI&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -375,7 +387,8 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] @datasource 설정&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -404,11 +417,11 @@
     &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div&gt;
-&lt;br /&gt;
-&lt;h2&gt;[스프링] @Autowired / @Resource&lt;/h2&gt;&lt;br /&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;[스프링] @Autowired / @Resource&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;/div&gt;
 </description>
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
@@ -450,8 +463,236 @@
         
         <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
         <link>
+        http://localhost:4000/spring-01_basic_bak</link>
+        <guid isPermaLink="true">http://localhost:4000/spring-01_basic_bak</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>spring 시작하기(1) bean 생성</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2) @annotation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-03_basic&quot;&gt;spring 시작하기(3) @datasource&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-04_basic&quot;&gt;spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
         http://localhost:4000/spring-01_basic</link>
         <guid isPermaLink="true">http://localhost:4000/spring-01_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>로그인 구현 연동</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[로그인] 토큰 요청&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;1. 토큰 유효성 검사&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; JWT 토큰이 유효한지 &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;span&gt;jwt 요청 순서도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic07/ch07_authenticationProcess01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic07/ch07_tokenFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;header 토큰 확인, 토큰 검증, 만료 여부, refresh 로직 등등&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-07_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-07_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>로그인 구현 연동</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[로그인] 인증 프로세스&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;1. 사내직원 여부&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 사내직원 : LDAP 인증&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 일반사용자 : DB 인증&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_authenticationProvider01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;authenticationProvider 에서 사내직원 / 일반 사용자 분기 실시&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;LDAP 프로세스로 DB인증을 위한 패스워드 해시화와 달리 window LDAP 서버로 인증하기 위해서는&lt;br /&gt;
+                    평문 pw가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다.&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;LDAP 인증을 위한 id,pw 입력 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다.&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_createToken01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;로그인이 정상 수행되었을때 토큰을 발급한다.&lt;br /&gt;
+                    토큰은 발급 후 사용자 테이블 DB에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만&lt;br /&gt;
+                    유효하게 사용가능하도록 upsert 된다&lt;br /&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-06_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-06_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>로그인 구현 연동</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[로그인] 커스텀 필터 적용&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;request 여부&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 모든 요청은 json&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; cors 방지&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;로그인 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_login01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;span&gt;커스텀 필터&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_requestFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_requestFilter02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;1. requestFilter &lt;br /&gt;
+                    -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 &lt;br /&gt;
+                       컨트롤러에서 request 처리 시 null 발생
+                    -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불가능 -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환
+              &lt;/span&gt;
+            &lt;/div&gt; 
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_jsonFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;2. JSON 유효성 필터 &lt;br /&gt;
+                    -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다.
+                    -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_corsFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;3. CORS 필터 &lt;br /&gt;
+                    -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 cors 발생
+                    -&amp;gt; cors 방지를 위한 필터 처리
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-05_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-05_basic</guid>
       </item>
       
     
@@ -463,11 +704,284 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;[스프링] Toss Payment 연동&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[발주 프로세스] 환불 설계&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;1. 상품상태 확인&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 주문확정 / 배송중 분기&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 주문확정 : 물류 취소 후 결제 취소 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 배송중 : 결제만 취소&lt;/p&gt;
+      &lt;p&gt;2. 환불타입&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 전체 환불 : 모든 상품 환불&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 부분환불 : 일부 상품 환불 &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;환불 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic04/ch04_refund01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;상품상태 확인&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic04/ch04_refund02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 상품상태가 주문확정인지 배송중인지 확인한다.&lt;br /&gt;
+                      2. 주문확정 시 물류취소를 선행한다.&lt;br /&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;환불타입 확인&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic04/ch04_refund03.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 전체환불 / 부분환불 확인한다.&lt;br /&gt;
+                      2. 부분환불 
+                      -&amp;gt; 결제 기록과 대조 후 부분환불 상품목록과 가격을 비교한다.&lt;br /&gt;
+                      -&amp;gt; 이미 취소된 상품인지, 환불금액이 일치하는지, 환불 누적금액과 결제금액 비교&lt;br /&gt;
+                      3. 전체환불
+                      &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;환불 결과&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic04/ch04_refund04.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 토스 모듈을 이용한 환불 실시&lt;br /&gt;
+                      2. DB처리
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-04_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-04_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Toss Payment 연동</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[발주 프로세스] 로직 설계&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;1. 사용자 유효성 검증&lt;br /&gt;&lt;/p&gt;
+      &lt;p&gt;-&amp;gt;  중지나 탈퇴 등 상태가 아닌 정상 사용자&lt;/p&gt;
+      &lt;br /&gt;
+      &lt;p&gt;2. 토스 페이먼츠 유효성 검증&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; ISP 카드 연동위한 파라미터 세팅&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; MD5 해쉬 이용한 거래 위변조 방지&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 토스에서 발급한 상점키 환경설정&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 정상일때 사용할 PAY_KEY 리디렉트&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 결제 lib 모듈 연동&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; DB 데이터 처리&lt;/p&gt;
+      &lt;br /&gt;
+      &lt;p&gt;3. SAP 연동&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 결제 전표 SAP 전송&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;발주 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;유효성 검사&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 사용자가 중지나, 탈퇴 등 비정상적인 상태인지 검증한다.&lt;br /&gt;
+                      2. 결제 트랜잭션 테이블에 데이터 처리 시작&lt;br /&gt;
+                      3. MD5 해쉬를 이용한 거래 위변조 체크를 한다&lt;br /&gt;
+                      4. 위변조 체크를 응답받은 리디렉트 컨트롤러에서 PAY_KEY를 내려 받는다&lt;br /&gt;
+                      5. 결제 트랜잭션 테이블에 PAY_KEY 업데이트&lt;br /&gt;
+                      &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;결제&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy03.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. PAY_KEY 및 금액 등 결제에 필요한 파라미터 세팅&lt;br /&gt;
+                      2. 토스 결제 모듈 호출 &lt;br /&gt;
+                      3. 결제 응답값 DB처리 -&amp;gt; 개인정보 등 AES 암호화 처리&lt;br /&gt;
+                      4. SAP 전표 생성&lt;br /&gt;
+                      5. EAI 와 연동한 경로에 전표 DUMP&lt;br /&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;발주&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy04.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 발주 유효성 검사&lt;br /&gt;
+                      -&amp;gt; 장바구니 유효성 검사 (이미 발주된건인지 확인)&lt;br /&gt;
+                      -&amp;gt; 상품 유효성 검사(상품 판매 중단여부, 재고 체크, 이벤트/세트상품 대상인지 등)&lt;br /&gt;
+                      -&amp;gt; 쿠폰 유효성 검사(쿠폰 만료여부, 쿠폰삭제여부, 기사용쿠폰 여부)&lt;br /&gt;
+                      -&amp;gt; 결제 번호 유효성 검사&lt;br /&gt;
+                      2. 발주 처리&lt;br /&gt;
+                      -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑)
+                      3. SAP 처리&lt;br /&gt;
+                      -&amp;gt; 발주된 상품정보 전송&lt;br /&gt;
+                  &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Jun 2022 03:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/businessLogic-03_basic</link>
+        <guid isPermaLink="true">http://localhost:4000/businessLogic-03_basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Toss Payment 연동</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[발주 프로세스] DB 설계&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;p&gt;1. 상품구조&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 일반상품 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 사은품 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 세트상품 (일반상품 + 사은품) &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 이벤트 상품(일반상품의 할인가격) &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 세트상품과 이벤트 상품은 특정 사용자 지정 &lt;/p&gt;
+      &lt;br /&gt;
+      &lt;p&gt;2. 프로모션 구조&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 프로모션 대상 상품지정 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 프로모션 제공 상품지정 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 프로모션은 특정 사용자 지정 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 프로모션은 개수 혹은 가격합산이 충족할때 적용&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 프로모션은 단건/누적으로 적용&lt;/p&gt;
+      &lt;br /&gt;
+      &lt;p&gt;3. 결제 구조&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 토스 페이먼츠 간편결제를 사용&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 결제 후 SAP으로 전표 생성 후 전달&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 전체 / 부분환불이 존재&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;DB 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic02/ch02_db_ERD01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;상품 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic02/ch02_product01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 브랜드 하위에 상품들이 존재하며, 브랜드 코드/상품코드가 PK로 존재&lt;br /&gt;
+                      2. 일반상품, 사은품은 단독으로 마스터 테이블이 존재&lt;br /&gt;
+                      3-1. 세트상품 key 값을 이용해 안에 포함된 일반상품/사은품을 매핑&lt;br /&gt;
+                      3-2. 세트상품 key 값을 이용해 타켓 대상 ID를 매핑&lt;br /&gt;
+                      4-1. 이벤트 상품key 값을 이용해 할인정보를 매핑&lt;br /&gt;
+                      4-2. 이벤트 상품 key 값을 이용해 타켓 대상 ID를 매핑&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;프로모션 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic02/ch02_promotion01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;  
+                &lt;span&gt;1. 프로모션 key 값으로 타켓 상품을 매핑&lt;br /&gt;
+                      2. 프로모션 key 값으로 증정 상품을 매핑&lt;br /&gt;
+                      3. 프로모션 key 값으로 타켓 대상 ID를 매핑&lt;br /&gt;
+                      4. 프로모션 key 값으로 적용 히스토리를 매핑&lt;br /&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+          &lt;span&gt;발주 구성도&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic02/ch02_buy01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+                &lt;span&gt;1. 결제 트랜잭션, 결제성공/결제환불 이중으로 처리&lt;br /&gt;
+                      2. 발주이력은 장바구니,결제이력,쿠폰이력,SAP처리 등 key값으로 매핑&lt;br /&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
 </description>
         
@@ -486,9 +1000,15 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./businessLogic-01_basic&quot;&gt;BusinessLogic(1) AWS MIG&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) TOSS payment&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-02_basic&quot;&gt;BusinessLogic(2) 발주 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-03_basic&quot;&gt;BusinessLogic(3) 발주 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-04_basic&quot;&gt;BusinessLogic(4) 발주 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-05_basic&quot;&gt;BusinessLogic(5) 로그인 프로세스 (1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-06_basic&quot;&gt;BusinessLogic(6) 로그인 프로세스 (2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./businessLogic-07_basic&quot;&gt;BusinessLogic(7) 로그인 프로세스 (3)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!– &amp;lt;div&amp;gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;[스프링] on premise -&amp;gt; CDN migration&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

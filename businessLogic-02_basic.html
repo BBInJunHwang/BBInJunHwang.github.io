@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -46,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Toss Payment 연동" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) TOSS payment [스프링] Toss Payment 연동 Toss 결제 모듈 연동 Toss용 lib 및 jsp 등 사용해 비지니스 설계 고려사항 모바일에서 토스결제 모듈 연동 (간편 결제 / 키인 결제) 서버에서는 유효한 사용자 체크 후 결제 진행 및 DB 데이터 처리 +" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [발주 프로세스] DB 설계 프로세스 고려사항 1. 상품구조 -&gt; 일반상품 -&gt; 사은품 -&gt; 세트상품 (일반상품 + 사은품)" />
     <meta property="og:url" content="http://localhost:4000/businessLogic-02_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +57,7 @@
     <meta property="article:tag" content="Businesslogic" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Toss Payment 연동" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) TOSS payment [스프링] Toss Payment 연동 Toss 결제 모듈 연동 Toss용 lib 및 jsp 등 사용해 비지니스 설계 고려사항 모바일에서 토스결제 모듈 연동 (간편 결제 / 키인 결제) 서버에서는 유효한 사용자 체크 후 결제 진행 및 DB 데이터 처리 +" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [발주 프로세스] DB 설계 프로세스 고려사항 1. 상품구조 -&gt; 일반상품 -&gt; 사은품 -&gt; 세트상품 (일반상품 + 사은품)" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/businessLogic-02_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) TOSS payment [스프링] Toss Payment 연동 Toss 결제 모듈 연동 Toss용 lib 및 jsp 등 사용해 비지니스 설계 고려사항 모바일에서 토스결제 모듈 연동 (간편 결제 / 키인 결제) 서버에서는 유효한 사용자 체크 후 결제 진행 및 DB 데이터 처리 +"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [발주 프로세스] DB 설계 프로세스 고려사항 1. 상품구조 -&gt; 일반상품 -&gt; 사은품 -&gt; 세트상품 (일반상품 + 사은품)"
 }
     </script>
 
@@ -195,31 +196,90 @@ into the {body} of the default.hbs template -->
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
     <li><a href="./businessLogic-01_basic">BusinessLogic(1) AWS MIG</a></li>
-    <li><a href="./businessLogic-02_basic">BusinessLogic(2) TOSS payment</a></li>
+    <li><a href="./businessLogic-02_basic">BusinessLogic(2) 발주 프로세스 (1)</a></li>
+    <li><a href="./businessLogic-03_basic">BusinessLogic(3) 발주 프로세스 (2)</a></li>
+    <li><a href="./businessLogic-04_basic">BusinessLogic(4) 발주 프로세스 (3)</a></li>
+    <li><a href="./businessLogic-05_basic">BusinessLogic(5) 로그인 프로세스 (1)</a></li>
+    <li><a href="./businessLogic-06_basic">BusinessLogic(6) 로그인 프로세스 (2)</a></li>
+    <li><a href="./businessLogic-07_basic">BusinessLogic(7) 로그인 프로세스 (3)</a></li>
 </ul>
-<p><br /></p>
-<h2>[스프링] Toss Payment 연동</h2>
-<p><br /></p>
-
-<p>Toss 결제 모듈 연동</p>
-
-<p>Toss용 lib 및 jsp 등 사용해 비지니스 설계</p>
-
-<ul>
-  <li>고려사항<br />
-    <ol>
-      <li>모바일에서 토스결제 모듈 연동 (간편 결제 / 키인 결제) <br /></li>
-      <li>서버에서는 유효한 사용자 체크 후 결제 진행 및 DB 데이터 처리 + 전표 SAP 연동<br /></li>
-      <li>모바일에서 사용자가 결제 내역 조회 가능<br /></li>
-      <li>관리자에서 모든 사용자 결제 내역 조회 및 환불 (전체/부분) 기능 <br /></li>
-      <li>서버에서는 관리자에서 환불 기능 API 제공 <br /></li>
-    </ol>
-  </li>
-</ul>
-
-<p>DB 설계</p>
-
-<p><img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class01.PNG" alt="absolute" /></p>
+<div>
+    <header>
+      <h2 class="title">[발주 프로세스] DB 설계</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle">프로세스 고려사항</h3>
+      <p>1. 상품구조</p>
+      <p>-&gt; 일반상품 </p>
+      <p>-&gt; 사은품 </p>
+      <p>-&gt; 세트상품 (일반상품 + 사은품) </p>
+      <p>-&gt; 이벤트 상품(일반상품의 할인가격) </p>
+      <p>-&gt; 세트상품과 이벤트 상품은 특정 사용자 지정 </p>
+      <br />
+      <p>2. 프로모션 구조</p>
+      <p>-&gt; 프로모션 대상 상품지정 </p>
+      <p>-&gt; 프로모션 제공 상품지정 </p>
+      <p>-&gt; 프로모션은 특정 사용자 지정 </p>
+      <p>-&gt; 프로모션은 개수 혹은 가격합산이 충족할때 적용</p>
+      <p>-&gt; 프로모션은 단건/누적으로 적용</p>
+      <br />
+      <p>3. 결제 구조</p>
+      <p>-&gt; 토스 페이먼츠 간편결제를 사용</p>
+      <p>-&gt; 결제 후 SAP으로 전표 생성 후 전달</p>
+      <p>-&gt; 전체 / 부분환불이 존재</p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;"></span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+          <span>DB 구성도</span>
+            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic02/ch02_db_ERD01.PNG" alt="absolute" />
+            <div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+          <span>상품 구성도</span>
+            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic02/ch02_product01.PNG" alt="absolute" />
+            <div>
+                <span>1. 브랜드 하위에 상품들이 존재하며, 브랜드 코드/상품코드가 PK로 존재<br />
+                      2. 일반상품, 사은품은 단독으로 마스터 테이블이 존재<br />
+                      3-1. 세트상품 key 값을 이용해 안에 포함된 일반상품/사은품을 매핑<br />
+                      3-2. 세트상품 key 값을 이용해 타켓 대상 ID를 매핑<br />
+                      4-1. 이벤트 상품key 값을 이용해 할인정보를 매핑<br />
+                      4-2. 이벤트 상품 key 값을 이용해 타켓 대상 ID를 매핑</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+          <span>프로모션 구성도</span>
+            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic02/ch02_promotion01.PNG" alt="absolute" />
+            <div>  
+                <span>1. 프로모션 key 값으로 타켓 상품을 매핑<br />
+                      2. 프로모션 key 값으로 증정 상품을 매핑<br />
+                      3. 프로모션 key 값으로 타켓 대상 ID를 매핑<br />
+                      4. 프로모션 key 값으로 적용 히스토리를 매핑<br />
+                </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+          <span>발주 구성도</span>
+            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic02/ch02_buy01.PNG" alt="absolute" />
+            <div>
+                <span>1. 결제 트랜잭션, 결제성공/결제환불 이중으로 처리<br />
+                      2. 발주이력은 장바구니,결제이력,쿠폰이력,SAP처리 등 key값으로 매핑<br />
+                </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 
                 </div>
@@ -356,6 +416,13 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/businessLogic-07_basic">로그인 구현 연동</a></li>
+                                        
                                     
                                   
                                 
@@ -363,7 +430,35 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/businessLogic-01_basic">AWS MIG 구현</a></li>
+                                            <li><a href="/businessLogic-06_basic">로그인 구현 연동</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/businessLogic-05_basic">로그인 구현 연동</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
                                         
                                     
                                   
@@ -375,7 +470,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/businesslogic/">
                                 
-                                    See all 1 posts  →
+                                    See all 6 posts  →
                                 
                             </a>
                         </footer>
@@ -389,26 +484,26 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/spring-01_basic">
-                <div class="post-card-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)"></div>
+            <a class="post-card-image-link" href="/businessLogic-03_basic">
+                <div class="post-card-image" style="background-image: url(/assets/images/infra/2022-06-12-infra-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-01_basic">
+            <a class="post-card-content-link" href="/businessLogic-03_basic">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Spring</span>
+                                <span class="post-card-tags">Businesslogic</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">spring 시작하기(1) bean 생성</h2>
+                    <h2 class="post-card-title">Toss Payment 연동</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3)</p>
                     
                 </section>
             </a>
@@ -460,17 +555,7 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    BusinessLogic(1) AWS MIG
-    BusinessLogic(2) TOSS payment
-
-
-[스프링] on premise -&gt; CDN migration
-
-
-</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3)</p>
                     
                 </section>
             </a>

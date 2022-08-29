@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -46,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="infra 시작하기(2)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서란 -&gt; 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인" />
     <meta property="og:url" content="http://localhost:4000/infra-02_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +57,7 @@
     <meta property="article:tag" content="Infra" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="infra 시작하기(2)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서란 -&gt; 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/infra-02_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx SSL 인증서 적용하기 인증서란 -&gt; 인증서 설정 외부에서 접속 불가능한 경로에 인증서 파일 구비 domain 인증서 -&gt; cert.pem chain 인증서 -&gt; ThawteDigiCert-Newchain.pem root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인"
 }
     </script>
 
@@ -197,27 +198,70 @@ into the {body} of the default.hbs template -->
     <li><a href="./infra-01_basic">Infra (1) Nginx</a></li>
     <li><a href="./infra-02_basic">Infra (2) Nginx</a></li>
 </ul>
-<p><br /></p>
-<h2>[Nginx] Nginx SSL 인증서 적용하기</h2>
-<p><br /></p>
+<!-- <div>
+<br>
+<h2>[Nginx] Nginx SSL 인증서 적용하기</h2><br>
 
-<p>인증서 설정<br />
-외부에서 접속 불가능한 경로에 인증서 파일 구비 <br />
-domain 인증서 -&gt; cert.pem<br />
-chain 인증서 -&gt; ThawteDigiCert-Newchain.pem<br />
-root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem<br />
-nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트 순)<br />
-cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert.pem(합칠 파일명 자유롭게)<br /></p>
+<p align = "justify">
+<font size=3>
+인증서 설정<br>
+외부에서 접속 불가능한 경로에 인증서 파일 구비 <br>
+domain 인증서 -> cert.pem<br>
+chain 인증서 -> ThawteDigiCert-Newchain.pem<br>
+root 인증서 -> ThawteDigiCert-Root-sha1.pem<br>
+nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트 순)<br>
+cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert.pem(합칠 파일명 자유롭게)<br>
 
-<p>인증서가 합쳐지면 반드시 <br /></p>
 
-<p>-END CERTIFICATE- 라인과 다음 인증서 시작 라인<br /></p>
+인증서가 합쳐지면 반드시 <br>
 
-<p>-BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 <br /></p>
+-END CERTIFICATE- 라인과 다음 인증서 시작 라인<br>
 
-<p><img data-action="zoom" src="/assets/images/infra/infra02/ch02_nginx_ssl_config01.PNG" alt="absolute" /></p>
+-BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 <br>
 
-<p><img data-action="zoom" src="/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG" alt="absolute" /></p>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/infra/infra02/ch02_nginx_ssl_config01.PNG' alt='absolute'>
+
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG' alt='absolute'>
+
+</font>
+</p>
+</div> -->
+
+<div>
+    <header>
+      <h2 class="title">[Nginx] Nginx SSL 인증서 적용하기</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle">인증서란</h3>
+      <p> -&gt;  </p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;"></span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/infra/infra02/ch02_nginx_ssl_config01.PNG" alt="absolute" />
+            <div>
+              <span>인증서 설정<br />
+                    외부에서 접속 불가능한 경로에 인증서 파일 구비 <br />
+                    domain 인증서 -&gt; cert.pem<br />
+                    chain 인증서 -&gt; ThawteDigiCert-Newchain.pem<br />
+                    root 인증서 -&gt; ThawteDigiCert-Root-sha1.pem<br />
+                    nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트 순)<br />
+                    cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert.pem(합칠 파일명 자유롭게)<br />
+                    <br />
+                    인증서가 합쳐지면 반드시 <br />
+                    <br />
+                    -END CERTIFICATE- 라인과 다음 인증서 시작 라인<br />
+                    <br />
+                    -BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 <br /></span>
+            </div>
+            <img data-action="zoom" src="/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG" alt="absolute" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
                 </div>
             </section>
@@ -367,6 +411,18 @@ cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
@@ -463,6 +519,7 @@ cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert
     Infra (1) Nginx
     Infra (2) Nginx
 
+&lt;!– &lt;div&gt;
 
 [Nginx] Nginx 설정하기
 

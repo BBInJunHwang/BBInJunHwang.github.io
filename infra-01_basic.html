@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -46,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="infra 시작하기(1)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가 분리되어" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가" />
     <meta property="og:url" content="http://localhost:4000/infra-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +57,7 @@
     <meta property="article:tag" content="Infra" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="infra 시작하기(1)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가 분리되어" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/infra-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가 분리되어"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가"
 }
     </script>
 
@@ -197,30 +198,81 @@ into the {body} of the default.hbs template -->
     <li><a href="./infra-01_basic">Infra (1) Nginx</a></li>
     <li><a href="./infra-02_basic">Infra (2) Nginx</a></li>
 </ul>
-<p><br /></p>
-<h2>[Nginx] Nginx 설정하기</h2>
-<p><br /></p>
+<!-- <div>
+<br>
+<h2>[Nginx] Nginx 설정하기</h2><br>
 
-<p>/etc/nginx 아래는 conf.d , nginx.conf 존재</p>
+<p align = "justify">
+<font size=3>
+/etc/nginx 아래는 conf.d , nginx.conf 존재
 
-<p>vi nginx.conf <br />
-로그,에러로그 경로<br />
-버퍼 사이즈 설정<br />
-첨부파일 용량 설정<br />
-추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)<br />
-<img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config01.PNG" alt="absolute" /></p>
+vi nginx.conf <br>
+로그,에러로그 경로<br>
+버퍼 사이즈 설정<br>
+첨부파일 용량 설정<br>
+추가 설정파일 include 경로 -> /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/infra/infra01/ch01_nginx_config01.PNG' alt='absolute'>
 
-<p>vi /etc/nginx/conf.d/xxx.conf<br />
-client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정<br />
-80,443 포트에 대해서 서버 포트로 설정 <br />
-80접속 시 443으로 redirect 설정<br />
-443대한 SSL 인증서 적용<br />
-SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용<br />
-CORS 정책 적용 가능<br />
-Static 파일에 대한 설정 가능 <br />
-<img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config02.PNG" alt="absolute" /></p>
+vi /etc/nginx/conf.d/xxx.conf<br>
+client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정<br>
+80,443 포트에 대해서 서버 포트로 설정 <br>
+80접속 시 443으로 redirect 설정<br>
+443대한 SSL 인증서 적용<br>
+SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용<br>
+CORS 정책 적용 가능<br>
+Static 파일에 대한 설정 가능 <br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/infra/infra01/ch01_nginx_config02.PNG' alt='absolute'>
 
-<p><img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config03.PNG" alt="absolute" /></p>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/infra/infra01/ch01_nginx_config03.PNG' alt='absolute'>
+
+</font>
+</p>
+</div> -->
+
+<div>
+    <header>
+      <h2 class="title">[Nginx] Nginx 설정하기</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle"></h3>
+      <p> -&gt;  </p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;"></span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config01.PNG" alt="absolute" />
+            <div>
+              <span>/etc/nginx 아래는 conf.d , nginx.conf 존재
+                    <br />
+                    vi nginx.conf <br />
+                    로그,에러로그 경로<br />
+                    버퍼 사이즈 설정<br />
+                    첨부파일 용량 설정<br />
+                    추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)<br /></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config02.PNG" alt="absolute" />
+            <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config03.PNG" alt="absolute" />      
+            <div>
+              <span>vi /etc/nginx/conf.d/xxx.conf<br />
+                    client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정<br />
+                    80,443 포트에 대해서 서버 포트로 설정 <br />
+                    80접속 시 443으로 redirect 설정<br />
+                    443대한 SSL 인증서 적용<br />
+                    SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용<br />
+                    CORS 정책 적용 가능<br />
+                    Static 파일에 대한 설정 가능 <br /></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
                 </div>
             </section>
@@ -370,6 +422,18 @@ Static 파일에 대한 설정 가능 <br />
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
@@ -414,6 +478,7 @@ Static 파일에 대한 설정 가능 <br />
     Infra (1) Nginx
     Infra (2) Nginx
 
+&lt;!– &lt;div&gt;
 
 [Nginx] Nginx SSL 인증서 적용하기
 
@@ -480,6 +545,7 @@ Static 파일에 대한 설정 가능 <br />
     springBoot 시큐리티(3)
     springBoot JPA 전략(1)
 
+&lt;!– &lt;div&gt;
 
 [스프링부트] model 
 

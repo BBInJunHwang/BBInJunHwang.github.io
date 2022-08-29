@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -46,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="springBoot 시큐리티(3)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식은 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지" />
     <meta property="og:url" content="http://localhost:4000/springBoot-05_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +57,7 @@
     <meta property="article:tag" content="Springboot" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="springBoot 시큐리티(3)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식은 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/springBoot-05_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식은 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] Security Jwt 기존 세션 로그인 방식 ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지"
 }
     </script>
 
@@ -201,55 +202,120 @@ into the {body} of the default.hbs template -->
     <li><a href="./springBoot-05_basic">springBoot 시큐리티(3)</a></li>
     <li><a href="./springBoot-06_basic">springBoot JPA 전략(1)</a></li>
 </ul>
-<p><br /></p>
-<h2>[스프링부트] Security Jwt </h2>
-<p><br /></p>
+<!-- <div>
+<br>
+<h2>[스프링부트] Security Jwt </h2><br>
 
-<p>기존 세션 로그인 방식은<br /><br />
-ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -&gt; client 쿠키에 세션ID 전달 <br />
-(웹 브라우저는 특별한 설정을 하지 않아도 쿠키라는 영역에 세션ID 저장한다.)<br /></p>
+<p align = "justify">
+<font size=3>
+기존 세션 로그인 방식은<br>  
+ID,PW 서버로 전달 -> 인증 실시 -> 세션(메모리영역) 세션ID 생성 후 user 정보 저장 -> client 쿠키에 세션ID 전달 <br>
+(웹 브라우저는 특별한 설정을 하지 않아도 쿠키라는 영역에 세션ID 저장한다.)<br>
 
-<p>인증 후 다음 요청 시 세션ID를 넣어서 보내면 서버에서는 세션ID 존재하는지 확인 후 인증한다.<br />
-서버가 1대 문제없지만 서버 2대이상 -&gt; 서버마다 세션 메모리영역이 따로 있음 -&gt; 스티키 세션 or 메모리 서버 레디스 사용, 세션복사 등 해야함 <br /></p>
+인증 후 다음 요청 시 세션ID를 넣어서 보내면 서버에서는 세션ID 존재하는지 확인 후 인증한다.<br>
+서버가 1대 문제없지만 서버 2대이상 -> 서버마다 세션 메모리영역이 따로 있음 -> 스티키 세션 or 메모리 서버 레디스 사용, 세션복사 등 해야함 <br>
 
-<p>JWT : json web token <br /></p>
 
-<p>JWT 방식은 클라이언트에게 JWT 토큰 헤더에 넣어서 응답 <br />
-요청마다 JWT 토큰으로 요청해야함<br />
-서버는 JWT 토큰이 유효한지 판단 -&gt; 필터 추가 필요 <br /></p>
+JWT : json web token <br>
 
-<p>SecurityConfig 설정에서 기존 세션방식과 달리 JWT 토큰을 위해서 설정을 변경해준다. <br /></p>
+JWT 방식은 클라이언트에게 JWT 토큰 헤더에 넣어서 응답 <br>
+요청마다 JWT 토큰으로 요청해야함<br>
+서버는 JWT 토큰이 유효한지 판단 -> 필터 추가 필요 <br>
 
-<p>더 이상 세션을 사용하지 않기 때문에 STATELSS 정책을 준다.<br />
-addFilter 통해서 JWT 토큰을 검증하는 필터를 적용한다. <br />
-JWT 검증을 위해서 security Filter에 등록해줘야하며, 로그인 요청 시 인증 및 토큰생성 필터와, 그외 인증이 필요한 요청에서 토큰을 검증할 필터가 필요하다<br /></p>
+SecurityConfig 설정에서 기존 세션방식과 달리 JWT 토큰을 위해서 설정을 변경해준다. <br>
 
-<p><img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_config01.PNG" alt="absolute" /></p>
+더 이상 세션을 사용하지 않기 때문에 STATELSS 정책을 준다.<br>
+addFilter 통해서 JWT 토큰을 검증하는 필터를 적용한다. <br>
+JWT 검증을 위해서 security Filter에 등록해줘야하며, 로그인 요청 시 인증 및 토큰생성 필터와, 그외 인증이 필요한 요청에서 토큰을 검증할 필터가 필요하다<br>
 
-<p>로그인 요청 시 동작하는 필터이며, UsernamePasswordAuthenticationFilter 로 구현되어져 있다.</p>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/springBoot/springBoot05/ch05_security_config01.PNG' alt='absolute'>
 
-<ol>
-  <li>
-    <p>request를 받은 후 (json) id,pw를 이용해서 임시 인증토큰 UsernamePasswordAuthenticationToken 생성한다<br /></p>
-  </li>
-  <li>
-    <p>UsernamePasswordAuthenticationToken 를 이용해서 loadUserByUsername 함수를 실행해 DB내 id,pw를 비교한다.
-이때 인증이 완료되면 successfulAuthentication를 호출한다.<br />
-<img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_filter01.PNG" alt="absolute" /></p>
-  </li>
-  <li>
-    <p>successfulAuthentication 에서는 인증이 완료된 Authentication 객체를 이용해서 JWT 토큰을 생성한다.
-서버만 알고있는 고유값과 Hash 알고리즘을 이용해서 생성<br />
-<img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_jwt01.PNG" alt="absolute" /></p>
-  </li>
-  <li>
-    <p>로그인 외 인증이 필요한 요청이 있을때 호출되는 필터로서 BasicAuthenticationFilter를 구현한다.
-header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUserByname을 호출해 인증을 한다.<br />
-이떄 유효한 사용자면 securityContextHoleder에 저장한다<br />
-<img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_filter02.PNG" alt="absolute" /></p>
-  </li>
-</ol>
 
+
+로그인 요청 시 동작하는 필터이며, UsernamePasswordAuthenticationFilter 로 구현되어져 있다.
+
+1. request를 받은 후 (json) id,pw를 이용해서 임시 인증토큰 UsernamePasswordAuthenticationToken 생성한다<br>
+
+2. UsernamePasswordAuthenticationToken 를 이용해서 loadUserByUsername 함수를 실행해 DB내 id,pw를 비교한다.
+이때 인증이 완료되면 successfulAuthentication를 호출한다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/springBoot/springBoot05/ch05_security_filter01.PNG' alt='absolute'>
+
+3. successfulAuthentication 에서는 인증이 완료된 Authentication 객체를 이용해서 JWT 토큰을 생성한다.
+서버만 알고있는 고유값과 Hash 알고리즘을 이용해서 생성<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/springBoot/springBoot05/ch05_security_jwt01.PNG' alt='absolute'>
+
+4. 로그인 외 인증이 필요한 요청이 있을때 호출되는 필터로서 BasicAuthenticationFilter를 구현한다.
+header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUserByname을 호출해 인증을 한다.<br>
+이떄 유효한 사용자면 securityContextHoleder에 저장한다<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/springBoot/springBoot05/ch05_security_filter02.PNG' alt='absolute'>
+
+
+
+</font>
+</p>
+</div> -->
+
+<div>
+    <header>
+      <h2 class="title">[스프링부트] Security Jwt</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle">기존 세션 로그인 방식</h3>
+      <span>ID,PW 서버로 전달 -&gt; 인증 실시 -&gt; 세션(메모리영역) 세션ID 생성 후 user 정보 저장<br />
+           -&gt; client 쿠키에 세션ID 전달 (웹 브라우저는 특별한 설정을 하지 않아도 쿠키라는 영역에 세션ID 저장한다.)<br /><br />
+            인증 후 다음 요청 시 세션ID를 넣어서 보내면 서버에서는 세션ID 존재하는지 확인 후 인증한다.<br />
+            서버가 1대 문제없지만 서버 2대이상 -&gt; 서버마다 세션 메모리영역이 따로 있음 -&gt; 스티키 세션 or 메모리 서버 레디스 사용, 세션복사 등 해야함 <br /></span>
+      <h3 class="subTitle">JWT : json web token </h3>
+      <span>JWT 방식은 클라이언트에게 JWT 토큰 헤더에 넣어서 응답 <br />
+            요청마다 JWT 토큰으로 요청해야함<br />
+            서버는 JWT 토큰이 유효한지 판단 -&gt; 필터 추가 필요 <br /></span>
+    </div>
+    <div class="listWrapper">
+      <!-- <span style="font-size: 20px;"></span> -->
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_config01.PNG" alt="absolute" />
+            <div>
+              <span>더 이상 세션을 사용하지 않기 때문에 STATELSS 정책을 준다.<br />
+                    addFilter 통해서 JWT 토큰을 검증하는 필터를 적용한다. <br />
+                    JWT 검증을 위해서 security Filter에 등록해줘야하며, 로그인 요청 시 인증 및 토큰생성 필터와, 그외 인증이 필요한 요청에서 토큰을 검증할 필터가 필요하다<br />
+                    </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_filter01.PNG" alt="absolute" />
+            <div>
+              <span>1. request를 받은 후 (json) id,pw를 이용해서 임시 인증토큰 UsernamePasswordAuthenticationToken 생성한다<br />
+                    2. UsernamePasswordAuthenticationToken 를 이용해서 loadUserByUsername 함수를 실행해 DB내 id,pw를 비교한다.<br />
+                    이때 인증이 완료되면 successfulAuthentication를 호출한다</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_jwt01.PNG" alt="absolute" />
+            <div>
+              <span>3. successfulAuthentication 에서는 인증이 완료된 Authentication 객체를 이용해서 JWT 토큰을 생성한다.<br />
+                    서버만 알고있는 고유값과 Hash 알고리즘을 이용해서 생성<br /></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot05/ch05_security_filter02.PNG" alt="absolute" />
+            <div>
+              <span>4. 로그인 외 인증이 필요한 요청이 있을때 호출되는 필터로서 BasicAuthenticationFilter를 구현한다.<br />
+                    header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUserByname을 호출해 인증을 한다.<br />
+                    이떄 유효한 사용자면 securityContextHoleder에 저장한다</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
                 </div>
             </section>
@@ -423,6 +489,18 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
@@ -472,6 +550,7 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
     springBoot JPA 전략(1)
 
 
+
 [스프링부트] JPA 전략 
 
 
@@ -493,7 +572,7 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
                 <span class="reading-time">
                     
                     
-                      2 min read
+                      3 min read
                     
                 </span>
             </footer>
@@ -537,6 +616,7 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
     springBoot 시큐리티(3)
     springBoot JPA 전략(1)
 
+&lt;!– &lt;div&gt;
 
 [스프링부트] Security Service 
 

@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -203,35 +204,84 @@ into the {body} of the default.hbs template -->
     <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
     <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
 </ul>
+
 <div>
-<br />
-<h2>[스프링] Bean 개념 및 생성</h2><br />
-<p>스프링 빈이란?</p>
-<p align="justify">
-<font size="3">
--&gt;  스프링 IOC 컨테이너가 관리하는 자바객체<br />
--&gt;  New로 생성한 객체가 아님<br />
--&gt;  ApplicationContext 로 얻을 수 있음
-</font></p>
+    <header>
+      <h2 class="title">[스프링] Bean 개념 및 생성</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle">스프링 빈이란?</h3>
+      <p> -&gt;  스프링 IOC 컨테이너가 관리하는 자바객체</p>
+      <p> -&gt;  New로 생성한 객체가 아님</p>
+      <p> -&gt;  ApplicationContext 로 얻을 수 있음</p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;">스프링 빈 xml 등록 방법</span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_01.PNG" alt="absolute" />
+            <div>
+              <span>xml 파일에서 빈으로 등록 할 id , 빈 클래스 경로 선언<br />
+              bean 태그 내 property 를 통해서 setter method 이용한 주입이 가능하다.</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_01.PNG" alt="absolute" />
+            <div>
+              <span>setter 메서드 동작 방식 : set메서드명 -&gt; name값으로 치환 되며 <br /> ex) 
+              setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식한다.</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_02.PNG" alt="absolute" />
+            <div>
+              <span>DAO &lt;-&gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.<br />
+              Dao 클래스를 빈으로 생성 후 Service 빈에 constructor-arg ref= 빈id를 통해서 넘겨 줄 수 있다.</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_02.PNG" alt="absolute" />
+            <div>
+              <span>Service 클래스 생성자에 dao를 넘겨 받아 생성한다.</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-스프링 빈 xml 등록 방법
-<p><font size="3">
-xml 파일에서 빈으로 등록 할 id , 빈 클래스 경로 선언<br />
-bean 태그 내 property 를 통해서 setter method 이용한 주입이 가능하다.
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_01.PNG" alt="absolute" />
-setter 메서드 동작 방식 : set메서드명 -&gt; name값으로 치환 되며<br />
-ex) setFormat -&gt; format 으로 set 생략 + 첫글자 대-&gt;소 로 인식한다.<br />
-
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_01.PNG" alt="absolute" /><br />
-DAO &lt;-&gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.<br />
-Dao 클래스를 빈으로 생성 후 Service 빈에 constructor-arg ref= 빈id를 통해서 넘겨 줄 수 있다.<br />
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_xml_02.PNG" alt="absolute" /><br />
-Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src="/assets/images/spring/spring01/ch01_bean_class_02.PNG" alt="absolute" />
-
-</font></p>
-</div>
-
+<!-- sample -->
+<!-- 
+  <div>
+    <header>
+      <h2 class="title"></h2><br>
+    </header>
+    <div>
+      <h3 class="subTitle"></h3>
+      <p> ->  </p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;"></span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <img data-action="zoom" src="" alt='absolute'>
+            <div>
+              <span></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> 
+  -->
 
                 </div>
             </section>
@@ -410,6 +460,20 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
                                   
                                 
                                   
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                 
                                   
                                 
@@ -420,7 +484,7 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
@@ -434,12 +498,12 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/spring-02_basic">
+            <a class="post-card-image-link" href="/spring-01_basic_bak">
                 <div class="post-card-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-02_basic">
+            <a class="post-card-content-link" href="/spring-01_basic_bak">
                 <header class="post-card-header">
                     
                         
@@ -449,7 +513,7 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
                         
                     
 
-                    <h2 class="post-card-title">spring 시작하기(2) @annotation</h2>
+                    <h2 class="post-card-title">spring 시작하기(1) bean 생성</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -486,12 +550,12 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/businessLogic-02_basic">
+            <a class="post-card-image-link" href="/businessLogic-07_basic">
                 <div class="post-card-image" style="background-image: url(/assets/images/infra/2022-06-12-infra-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/businessLogic-02_basic">
+            <a class="post-card-content-link" href="/businessLogic-07_basic">
                 <header class="post-card-header">
                     
                         
@@ -501,21 +565,11 @@ Service 클래스 생성자에 dao를 넘겨 받아 생성한다.<br />
                         
                     
 
-                    <h2 class="post-card-title">Toss Payment 연동</h2>
+                    <h2 class="post-card-title">로그인 구현 연동</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
-
-    
-    BusinessLogic(1) AWS MIG
-    BusinessLogic(2) TOSS payment
-
-
-[스프링] Toss Payment 연동
-
-
-</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3)</p>
                     
                 </section>
             </a>

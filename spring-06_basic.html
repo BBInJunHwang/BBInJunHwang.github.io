@@ -21,6 +21,7 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/common.css" />
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -46,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="spring 시작하기(6) AOP" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? Aspect Oriented Programming 관점지향 프로그래밍으로 사용자" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? -&gt; Aspect Oriented Programming 관점지향 프로그래밍으로" />
     <meta property="og:url" content="http://localhost:4000/spring-06_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,7 +57,7 @@
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="spring 시작하기(6) AOP" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? Aspect Oriented Programming 관점지향 프로그래밍으로 사용자" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? -&gt; Aspect Oriented Programming 관점지향 프로그래밍으로" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-06_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? Aspect Oriented Programming 관점지향 프로그래밍으로 사용자"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] AOP AOP란? -&gt; Aspect Oriented Programming 관점지향 프로그래밍으로"
 }
     </script>
 
@@ -203,68 +204,145 @@ into the {body} of the default.hbs template -->
     <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
     <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
 </ul>
-<p><br /></p>
-<h2>[스프링] AOP</h2>
-<p><br /></p>
+<!-- <div>
+<br>
+<h2>[스프링] AOP</h2><br>
 
-<p>AOP란?<br /></p>
-<p align="justify">
-<font size="3">
-Aspect Oriented Programming 관점지향 프로그래밍으로 사용자 기준이 아닌 (사용자가 요구한 업무 로직) 개발자 필요로 인한 운영을 위한 업무 (주가 아닌 부가업무)
+AOP란?<br> 
+<p align = "justify">
+<font size=3>
+Aspect Oriented Programming 관점지향 프로그래밍으로 사용자 기준이 아닌 (사용자가 요구한 업무 로직)<br> 
+개발자 필요로 인한 운영을 위한 업무 (주가 아닌 부가업무)<br>
+<br>
+ex) 로그처리, 권한 처리(보안) 트랜잭션 등 주 업무와 상관없는 업무를 처리한다.<br>
+<br>
+주 업무 앞과 뒤에 전반적인 처리를 한다.<br>
+만약 주 업무 소스코드가 없는 경우 직접 로그나 실행시간 등 코드를 넣을 수 없지만 AOP를 이용하면 업무코드를 수정하지 않아도 꽂아 넣을 수 있다.<br>
+사용자는 Proxy를 호출 하면 보조 업무 실행 후 주업무를 호출한다.<br>
 
-ex) 로그처리, 권한 처리(보안) 트랜잭션 등 주 업무와 상관없는 업무를 처리한다.
+<br>
+1. 자바 Proxy를 이용한 공통로직 구현<br>
+Proxy.newProxyInstance(가져올 클래스 로더, 클래스 인터페이스들, 보조업무)<br>
+-> InvocationHandler 이용해서 보조 업무를 정의하며, invoke에서 실제 업무를 호출하며, 결과값을 전달한다.<br>
+<br>
+proxy.SelectService 호출 시 호출시간을 출력하는 보조 업무가 service 클래스 소스 수정없이 호출된다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_main_class_aop_01.PNG' alt='absolute'><br>
 
-주 업무 앞과 뒤에 전반적인 처리를 한다.
-만약 주 업무 소스코드가 없는 경우 직접 로그나 실행시간 등 코드를 넣을 수 없지만 AOP를 이용하면 업무코드를 수정하지 않아도 꽂아 넣을 수 있다.
+<br>
+2. 스프링 AOP<br>
+Before, After returnning, After throwing, Around 4가지가 존재한다.<br>
+<br>
+먼저 자바 Proxy를 이용한 결과와 동일한 Around로 구현을 해본다.<br>
 
-사용자는 Proxy를 호출 하면 보조 업무 실행 후 주업무를 호출한다.
+Component-scan 으로 xml에 빈 설정을 하지않은 service는 xml 상에서 aop 등록시 빈으로 넘겨 줄 수 없기 때문에<br>
+service2를 copy 후  xml상 빈으로 등록한다.<br>
+target 으로 해당 빈을 ref 넘겨주며, AOP를 적용할 interceptorNames list 구조로 logAroundAdvice 빈을 넘겨준다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_bean_xml_01.PNG' alt='absolute'><br>
 
+LogAroundAdvice 클래스에는 invoke를 구현한다. 자바 Proxy와 동일하게 Object 로 실행 후 결과값을 넘겨준다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_advice_class_aop_01.PNG' alt='absolute'><br>
 
-1. 자바 Proxy를 이용한 공통로직 구현
-Proxy.newProxyInstance(가져올 클래스 로더, 클래스 인터페이스들, 보조업무)
--&gt; InvocationHandler 이용해서 보조 업무를 정의하며, invoke에서 실제 업무를 호출하며, 결과값을 전달한다.
+Main 실행 시 동일한 결과가 호출된다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_main_class_aop_02.PNG' alt='absolute'><br>
 
-proxy.SelectService 호출 시 호출시간을 출력하는 보조 업무가 service 클래스 소스 수정없이 호출된다.
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_main_class_aop_01.PNG" alt="absolute" />
+before, after, afterThrowing 추가<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_bean_xml_02.PNG' alt='absolute'><br>
 
+before<br>
+-> 해당 메소드가 실행되기전 호출 클래스나, 파라마터 등 조회 가능<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_before_class_aop_01.PNG' alt='absolute'><br>
 
-2. 스프링 AOP
-Before, After returnning, After throwing, Around 4가지가 존재한다.
+after<br>
+-> 해당 메소드 실행 후 호출 클래스나, 파라미터, 결과값등 조회가능<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_after_class_aop_01.PNG' alt='absolute'><br>
 
-먼저 자바 Proxy를 이용한 결과와 동일한 Around로 구현을 해본다.
+afterThrowing<br>
+-> 따로 구현메소드는 없으며, exception에 따른 직접 구현을 하면된다 <br>
+-> 파라미터가 null 인경우 runtimeException을 발생시켰으며, 해당 부분으로 빠진다.<br>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_afterThrowing_class_aop_01.PNG' alt='absolute'>
+<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;" data-action="zoom" src='/assets/images/spring/spring06/ch06_bean_service_class_01.PNG' alt='absolute'>
 
-Component-scan 으로 xml에 빈 설정을 하지않은 service는 xml 상에서 aop 등록시 빈으로 넘겨 줄 수 없기 때문에<br />
-service2를 copy 후  xml상 빈으로 등록한다.<br />
-target 으로 해당 빈을 ref 넘겨주며, AOP를 적용할 interceptorNames list 구조로 logAroundAdvice 빈을 넘겨준다.
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_xml_01.PNG" alt="absolute" />
-
-LogAroundAdvice 클래스에는 invoke를 구현한다. 자바 Proxy와 동일하게 Object 로 실행 후 결과값을 넘겨준다.
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_advice_class_aop_01.PNG" alt="absolute" />
-
-Main 실행 시 동일한 결과가 호출된다.
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_main_class_aop_02.PNG" alt="absolute" />
-
-before, after, afterThrowing 추가
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_xml_02.PNG" alt="absolute" />
-
-before<br />
--&gt; 해당 메소드가 실행되기전 호출 클래스나, 파라마터 등 조회 가능
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_before_class_aop_01.PNG" alt="absolute" />
-
-after<br />
--&gt; 해당 메소드 실행 후 호출 클래스나, 파라미터, 결과값등 조회가능
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_after_class_aop_01.PNG" alt="absolute" />
-
-afterThrowing<br />
--&gt; 따로 구현메소드는 없으며, exception에 따른 직접 구현을 하면된다 <br />
--&gt; 파라미터가 null 인경우 runtimeException을 발생시켰으며, 해당 부분으로 빠진다.
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_afterThrowing_class_aop_01.PNG" alt="absolute" />
-<img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_service_class_01.PNG" alt="absolute" />
-
-순서는 before -&gt; 메소드 실행 -&gt; after -&gt; around 순
+순서는 before -> 메소드 실행 -> after -> around 순<br>
 
 </font>
 </p>
+</div> -->
+
+<div>
+    <header>
+      <h2 class="title">[스프링] AOP</h2><br />
+    </header>
+    <div>
+      <h3 class="subTitle">AOP란?</h3>
+      <p> -&gt;  Aspect Oriented Programming 관점지향 프로그래밍으로 사용자 기준이 아닌 (사용자가 요구한 업무 로직)</p>
+      <p> -&gt;  개발자 필요로 인한 운영을 위한 업무 (주가 아닌 부가업무)</p>
+      <p> -&gt;  ex) 로그처리, 권한 처리(보안) 트랜잭션 등 주 업무와 상관없는 업무를 처리한다.</p>
+    </div>
+    <div class="listWrapper">
+      <span style="font-size: 20px;">주 업무 앞과 뒤에 전반적인 처리를 한다.<br />
+                                    만약 주 업무 소스코드가 없는 경우 직접 로그나 실행시간 등 코드를 넣을 수 없지만 AOP를 이용하면 업무코드를 수정하지 않아도 꽂아 넣을 수 있다.<br />
+                                    사용자는 Proxy를 호출 하면 보조 업무 실행 후 주업무를 호출한다.</span>
+      <ul class="imageList">
+        <li>
+          <div class="area">
+            <span>1. 자바 Proxy를 이용한 공통로직 구현</span>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_main_class_aop_01.PNG" alt="absolute" />
+            <div>
+              <span>Proxy.newProxyInstance(가져올 클래스 로더, 클래스 인터페이스들, 보조업무)<br />
+                    -&gt; InvocationHandler 이용해서 보조 업무를 정의하며, invoke에서 실제 업무를 호출하며, 결과값을 전달한다.<br />
+                    <br />
+                    proxy.SelectService 호출 시 호출시간을 출력하는 보조 업무가 service 클래스 소스 수정없이 호출된다.<br /></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span>2. 스프링 AOP
+            Before, After returnning, After throwing, Around 4가지가 존재한다.<br />
+            <br />
+            먼저 자바 Proxy를 이용한 결과와 동일한 Around로 구현을 해본다.<br /></span>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_xml_01.PNG" alt="absolute" />
+            <div>
+              <span>Component-scan 으로 xml에 빈 설정을 하지않은 service는 xml 상에서 aop 등록시 빈으로 넘겨 줄 수 없기 때문에<br />
+                service2를 copy 후  xml상 빈으로 등록한다.<br />
+                target 으로 해당 빈을 ref 넘겨주며, AOP를 적용할 interceptorNames list 구조로 logAroundAdvice 빈을 넘겨준다.<br /></span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_advice_class_aop_01.PNG" alt="absolute" />
+            <div>
+              <span>LogAroundAdvice 클래스에는 invoke를 구현한다. 자바 Proxy와 동일하게 Object 로 실행 후 결과값을 넘겨준다.</span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_main_class_aop_02.PNG" alt="absolute" />
+            <div>
+              <span>Main 실행 시 동일한 결과가 호출된다.</span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_xml_02.PNG" alt="absolute" />
+            <div>
+              <span>before, after, afterThrowing 추가</span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_before_class_aop_01.PNG" alt="absolute" />
+            <div>
+              <span>before<br />
+                    -&gt; 해당 메소드가 실행되기전 호출 클래스나, 파라마터 등 조회 가능</span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_after_class_aop_01.PNG" alt="absolute" />
+            <div>
+              <span>after<br />
+                    -&gt; 해당 메소드 실행 후 호출 클래스나, 파라미터, 결과값등 조회가능</span>
+            </div>
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_afterThrowing_class_aop_01.PNG" alt="absolute" />
+            <img data-action="zoom" src="/assets/images/spring/spring06/ch06_bean_service_class_01.PNG" alt="absolute" />
+            <div>
+              <span>afterThrowing<br />
+                    -&gt; 따로 구현메소드는 없으며, exception에 따른 직접 구현을 하면된다 <br />
+                    -&gt; 파라미터가 null 인경우 runtimeException을 발생시켰으며, 해당 부분으로 빠진다.<br />
+                    순서는 before -&gt; 메소드 실행 -&gt; after -&gt; around 순</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
                 </div>
             </section>
@@ -443,6 +521,23 @@ afterThrowing<br />
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
                                 
                                   
                                 
@@ -453,7 +548,7 @@ afterThrowing<br />
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
