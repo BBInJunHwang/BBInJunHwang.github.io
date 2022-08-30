@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/BBInJunHwang/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-08-29T12:39:10+09:00</updated>
+  <updated>2022-08-30T17:40:19+09:00</updated>
   <id>http://localhost:4000/author/BBInJunHwang/feed.xml</id>
 
   
@@ -713,8 +713,9 @@ Static 파일에 대한 설정 가능 &lt;br&gt;
       &lt;h2 class=&quot;title&quot;&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;&lt;/h3&gt;
-      &lt;p&gt; -&amp;gt;  &lt;/p&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;NGINX&lt;/h3&gt;
+      &lt;p&gt; -&amp;gt; Nginx는 경량 웹 서버   &lt;/p&gt;
+      &lt;p&gt; -&amp;gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -723,13 +724,14 @@ Static 파일에 대한 설정 가능 &lt;br&gt;
           &lt;div class=&quot;area&quot;&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;/etc/nginx 아래는 conf.d , nginx.conf 존재
-                    &lt;br /&gt;
-                    vi nginx.conf &lt;br /&gt;
-                    로그,에러로그 경로&lt;br /&gt;
+              &lt;span&gt;Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재&lt;br /&gt;
+                    vi nginx.conf 설정파일 편집 &lt;br /&gt;
+                    로그 및 에러로그 경로 설정 가능&lt;br /&gt;
                     버퍼 사이즈 설정&lt;br /&gt;
                     첨부파일 용량 설정&lt;br /&gt;
-                    추가 설정파일 include 경로 -&amp;gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br /&gt;&lt;/span&gt;
+                    -&amp;gt; 웹 경로에 첨부파일 업로드 시 사이즈 설정 가능&lt;br /&gt;
+                    추가 설정파일 include 경로&lt;br /&gt; 
+                    -&amp;gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -738,14 +740,17 @@ Static 파일에 대한 설정 가능 &lt;br&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config03.PNG&quot; alt=&quot;absolute&quot; /&gt;      
             &lt;div&gt;
-              &lt;span&gt;vi /etc/nginx/conf.d/xxx.conf&lt;br /&gt;
-                    client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br /&gt;
-                    80,443 포트에 대해서 서버 포트로 설정 &lt;br /&gt;
-                    80접속 시 443으로 redirect 설정&lt;br /&gt;
-                    443대한 SSL 인증서 적용&lt;br /&gt;
+              &lt;span&gt;vi /etc/nginx/conf.d/xxx.conf 편집&lt;br /&gt;
+                    client - server 가 각 개별 서버로 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br /&gt;
+                    80, 443 포트에 대해서 서버 포트로 설정 &lt;br /&gt;
+                    80 포트 접속 시 443 포트로 redirect 설정&lt;br /&gt;
+                    -&amp;gt; http://도메인 요청 시 https://도메인으로 자동 리디렉션&lt;br /&gt;
+                    &lt;br /&gt;
+                    https 요청 SSL 인증서 적용&lt;br /&gt;
                     SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br /&gt;
                     CORS 정책 적용 가능&lt;br /&gt;
-                    Static 파일에 대한 설정 가능 &lt;br /&gt;&lt;/span&gt;
+                    Static 파일에 대한 설정 가능&lt;br /&gt;
+                    -&amp;gt; /static/upload 경로로 지정 &lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -825,8 +830,8 @@ cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert
       &lt;h2 class=&quot;title&quot;&gt;[Nginx] Nginx SSL 인증서 적용하기&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;인증서란&lt;/h3&gt;
-      &lt;p&gt; -&amp;gt;  &lt;/p&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;SSL 이란?&lt;/h3&gt;
+      &lt;p&gt; -&amp;gt; SSL(Secure Sockets Layer)은 암호화 기반 인터넷 보안 프로토콜  &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -839,17 +844,21 @@ cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert
                     외부에서 접속 불가능한 경로에 인증서 파일 구비 &lt;br /&gt;
                     domain 인증서 -&amp;gt; cert.pem&lt;br /&gt;
                     chain 인증서 -&amp;gt; ThawteDigiCert-Newchain.pem&lt;br /&gt;
-                    root 인증서 -&amp;gt; ThawteDigiCert-Root-sha1.pem&lt;br /&gt;
-                    nginx 는 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인 체인 루트 순)&lt;br /&gt;
+                    root 인증서 -&amp;gt; ThawteDigiCert-Root-sha1.pem&lt;br /&gt;&lt;br /&gt;
+              &lt;/span&gt;
+              &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+              &lt;div&gt;
+                &lt;span&gt;
+                    NGINX 에 적용 시 인증서 파일을 통합해서 적용해야 한다. (순서는 반드시 도메인-체인-루트 순)&lt;br /&gt;
                     cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert.pem(합칠 파일명 자유롭게)&lt;br /&gt;
                     &lt;br /&gt;
-                    인증서가 합쳐지면 반드시 &lt;br /&gt;
-                    &lt;br /&gt;
+                    정상적으로 인증서가 합쳐진거 확인하기 위해서 아래와 같이 확인 필요&lt;br /&gt;&lt;br /&gt;
                     -END CERTIFICATE- 라인과 다음 인증서 시작 라인&lt;br /&gt;
-                    &lt;br /&gt;
-                    -BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 &lt;br /&gt;&lt;/span&gt;
+                    -BEGIN CERTIFICATE- 붙어있음 안되고 다음 라인으로 분리 되어야함 &lt;br /&gt;&lt;br /&gt;
+                    만약 적용 후 NGINX 구동 시 에러가 나는 경우 key.pem 생성 시 사용 했던 암호화 구문을 넣어줘야함&lt;br /&gt;
+                &lt;/span&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra02/ch02_nginx_ssl_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
           &lt;/div&gt;
         &lt;/li&gt;
       &lt;/ul&gt;

@@ -11,7 +11,7 @@
 
 
 
-    <title>AWS MIG 구현</title>
+    <title>AWS Migration</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -46,8 +46,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="AWS MIG 구현" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] on premise -&gt; CDN migration 온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시 변경사항 1. java6" />
+    <meta property="og:title" content="AWS Migration" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] On premise -&gt; AWS migration IDC 내 온 프레미스 환경 내 구축된 서비스 AWS 마이그레이션 실시" />
     <meta property="og:url" content="http://localhost:4000/businessLogic-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/businessLogic/2022-08-22-business-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -56,8 +56,8 @@
     <meta property="article:modified_time" content="2022-06-12T03:00:00+09:00" />
     <meta property="article:tag" content="Businesslogic" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AWS MIG 구현" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] on premise -&gt; CDN migration 온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시 변경사항 1. java6" />
+    <meta name="twitter:title" content="AWS Migration" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] On premise -&gt; AWS migration IDC 내 온 프레미스 환경 내 구축된 서비스 AWS 마이그레이션 실시" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/businessLogic/2022-08-22-business-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -89,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/businessLogic-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] on premise -&gt; CDN migration 온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시 변경사항 1. java6"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [스프링] On premise -&gt; AWS migration IDC 내 온 프레미스 환경 내 구축된 서비스 AWS 마이그레이션 실시"
 }
     </script>
 
@@ -102,7 +102,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="AWS MIG 구현" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="AWS Migration" href="/feed.xml" />
 
 
 </head>
@@ -178,7 +178,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">AWS MIG 구현</h1>
+                <h1 class="post-full-title">AWS Migration</h1>
             </header>
 
             <!-- 글 상세 들어갈 때 맨처음 나오는 이미지
@@ -257,30 +257,29 @@ IO 작업 후 s3 업로드 로직 추가<br>
 
 <div>
     <header>
-      <h2 class="title">[스프링] on premise -&gt; CDN migration</h2><br />
+      <h2 class="title">[스프링] On premise -&gt; AWS migration</h2><br />
     </header>
     <div>
-      <h3 class="subTitle">온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시<br /></h3>
+      <h3 class="subTitle">IDC 내 온 프레미스 환경 내 구축된 서비스 AWS 마이그레이션 실시<br /><br /></h3>
       <span>변경사항<br />
-            1. java6 -&gt;8, 스프링 3 -&gt; 4.X or 5.X 전환 필요<br />
-            2. 오라클 11 -&gt; 19 전환 필요<br />
-            3. NEXUS 연동 불가로 인한 new Maven parent 필요<br />
-            4. DB link 불가능으로 인한 EAI 전환 필요<br />
-            5. 파일 업로드<br />
+            1. 자바 버전 6 -&gt; 8, 스프링 3.x -&gt; 4.X or 5.X 전환 필요<br /><br />
+            2. 오라클 11 -&gt; 19 전환 필요<br /><br />
+            3. NEXUS 연동 불가로 인한 new Maven parent 필요<br /><br />
+            4. DB link -&gt; EAI 전환 필요<br /><br />
+            5. 파일 업로드 로직 변경 필요<br /><br />
                AS-IS : 웹 서버 + window 서버용 CDN dll 파일 통한 파일 업로드<br />
-               TO-BE : FTP 업로드 + S3 업로드 <br />
-            6. SVN -&gt; Git Lab 변경<br />
-            7. CI/CD 구축<br />
-            <br />
+               TO-BE : FTP 업로드 + S3 업로드 <br /><br />
+            6. SVN -&gt; Git Lab 변경<br /><br />
+            7. CI/CD 구축<br /><br />
             + 고려사항<br />
-            1. java 및 spring 변경에 따른 검토필요
-            2. 오라클19에서 지원하지않는 comcat -&gt; listagg 등 문법 변경<br />
-            3. 기존 Nexus 대체할 외부 lib 연동 및 parent 구성<br />
-            4. EAI 연동할 수신 테이블 설계 및 데이터 범위 지정<br />
-            5. 파일업로드 시 기존 CDN dll 파일 제거 및 window 서버용 로직 제거<br />
-            6. 영상 업로드, PDF 업로드 분리 및 PDF -&gt; 이미지 변환실시<br />
-            7. Git Lab 소스 push 및 브랜치 관리<br />
-            8. 자동배포를 위한 파이프라인 구성<br />
+            1. 자바 및 스프링 변경에 따른 검토 필요 <br /><br />
+            2. 오라클 19에서 지원하지않는 문법 변경<br /><br />
+            3. 기존 Nexus 대체할 로컬 repo 연동 및 parent 구성<br /><br />
+            4. EAI 연동할 수신 테이블 설계 및 데이터 범위 지정<br /><br />
+            5. 파일업로드 시 기존 CDN dll 파일 제거 및 window 서버용 로직 제거<br /><br />
+            6. 영상 업로드, PDF 업로드 분리 및 PDF -&gt; 이미지 변환실시<br /><br />
+            7. Git Lab 소스 push 및 브랜치 관리<br /><br />
+            8. 자동배포를 위한 파이프라인 구성<br /><br />
             </span>
     </div>
     <div class="listWrapper">
@@ -288,47 +287,54 @@ IO 작업 후 s3 업로드 로직 추가<br>
       <ul class="imageList">
         <li>
           <div class="area">
-            <span>spring 버전 변경</span>
+            <span>1. 자바 및 스프링 버전 변경</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_spring_versionup01.PNG" alt="absolute" />
             <div>
-              <span>스프링 버전 변경<br /></span>
+              <span>자바 1.8 적용<br />
+                  스프링 4.3 적용<br />
+              </span>
             </div>
           </div>
         </li>
         <li>
           <div class="area">
-            <span>쿼리 변경</span>
+            <span>2. 오라클 변경</span>
             <div>
-              <span>LISTAGG 쿼리 및 literal does not match format string ora-01861 OS의 LANG 설정이 달라서 문자열을 묵시적으로 날짜로 변환을 못해서 발생하는 에러<br /></span>
+              <span>WM_CONCAT -&gt; LISTAGG 등 지원 하지 않는 쿼리 변경<br /> 
+                    linux 환경에서 OS의 LANG 설정이 달라서 문자열을 묵시적으로 날짜로 변환을 못해서 발생하는 에러 조치<br /></span>
             </div>
           </div>
         </li>
         <li>
           <div class="area">
-            <span>parent 신규 생성</span>
-            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_maven_local_repo01.PNG" alt="absolute" />
+            <span>3. 로컬 repository 구성 및 parent 신규 생성</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_maven_parent01.PNG" alt="absolute" />
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_maven_parent02.PNG" alt="absolute" />
             <div>
-              <span>parent 신규 생성 및 모듈 추가<br /> 외부 lib 사용할 로컬 repo 정의</span>
+              <span>parent 신규 생성 및 연결 모듈 추가<br /></span>
             </div>
-          </div>
-        </li>
-        <li>
-          <div class="area">
-            <span>EAI 연동</span>
+            <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_maven_local_repo01.PNG" alt="absolute" />
             <div>
-              <span>기존 DB link 사용이 불가능하기 떄문에, EAI receive 테이블 생성<br /></span>
+              <span>로컬 repository에 정의할 lib 추가<br /></span>
             </div>
           </div>
         </li>
         <li>
           <div class="area">
-            <span>첨부파일 업로드 변경</span>
+            <span>4. EAI 연동</span>
+            <div>
+              <span>기존 DB link 사용이 불가능하기 떄문에, Legacy 데이터를 내려 받을 receive 테이블 생성<br />
+                    데이터 정보를 매핑 후 EAI 통해서 수신 실시</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="area">
+            <span>5. 첨부파일 업로드 변경<br /></span>
             <span>영상인경우</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class01.PNG" alt="absolute" />
             <div>
-              <span>웹 서버 업로드 대체 s3 putObject 메서드 구현<br /></span>
+              <span>S3 업로드를 위한 putObject 메서드 구현<br /></span>
             </div>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_ftp_upload_class01.PNG" alt="absolute" />
             <div>
@@ -341,7 +347,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
             <span>PDF 경우</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class02.PNG" alt="absolute" />
             <div>
-              <span>웹 서버 업로드 대체 s3 pubOjbect 이미지 메서드 구현<br /></span>
+              <span>S3 업로드를 위한 pubOjbect 이미지 메서드 구현<br /></span>
             </div>
           </div>
           <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_class01.PNG" alt="absolute" />
@@ -352,36 +358,44 @@ IO 작업 후 s3 업로드 로직 추가<br>
             <div>
               <span>pdfbox.lib 에서 제공하는 PDFImageWriter.class 내 writeImage 이미지는 <br />
                     단순히 IO를 통해 읽은 이미지를 서버내 특정경로에 저장만 시키기 때문에 <br />
-                    읽은 후  s3 업로드를 위해서는 재정의가 필요하다<br />
-                    IO 작업 후 s3 업로드 로직 추가</span>
+                    IO 작업 후 S3 업로드 로직 추가</span>
             </div>
           <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_result01.PNG" alt="absolute" />
             <div>
-              <span>정상적으로 PDF 파일 장수만큼 이미지 파일로 변경완료</span>
+              <span>PDF 파일 장 수만큼 이미지 파일로 변경완료</span>
             </div>
           <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_signedUrl_class01.PNG" alt="absolute" />
             <div>
-              <span>최종적으로 사용자에게 보여주기 위한 pre-signedUrl 생성</span>
+              <span>사용자에게 보여주기 위한 pre-signedUrl 생성</span>
             </div>
         </li>
         <li>
           <div class="area">
-            <span>Git Lab 관리</span>
+            <span>6. GitLab 관리</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_gitlab01.PNG" alt="absolute" />
             <div>
-              <span>svn -&gt; git lab 업로드 및 형상관리 실시<br /></span>
+              <span>svn -&gt; Gitlab Push 및 PRD, STG, DEV 환경별 branch 관리 실시<br /></span>
             </div>
           </div>
         </li>
         <li>
           <div class="area">
-            <span>CICD 구축</span>
+            <span>7. CI/CD 구축</span>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_git01.PNG" alt="absolute" />
+            <div>
+              <span>Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결<br /></span>
+            </div>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_env_variable01.PNG" alt="absolute" />
+            <div>
+              <span>PRD, STG, DEV 환경별 스프링 프로필을 사용할 수 있도록 환경변수 적용<br /></span>
+            </div>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_build01.PNG" alt="absolute" />
+            <div>
+              <span>Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결<br /></span>
+            </div>
             <img data-action="zoom" src="/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_pipeline01.PNG" alt="absolute" />
             <div>
-              <span>기존 DB link 사용이 불가능하기 떄문에, EAI receive 테이블 생성<br /></span>
+              <span>Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결<br /></span>
             </div>
           </div>
         </li>
@@ -447,7 +461,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
                         var disqus_config = function () {
                             var this_page_url = 'http://localhost:4000/businessLogic-01_basic';
                             var this_page_identifier = '/businessLogic-01_basic';
-                            var this_page_title = 'AWS MIG 구현';
+                            var this_page_title = 'AWS Migration';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -528,7 +542,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
                                     
                                         
                                         
-                                            <li><a href="/businessLogic-07_basic">로그인 구현 연동</a></li>
+                                            <li><a href="/businessLogic-07_basic">로그인 프로세스 (3)</a></li>
                                         
                                     
                                   
@@ -537,7 +551,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
                                     
                                         
                                         
-                                            <li><a href="/businessLogic-06_basic">로그인 구현 연동</a></li>
+                                            <li><a href="/businessLogic-06_basic">로그인 프로세스 (2)</a></li>
                                         
                                     
                                   
@@ -546,7 +560,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
                                     
                                         
                                         
-                                            <li><a href="/businessLogic-05_basic">로그인 구현 연동</a></li>
+                                            <li><a href="/businessLogic-05_basic">로그인 프로세스 (1)</a></li>
                                         
                                     
                                   
@@ -612,7 +626,7 @@ IO 작업 후 s3 업로드 로직 추가<br>
                         
                     
 
-                    <h2 class="post-card-title">Toss Payment 연동</h2>
+                    <h2 class="post-card-title">발주 프로세스(1)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -701,13 +715,13 @@ IO 작업 후 s3 업로드 로직 추가<br>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">AWS MIG 구현</div>
+    <div class="floating-header-title">AWS Migration</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=AWS+MIG+%EA%B5%AC%ED%98%84&amp;url=https://bbinjunhwang.github.io/businessLogic-01_basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=AWS+Migration&amp;url=https://bbinjunhwang.github.io/businessLogic-01_basic"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 

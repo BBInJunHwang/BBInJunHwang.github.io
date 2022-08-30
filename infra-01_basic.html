@@ -47,7 +47,7 @@
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="infra 시작하기(1)" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 NGINX -&gt; Nginx는 경량 웹 서버 -&gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재 vi nginx.conf 설정파일" />
     <meta property="og:url" content="http://localhost:4000/infra-01_basic" />
     <meta property="og:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -57,7 +57,7 @@
     <meta property="article:tag" content="Infra" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="infra 시작하기(1)" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 NGINX -&gt; Nginx는 경량 웹 서버 -&gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재 vi nginx.conf 설정파일" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/infra/2022-06-12-infra-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -89,7 +89,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/infra-01_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 -&gt; /etc/nginx 아래는 conf.d , nginx.conf 존재 vi nginx.conf 로그,에러로그 경로 버퍼 사이즈 설정 첨부파일 용량 설정 추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf (아래 .conf로 끝나는 파일 모두 읽음) vi /etc/nginx/conf.d/xxx.conf client - server 가"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx [Nginx] Nginx 설정하기 NGINX -&gt; Nginx는 경량 웹 서버 -&gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재 vi nginx.conf 설정파일"
 }
     </script>
 
@@ -234,8 +234,9 @@ Static 파일에 대한 설정 가능 <br>
       <h2 class="title">[Nginx] Nginx 설정하기</h2><br />
     </header>
     <div>
-      <h3 class="subTitle"></h3>
-      <p> -&gt;  </p>
+      <h3 class="subTitle">NGINX</h3>
+      <p> -&gt; Nginx는 경량 웹 서버   </p>
+      <p> -&gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 </p>
     </div>
     <div class="listWrapper">
       <span style="font-size: 20px;"></span>
@@ -244,13 +245,14 @@ Static 파일에 대한 설정 가능 <br>
           <div class="area">
             <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config01.PNG" alt="absolute" />
             <div>
-              <span>/etc/nginx 아래는 conf.d , nginx.conf 존재
-                    <br />
-                    vi nginx.conf <br />
-                    로그,에러로그 경로<br />
+              <span>Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재<br />
+                    vi nginx.conf 설정파일 편집 <br />
+                    로그 및 에러로그 경로 설정 가능<br />
                     버퍼 사이즈 설정<br />
                     첨부파일 용량 설정<br />
-                    추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)<br /></span>
+                    -&gt; 웹 경로에 첨부파일 업로드 시 사이즈 설정 가능<br />
+                    추가 설정파일 include 경로<br /> 
+                    -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)<br /></span>
             </div>
           </div>
         </li>
@@ -259,14 +261,17 @@ Static 파일에 대한 설정 가능 <br>
             <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config02.PNG" alt="absolute" />
             <img data-action="zoom" src="/assets/images/infra/infra01/ch01_nginx_config03.PNG" alt="absolute" />      
             <div>
-              <span>vi /etc/nginx/conf.d/xxx.conf<br />
-                    client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정<br />
-                    80,443 포트에 대해서 서버 포트로 설정 <br />
-                    80접속 시 443으로 redirect 설정<br />
-                    443대한 SSL 인증서 적용<br />
+              <span>vi /etc/nginx/conf.d/xxx.conf 편집<br />
+                    client - server 가 각 개별 서버로 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정<br />
+                    80, 443 포트에 대해서 서버 포트로 설정 <br />
+                    80 포트 접속 시 443 포트로 redirect 설정<br />
+                    -&gt; http://도메인 요청 시 https://도메인으로 자동 리디렉션<br />
+                    <br />
+                    https 요청 SSL 인증서 적용<br />
                     SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용<br />
                     CORS 정책 적용 가능<br />
-                    Static 파일에 대한 설정 가능 <br /></span>
+                    Static 파일에 대한 설정 가능<br />
+                    -&gt; /static/upload 경로로 지정 <br /></span>
             </div>
           </div>
         </li>

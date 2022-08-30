@@ -496,7 +496,7 @@
     
       
       <item>
-        <title>로그인 구현 연동</title>
+        <title>로그인 프로세스 (3)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -514,9 +514,10 @@
       &lt;h2 class=&quot;title&quot;&gt;[로그인] 토큰 요청&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 토큰 유효성 검사&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; JWT 토큰이 유효한지 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; JWT 토큰이 유효한지? &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; JWT 토큰이 만료되었는지? &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -531,7 +532,12 @@
           &lt;div class=&quot;area&quot;&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic07/ch07_tokenFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;header 토큰 확인, 토큰 검증, 만료 여부, refresh 로직 등등&lt;/span&gt;
+              &lt;span&gt;1. requset Header 토큰 확인&lt;br /&gt;
+                    2. 토큰 내 ID 값을 이용해 유효한 사용자 체크&lt;br /&gt;
+                    3. 토큰 만료 여부 확인&lt;br /&gt;
+                    -&amp;gt; 만약 만료되었지만, refresh 토큰이 살아있는 경우, 토큰 재발급 실시&lt;br /&gt;
+                    4. 모든 경우 확인 후 토큰이 정상인 경우 SecurityContext에 저장&lt;br /&gt;
+                    -&amp;gt; 세션기반이 아니기 때문에 Controller 등에서 사용자 정보를 사용하기 위함.  &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -550,7 +556,7 @@
     
       
       <item>
-        <title>로그인 구현 연동</title>
+        <title>로그인 프로세스 (2)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -568,7 +574,7 @@
       &lt;h2 class=&quot;title&quot;&gt;[로그인] 인증 프로세스&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 사내직원 여부&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 사내직원 : LDAP 인증&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 일반사용자 : DB 인증&lt;/p&gt;
@@ -588,12 +594,12 @@
           &lt;div class=&quot;area&quot;&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;LDAP 프로세스로 DB인증을 위한 패스워드 해시화와 달리 window LDAP 서버로 인증하기 위해서는&lt;br /&gt;
-                    평문 pw가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다.&lt;/span&gt;
+              &lt;span&gt;LDAP 프로세스는 DB인증을 위한 패스워드 SHA512 해시화와 달리 Window LDAP 서버로 인증하기 위해서는&lt;br /&gt;
+                    평문 패스워드가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다.&lt;/span&gt;
             &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;LDAP 인증을 위한 id,pw 입력 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다.&lt;/span&gt;
+              &lt;span&gt;LDAP 인증을 위한 ID / PASSWORD 입력 후 연결 진행 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다.&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -602,8 +608,8 @@
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_createToken01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;로그인이 정상 수행되었을때 토큰을 발급한다.&lt;br /&gt;
-                    토큰은 발급 후 사용자 테이블 DB에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만&lt;br /&gt;
-                    유효하게 사용가능하도록 upsert 된다&lt;br /&gt;
+                    토큰은 발급 후 사용자 테이블에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만&lt;br /&gt;
+                    유효하게 사용가능하도록 upsert 된다.&lt;br /&gt;
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -623,7 +629,7 @@
     
       
       <item>
-        <title>로그인 구현 연동</title>
+        <title>로그인 프로세스 (1)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -642,9 +648,9 @@
     &lt;/header&gt;
     &lt;div&gt;
       &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
-      &lt;p&gt;request 여부&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 모든 요청은 json&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; cors 방지&lt;/p&gt;
+      &lt;p&gt;request 검증&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 모든 request는 json 형태로 요청&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; Client에서 ajax 요청 시 CORS 해결&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -662,23 +668,23 @@
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_requestFilter02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;1. requestFilter &lt;br /&gt;
-                    -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 &lt;br /&gt;
-                       컨트롤러에서 request 처리 시 null 발생
-                    -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불가능 -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환
+                    -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 컨트롤러에서 request 처리 시 null 발생&lt;br /&gt;
+                    -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불 가능 &lt;br /&gt;
+                    -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환
               &lt;/span&gt;
             &lt;/div&gt; 
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_jsonFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;2. JSON 유효성 필터 &lt;br /&gt;
-                    -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다.
-                    -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과
+                    -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다.&lt;br /&gt;
+                    -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과&lt;br /&gt;
               &lt;/span&gt;
             &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_corsFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;3. CORS 필터 &lt;br /&gt;
-                    -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 cors 발생
-                    -&amp;gt; cors 방지를 위한 필터 처리
+                    -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 CORS 발생 &lt;br /&gt;
+                    -&amp;gt; CORS 방지를 위한 필터 처리
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -698,7 +704,7 @@
     
       
       <item>
-        <title>Toss Payment 연동</title>
+        <title>발주 프로세스(3)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -787,7 +793,7 @@
     
       
       <item>
-        <title>Toss Payment 연동</title>
+        <title>발주 프로세스(2)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -805,20 +811,20 @@
       &lt;h2 class=&quot;title&quot;&gt;[발주 프로세스] 로직 설계&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 사용자 유효성 검증&lt;br /&gt;&lt;/p&gt;
       &lt;p&gt;-&amp;gt;  중지나 탈퇴 등 상태가 아닌 정상 사용자&lt;/p&gt;
       &lt;br /&gt;
-      &lt;p&gt;2. 토스 페이먼츠 유효성 검증&lt;/p&gt;
+      &lt;p&gt;2. 토스 페이먼츠 설정&lt;/p&gt;
       &lt;p&gt;-&amp;gt; ISP 카드 연동위한 파라미터 세팅&lt;/p&gt;
       &lt;p&gt;-&amp;gt; MD5 해쉬 이용한 거래 위변조 방지&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 토스에서 발급한 상점키 환경설정&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 정상일때 사용할 PAY_KEY 리디렉트&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 결제 lib 모듈 연동&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; Toss lib 모듈 연동&lt;/p&gt;
       &lt;p&gt;-&amp;gt; DB 데이터 처리&lt;/p&gt;
       &lt;br /&gt;
       &lt;p&gt;3. SAP 연동&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 결제 전표 SAP 전송&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 결제 전표 전송&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -833,7 +839,7 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;유효성 검사&lt;/span&gt;
+          &lt;span&gt;결제 이전 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. 사용자가 중지나, 탈퇴 등 비정상적인 상태인지 검증한다.&lt;br /&gt;
@@ -847,13 +853,13 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;결제&lt;/span&gt;
+          &lt;span&gt;결제 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy03.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. PAY_KEY 및 금액 등 결제에 필요한 파라미터 세팅&lt;br /&gt;
                       2. 토스 결제 모듈 호출 &lt;br /&gt;
                       3. 결제 응답값 DB처리 -&amp;gt; 개인정보 등 AES 암호화 처리&lt;br /&gt;
-                      4. SAP 전표 생성&lt;br /&gt;
+                      4. 결제 전표 생성&lt;br /&gt;
                       5. EAI 와 연동한 경로에 전표 DUMP&lt;br /&gt;
                 &lt;/span&gt;
             &lt;/div&gt;
@@ -861,16 +867,16 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;발주&lt;/span&gt;
+          &lt;span&gt;발주 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy04.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. 발주 유효성 검사&lt;br /&gt;
                       -&amp;gt; 장바구니 유효성 검사 (이미 발주된건인지 확인)&lt;br /&gt;
                       -&amp;gt; 상품 유효성 검사(상품 판매 중단여부, 재고 체크, 이벤트/세트상품 대상인지 등)&lt;br /&gt;
                       -&amp;gt; 쿠폰 유효성 검사(쿠폰 만료여부, 쿠폰삭제여부, 기사용쿠폰 여부)&lt;br /&gt;
-                      -&amp;gt; 결제 번호 유효성 검사&lt;br /&gt;
+                      -&amp;gt; 결제 번호 유효성 검사&lt;br /&gt;&lt;br /&gt;
                       2. 발주 처리&lt;br /&gt;
-                      -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑)
+                      -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑)&lt;br /&gt;&lt;br /&gt;
                       3. SAP 처리&lt;br /&gt;
                       -&amp;gt; 발주된 상품정보 전송&lt;br /&gt;
                   &lt;/span&gt;
@@ -892,7 +898,7 @@
     
       
       <item>
-        <title>Toss Payment 연동</title>
+        <title>발주 프로세스(1)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -994,7 +1000,7 @@
     
       
       <item>
-        <title>AWS MIG 구현</title>
+        <title>AWS Migration</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;

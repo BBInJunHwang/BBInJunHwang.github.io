@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/businesslogic/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-08-29T12:39:10+09:00</updated>
+  <updated>2022-08-30T17:40:19+09:00</updated>
   <id>http://localhost:4000/tag/businesslogic/feed.xml</id>
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">로그인 구현 연동</title>
-      <link href="http://localhost:4000/businessLogic-06_basic" rel="alternate" type="text/html" title="로그인 구현 연동" />
+      <title type="html">로그인 프로세스 (2)</title>
+      <link href="http://localhost:4000/businessLogic-06_basic" rel="alternate" type="text/html" title="로그인 프로세스 (2)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-06_basic</id>
@@ -53,7 +53,7 @@
       &lt;h2 class=&quot;title&quot;&gt;[로그인] 인증 프로세스&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 사내직원 여부&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 사내직원 : LDAP 인증&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 일반사용자 : DB 인증&lt;/p&gt;
@@ -73,12 +73,12 @@
           &lt;div class=&quot;area&quot;&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;LDAP 프로세스로 DB인증을 위한 패스워드 해시화와 달리 window LDAP 서버로 인증하기 위해서는&lt;br /&gt;
-                    평문 pw가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다.&lt;/span&gt;
+              &lt;span&gt;LDAP 프로세스는 DB인증을 위한 패스워드 SHA512 해시화와 달리 Window LDAP 서버로 인증하기 위해서는&lt;br /&gt;
+                    평문 패스워드가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다.&lt;/span&gt;
             &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_ldap02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;LDAP 인증을 위한 id,pw 입력 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다.&lt;/span&gt;
+              &lt;span&gt;LDAP 인증을 위한 ID / PASSWORD 입력 후 연결 진행 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다.&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -87,8 +87,8 @@
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic06/ch06_createToken01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;로그인이 정상 수행되었을때 토큰을 발급한다.&lt;br /&gt;
-                    토큰은 발급 후 사용자 테이블 DB에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만&lt;br /&gt;
-                    유효하게 사용가능하도록 upsert 된다&lt;br /&gt;
+                    토큰은 발급 후 사용자 테이블에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만&lt;br /&gt;
+                    유효하게 사용가능하도록 upsert 된다.&lt;br /&gt;
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -116,7 +116,7 @@
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 인증 프로세스 프로세스 고려사항 1. 사내직원 여부 -&amp;gt; 사내직원 : LDAP 인증 -&amp;gt; 일반사용자 : DB 인증 authenticationProvider 에서 사내직원 / 일반 사용자 분기 실시 LDAP 프로세스로 DB인증을 위한 패스워드 해시화와 달리 window LDAP 서버로 인증하기 위해서는 평문 pw가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다. LDAP 인증을 위한 id,pw 입력 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다. 로그인이 정상 수행되었을때 토큰을 발급한다. 토큰은 발급 후 사용자 테이블 DB에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만 유효하게 사용가능하도록 upsert 된다</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 인증 프로세스 프로세스 고려사항 1. 사내직원 여부 -&amp;gt; 사내직원 : LDAP 인증 -&amp;gt; 일반사용자 : DB 인증 authenticationProvider 에서 사내직원 / 일반 사용자 분기 실시 LDAP 프로세스는 DB인증을 위한 패스워드 SHA512 해시화와 달리 Window LDAP 서버로 인증하기 위해서는 평문 패스워드가 필요하기 때문에 클라이언트와 비대칭키를 이용한 RSA 암호화 값을 복호화 해준다. LDAP 인증을 위한 ID / PASSWORD 입력 후 연결 진행 및 LDAP 쿼리를 수행 후 사용자 여부를 파악한다. 로그인이 정상 수행되었을때 토큰을 발급한다. 토큰은 발급 후 사용자 테이블에 저장되며, 차후 토큰 탈취 등 상황에서 가장 마지막에 발급된 토큰만 유효하게 사용가능하도록 upsert 된다.</summary>
       
 
       
@@ -124,8 +124,8 @@
     </entry>
   
     <entry>
-      <title type="html">로그인 구현 연동</title>
-      <link href="http://localhost:4000/businessLogic-05_basic" rel="alternate" type="text/html" title="로그인 구현 연동" />
+      <title type="html">로그인 프로세스 (1)</title>
+      <link href="http://localhost:4000/businessLogic-05_basic" rel="alternate" type="text/html" title="로그인 프로세스 (1)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-05_basic</id>
@@ -146,9 +146,9 @@
     &lt;/header&gt;
     &lt;div&gt;
       &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
-      &lt;p&gt;request 여부&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 모든 요청은 json&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; cors 방지&lt;/p&gt;
+      &lt;p&gt;request 검증&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 모든 request는 json 형태로 요청&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; Client에서 ajax 요청 시 CORS 해결&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -166,23 +166,23 @@
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_requestFilter02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;1. requestFilter &lt;br /&gt;
-                    -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 &lt;br /&gt;
-                       컨트롤러에서 request 처리 시 null 발생
-                    -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불가능 -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환
+                    -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 컨트롤러에서 request 처리 시 null 발생&lt;br /&gt;
+                    -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불 가능 &lt;br /&gt;
+                    -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환
               &lt;/span&gt;
             &lt;/div&gt; 
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_jsonFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;2. JSON 유효성 필터 &lt;br /&gt;
-                    -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다.
-                    -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과
+                    -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다.&lt;br /&gt;
+                    -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과&lt;br /&gt;
               &lt;/span&gt;
             &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic05/ch05_corsFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
               &lt;span&gt;3. CORS 필터 &lt;br /&gt;
-                    -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 cors 발생
-                    -&amp;gt; cors 방지를 위한 필터 처리
+                    -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 CORS 발생 &lt;br /&gt;
+                    -&amp;gt; CORS 방지를 위한 필터 처리
               &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -210,7 +210,7 @@
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 커스텀 필터 적용 프로세스 고려사항 request 여부 -&amp;gt; 모든 요청은 json -&amp;gt; cors 방지 로그인 구성도 커스텀 필터 1. requestFilter -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 컨트롤러에서 request 처리 시 null 발생 -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불가능 -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환 2. JSON 유효성 필터 -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다. -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과 3. CORS 필터 -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 cors 발생 -&amp;gt; cors 방지를 위한 필터 처리</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 커스텀 필터 적용 프로세스 고려사항 request 검증 -&amp;gt; 모든 request는 json 형태로 요청 -&amp;gt; Client에서 ajax 요청 시 CORS 해결 로그인 구성도 커스텀 필터 1. requestFilter -&amp;gt; 각종 필터에서 request를 먼저 stream으로 읽었을때 필터 통과 후 컨트롤러에서 request 처리 시 null 발생 -&amp;gt; 톰캣에서 한번 읽은 stream은 사용 불 가능 -&amp;gt; Wrapper 객체를 만들어서 읽은 후 다른곳에서 사용시 해당 객체를 반환 2. JSON 유효성 필터 -&amp;gt; request가 정상적인 json 구조 요청인지 확인한다. -&amp;gt; Gson lib 이용해서 정상적으로 json 구조 생성이 되면 통과 3. CORS 필터 -&amp;gt; 클라이언트 서버가 따로 존재하며, ajax 등 스크립트를 통해서 호출 시 CORS 발생 -&amp;gt; CORS 방지를 위한 필터 처리</summary>
       
 
       
@@ -218,8 +218,8 @@
     </entry>
   
     <entry>
-      <title type="html">Toss Payment 연동</title>
-      <link href="http://localhost:4000/businessLogic-04_basic" rel="alternate" type="text/html" title="Toss Payment 연동" />
+      <title type="html">발주 프로세스(3)</title>
+      <link href="http://localhost:4000/businessLogic-04_basic" rel="alternate" type="text/html" title="발주 프로세스(3)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-04_basic</id>
@@ -326,8 +326,8 @@
     </entry>
   
     <entry>
-      <title type="html">Toss Payment 연동</title>
-      <link href="http://localhost:4000/businessLogic-03_basic" rel="alternate" type="text/html" title="Toss Payment 연동" />
+      <title type="html">발주 프로세스(2)</title>
+      <link href="http://localhost:4000/businessLogic-03_basic" rel="alternate" type="text/html" title="발주 프로세스(2)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-03_basic</id>
@@ -347,20 +347,20 @@
       &lt;h2 class=&quot;title&quot;&gt;[발주 프로세스] 로직 설계&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 사용자 유효성 검증&lt;br /&gt;&lt;/p&gt;
       &lt;p&gt;-&amp;gt;  중지나 탈퇴 등 상태가 아닌 정상 사용자&lt;/p&gt;
       &lt;br /&gt;
-      &lt;p&gt;2. 토스 페이먼츠 유효성 검증&lt;/p&gt;
+      &lt;p&gt;2. 토스 페이먼츠 설정&lt;/p&gt;
       &lt;p&gt;-&amp;gt; ISP 카드 연동위한 파라미터 세팅&lt;/p&gt;
       &lt;p&gt;-&amp;gt; MD5 해쉬 이용한 거래 위변조 방지&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 토스에서 발급한 상점키 환경설정&lt;/p&gt;
       &lt;p&gt;-&amp;gt; 정상일때 사용할 PAY_KEY 리디렉트&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 결제 lib 모듈 연동&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; Toss lib 모듈 연동&lt;/p&gt;
       &lt;p&gt;-&amp;gt; DB 데이터 처리&lt;/p&gt;
       &lt;br /&gt;
       &lt;p&gt;3. SAP 연동&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; 결제 전표 SAP 전송&lt;/p&gt;
+      &lt;p&gt;-&amp;gt; 결제 전표 전송&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -375,7 +375,7 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;유효성 검사&lt;/span&gt;
+          &lt;span&gt;결제 이전 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. 사용자가 중지나, 탈퇴 등 비정상적인 상태인지 검증한다.&lt;br /&gt;
@@ -389,13 +389,13 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;결제&lt;/span&gt;
+          &lt;span&gt;결제 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy03.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. PAY_KEY 및 금액 등 결제에 필요한 파라미터 세팅&lt;br /&gt;
                       2. 토스 결제 모듈 호출 &lt;br /&gt;
                       3. 결제 응답값 DB처리 -&amp;gt; 개인정보 등 AES 암호화 처리&lt;br /&gt;
-                      4. SAP 전표 생성&lt;br /&gt;
+                      4. 결제 전표 생성&lt;br /&gt;
                       5. EAI 와 연동한 경로에 전표 DUMP&lt;br /&gt;
                 &lt;/span&gt;
             &lt;/div&gt;
@@ -403,16 +403,16 @@
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-          &lt;span&gt;발주&lt;/span&gt;
+          &lt;span&gt;발주 프로세스&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic03/ch03_buy04.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
                 &lt;span&gt;1. 발주 유효성 검사&lt;br /&gt;
                       -&amp;gt; 장바구니 유효성 검사 (이미 발주된건인지 확인)&lt;br /&gt;
                       -&amp;gt; 상품 유효성 검사(상품 판매 중단여부, 재고 체크, 이벤트/세트상품 대상인지 등)&lt;br /&gt;
                       -&amp;gt; 쿠폰 유효성 검사(쿠폰 만료여부, 쿠폰삭제여부, 기사용쿠폰 여부)&lt;br /&gt;
-                      -&amp;gt; 결제 번호 유효성 검사&lt;br /&gt;
+                      -&amp;gt; 결제 번호 유효성 검사&lt;br /&gt;&lt;br /&gt;
                       2. 발주 처리&lt;br /&gt;
-                      -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑)
+                      -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑)&lt;br /&gt;&lt;br /&gt;
                       3. SAP 처리&lt;br /&gt;
                       -&amp;gt; 발주된 상품정보 전송&lt;br /&gt;
                   &lt;/span&gt;
@@ -442,7 +442,7 @@
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [발주 프로세스] 로직 설계 프로세스 고려사항 1. 사용자 유효성 검증 -&amp;gt; 중지나 탈퇴 등 상태가 아닌 정상 사용자 2. 토스 페이먼츠 유효성 검증 -&amp;gt; ISP 카드 연동위한 파라미터 세팅 -&amp;gt; MD5 해쉬 이용한 거래 위변조 방지 -&amp;gt; 토스에서 발급한 상점키 환경설정 -&amp;gt; 정상일때 사용할 PAY_KEY 리디렉트 -&amp;gt; 결제 lib 모듈 연동 -&amp;gt; DB 데이터 처리 3. SAP 연동 -&amp;gt; 결제 전표 SAP 전송 발주 구성도 유효성 검사 1. 사용자가 중지나, 탈퇴 등 비정상적인 상태인지 검증한다. 2. 결제 트랜잭션 테이블에 데이터 처리 시작 3. MD5 해쉬를 이용한 거래 위변조 체크를 한다 4. 위변조 체크를 응답받은 리디렉트 컨트롤러에서 PAY_KEY를 내려 받는다 5. 결제 트랜잭션 테이블에 PAY_KEY 업데이트 결제 1. PAY_KEY 및 금액 등 결제에 필요한 파라미터 세팅 2. 토스 결제 모듈 호출 3. 결제 응답값 DB처리 -&amp;gt; 개인정보 등 AES 암호화 처리 4. SAP 전표 생성 5. EAI 와 연동한 경로에 전표 DUMP 발주 1. 발주 유효성 검사 -&amp;gt; 장바구니 유효성 검사 (이미 발주된건인지 확인) -&amp;gt; 상품 유효성 검사(상품 판매 중단여부, 재고 체크, 이벤트/세트상품 대상인지 등) -&amp;gt; 쿠폰 유효성 검사(쿠폰 만료여부, 쿠폰삭제여부, 기사용쿠폰 여부) -&amp;gt; 결제 번호 유효성 검사 2. 발주 처리 -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑) 3. SAP 처리 -&amp;gt; 발주된 상품정보 전송</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [발주 프로세스] 로직 설계 프로세스 고려사항 1. 사용자 유효성 검증 -&amp;gt; 중지나 탈퇴 등 상태가 아닌 정상 사용자 2. 토스 페이먼츠 설정 -&amp;gt; ISP 카드 연동위한 파라미터 세팅 -&amp;gt; MD5 해쉬 이용한 거래 위변조 방지 -&amp;gt; 토스에서 발급한 상점키 환경설정 -&amp;gt; 정상일때 사용할 PAY_KEY 리디렉트 -&amp;gt; Toss lib 모듈 연동 -&amp;gt; DB 데이터 처리 3. SAP 연동 -&amp;gt; 결제 전표 전송 발주 구성도 결제 이전 프로세스 1. 사용자가 중지나, 탈퇴 등 비정상적인 상태인지 검증한다. 2. 결제 트랜잭션 테이블에 데이터 처리 시작 3. MD5 해쉬를 이용한 거래 위변조 체크를 한다 4. 위변조 체크를 응답받은 리디렉트 컨트롤러에서 PAY_KEY를 내려 받는다 5. 결제 트랜잭션 테이블에 PAY_KEY 업데이트 결제 프로세스 1. PAY_KEY 및 금액 등 결제에 필요한 파라미터 세팅 2. 토스 결제 모듈 호출 3. 결제 응답값 DB처리 -&amp;gt; 개인정보 등 AES 암호화 처리 4. 결제 전표 생성 5. EAI 와 연동한 경로에 전표 DUMP 발주 프로세스 1. 발주 유효성 검사 -&amp;gt; 장바구니 유효성 검사 (이미 발주된건인지 확인) -&amp;gt; 상품 유효성 검사(상품 판매 중단여부, 재고 체크, 이벤트/세트상품 대상인지 등) -&amp;gt; 쿠폰 유효성 검사(쿠폰 만료여부, 쿠폰삭제여부, 기사용쿠폰 여부) -&amp;gt; 결제 번호 유효성 검사 2. 발주 처리 -&amp;gt; DB 처리 (장바구니 발주 완료 처리, 결제-장바구니-SAP-쿠폰 등 매핑) 3. SAP 처리 -&amp;gt; 발주된 상품정보 전송</summary>
       
 
       
@@ -450,8 +450,8 @@
     </entry>
   
     <entry>
-      <title type="html">Toss Payment 연동</title>
-      <link href="http://localhost:4000/businessLogic-02_basic" rel="alternate" type="text/html" title="Toss Payment 연동" />
+      <title type="html">발주 프로세스(1)</title>
+      <link href="http://localhost:4000/businessLogic-02_basic" rel="alternate" type="text/html" title="발주 프로세스(1)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-02_basic</id>
@@ -571,8 +571,8 @@
     </entry>
   
     <entry>
-      <title type="html">AWS MIG 구현</title>
-      <link href="http://localhost:4000/businessLogic-01_basic" rel="alternate" type="text/html" title="AWS MIG 구현" />
+      <title type="html">AWS Migration</title>
+      <link href="http://localhost:4000/businessLogic-01_basic" rel="alternate" type="text/html" title="AWS Migration" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-01_basic</id>
@@ -641,30 +641,29 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
 
 &lt;div&gt;
     &lt;header&gt;
-      &lt;h2 class=&quot;title&quot;&gt;[스프링] on premise -&amp;gt; CDN migration&lt;/h2&gt;&lt;br /&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[스프링] On premise -&amp;gt; AWS migration&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;온 프레미스 환경내 구축되어있던 서비스 AWS 마이그레이션 실시&lt;br /&gt;&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;IDC 내 온 프레미스 환경 내 구축된 서비스 AWS 마이그레이션 실시&lt;br /&gt;&lt;br /&gt;&lt;/h3&gt;
       &lt;span&gt;변경사항&lt;br /&gt;
-            1. java6 -&amp;gt;8, 스프링 3 -&amp;gt; 4.X or 5.X 전환 필요&lt;br /&gt;
-            2. 오라클 11 -&amp;gt; 19 전환 필요&lt;br /&gt;
-            3. NEXUS 연동 불가로 인한 new Maven parent 필요&lt;br /&gt;
-            4. DB link 불가능으로 인한 EAI 전환 필요&lt;br /&gt;
-            5. 파일 업로드&lt;br /&gt;
+            1. 자바 버전 6 -&amp;gt; 8, 스프링 3.x -&amp;gt; 4.X or 5.X 전환 필요&lt;br /&gt;&lt;br /&gt;
+            2. 오라클 11 -&amp;gt; 19 전환 필요&lt;br /&gt;&lt;br /&gt;
+            3. NEXUS 연동 불가로 인한 new Maven parent 필요&lt;br /&gt;&lt;br /&gt;
+            4. DB link -&amp;gt; EAI 전환 필요&lt;br /&gt;&lt;br /&gt;
+            5. 파일 업로드 로직 변경 필요&lt;br /&gt;&lt;br /&gt;
                AS-IS : 웹 서버 + window 서버용 CDN dll 파일 통한 파일 업로드&lt;br /&gt;
-               TO-BE : FTP 업로드 + S3 업로드 &lt;br /&gt;
-            6. SVN -&amp;gt; Git Lab 변경&lt;br /&gt;
-            7. CI/CD 구축&lt;br /&gt;
-            &lt;br /&gt;
+               TO-BE : FTP 업로드 + S3 업로드 &lt;br /&gt;&lt;br /&gt;
+            6. SVN -&amp;gt; Git Lab 변경&lt;br /&gt;&lt;br /&gt;
+            7. CI/CD 구축&lt;br /&gt;&lt;br /&gt;
             + 고려사항&lt;br /&gt;
-            1. java 및 spring 변경에 따른 검토필요
-            2. 오라클19에서 지원하지않는 comcat -&amp;gt; listagg 등 문법 변경&lt;br /&gt;
-            3. 기존 Nexus 대체할 외부 lib 연동 및 parent 구성&lt;br /&gt;
-            4. EAI 연동할 수신 테이블 설계 및 데이터 범위 지정&lt;br /&gt;
-            5. 파일업로드 시 기존 CDN dll 파일 제거 및 window 서버용 로직 제거&lt;br /&gt;
-            6. 영상 업로드, PDF 업로드 분리 및 PDF -&amp;gt; 이미지 변환실시&lt;br /&gt;
-            7. Git Lab 소스 push 및 브랜치 관리&lt;br /&gt;
-            8. 자동배포를 위한 파이프라인 구성&lt;br /&gt;
+            1. 자바 및 스프링 변경에 따른 검토 필요 &lt;br /&gt;&lt;br /&gt;
+            2. 오라클 19에서 지원하지않는 문법 변경&lt;br /&gt;&lt;br /&gt;
+            3. 기존 Nexus 대체할 로컬 repo 연동 및 parent 구성&lt;br /&gt;&lt;br /&gt;
+            4. EAI 연동할 수신 테이블 설계 및 데이터 범위 지정&lt;br /&gt;&lt;br /&gt;
+            5. 파일업로드 시 기존 CDN dll 파일 제거 및 window 서버용 로직 제거&lt;br /&gt;&lt;br /&gt;
+            6. 영상 업로드, PDF 업로드 분리 및 PDF -&amp;gt; 이미지 변환실시&lt;br /&gt;&lt;br /&gt;
+            7. Git Lab 소스 push 및 브랜치 관리&lt;br /&gt;&lt;br /&gt;
+            8. 자동배포를 위한 파이프라인 구성&lt;br /&gt;&lt;br /&gt;
             &lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
@@ -672,47 +671,54 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
       &lt;ul class=&quot;imageList&quot;&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;spring 버전 변경&lt;/span&gt;
+            &lt;span&gt;1. 자바 및 스프링 버전 변경&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_spring_versionup01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;스프링 버전 변경&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;자바 1.8 적용&lt;br /&gt;
+                  스프링 4.3 적용&lt;br /&gt;
+              &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;쿼리 변경&lt;/span&gt;
+            &lt;span&gt;2. 오라클 변경&lt;/span&gt;
             &lt;div&gt;
-              &lt;span&gt;LISTAGG 쿼리 및 literal does not match format string ora-01861 OS의 LANG 설정이 달라서 문자열을 묵시적으로 날짜로 변환을 못해서 발생하는 에러&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;WM_CONCAT -&amp;gt; LISTAGG 등 지원 하지 않는 쿼리 변경&lt;br /&gt; 
+                    linux 환경에서 OS의 LANG 설정이 달라서 문자열을 묵시적으로 날짜로 변환을 못해서 발생하는 에러 조치&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;parent 신규 생성&lt;/span&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_maven_local_repo01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;span&gt;3. 로컬 repository 구성 및 parent 신규 생성&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_maven_parent01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_maven_parent02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;parent 신규 생성 및 모듈 추가&lt;br /&gt; 외부 lib 사용할 로컬 repo 정의&lt;/span&gt;
+              &lt;span&gt;parent 신규 생성 및 연결 모듈 추가&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;EAI 연동&lt;/span&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_maven_local_repo01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;기존 DB link 사용이 불가능하기 떄문에, EAI receive 테이블 생성&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;로컬 repository에 정의할 lib 추가&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;첨부파일 업로드 변경&lt;/span&gt;
+            &lt;span&gt;4. EAI 연동&lt;/span&gt;
+            &lt;div&gt;
+              &lt;span&gt;기존 DB link 사용이 불가능하기 떄문에, Legacy 데이터를 내려 받을 receive 테이블 생성&lt;br /&gt;
+                    데이터 정보를 매핑 후 EAI 통해서 수신 실시&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;span&gt;5. 첨부파일 업로드 변경&lt;br /&gt;&lt;/span&gt;
             &lt;span&gt;영상인경우&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;웹 서버 업로드 대체 s3 putObject 메서드 구현&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;S3 업로드를 위한 putObject 메서드 구현&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_ftp_upload_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
@@ -725,7 +731,7 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
             &lt;span&gt;PDF 경우&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_s3_upload_class02.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;웹 서버 업로드 대체 s3 pubOjbect 이미지 메서드 구현&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;S3 업로드를 위한 pubOjbect 이미지 메서드 구현&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
           &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;
@@ -736,36 +742,44 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
             &lt;div&gt;
               &lt;span&gt;pdfbox.lib 에서 제공하는 PDFImageWriter.class 내 writeImage 이미지는 &lt;br /&gt;
                     단순히 IO를 통해 읽은 이미지를 서버내 특정경로에 저장만 시키기 때문에 &lt;br /&gt;
-                    읽은 후  s3 업로드를 위해서는 재정의가 필요하다&lt;br /&gt;
-                    IO 작업 후 s3 업로드 로직 추가&lt;/span&gt;
+                    IO 작업 후 S3 업로드 로직 추가&lt;/span&gt;
             &lt;/div&gt;
           &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_pdf_convert_result01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;정상적으로 PDF 파일 장수만큼 이미지 파일로 변경완료&lt;/span&gt;
+              &lt;span&gt;PDF 파일 장 수만큼 이미지 파일로 변경완료&lt;/span&gt;
             &lt;/div&gt;
           &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_signedUrl_class01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;최종적으로 사용자에게 보여주기 위한 pre-signedUrl 생성&lt;/span&gt;
+              &lt;span&gt;사용자에게 보여주기 위한 pre-signedUrl 생성&lt;/span&gt;
             &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;Git Lab 관리&lt;/span&gt;
+            &lt;span&gt;6. GitLab 관리&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_gitlab01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;svn -&amp;gt; git lab 업로드 및 형상관리 실시&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;svn -&amp;gt; Gitlab Push 및 PRD, STG, DEV 환경별 branch 관리 실시&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;span&gt;CICD 구축&lt;/span&gt;
+            &lt;span&gt;7. CI/CD 구축&lt;/span&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_git01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결&lt;br /&gt;&lt;/span&gt;
+            &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_env_variable01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;PRD, STG, DEV 환경별 스프링 프로필을 사용할 수 있도록 환경변수 적용&lt;br /&gt;&lt;/span&gt;
+            &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_build01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결&lt;br /&gt;&lt;/span&gt;
+            &lt;/div&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic01/ch01_aws_cicd_pipeline01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;기존 DB link 사용이 불가능하기 떄문에, EAI receive 테이블 생성&lt;br /&gt;&lt;/span&gt;
+              &lt;span&gt;Git push 시 자동으로 파이프라인이 가동될 수 있도록 연결&lt;br /&gt;&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -800,8 +814,8 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
     </entry>
   
     <entry>
-      <title type="html">로그인 구현 연동</title>
-      <link href="http://localhost:4000/businessLogic-07_basic" rel="alternate" type="text/html" title="로그인 구현 연동" />
+      <title type="html">로그인 프로세스 (3)</title>
+      <link href="http://localhost:4000/businessLogic-07_basic" rel="alternate" type="text/html" title="로그인 프로세스 (3)" />
       <published>2022-06-12T03:00:00+09:00</published>
       <updated>2022-06-12T03:00:00+09:00</updated>
       <id>http://localhost:4000/businessLogic-07_basic</id>
@@ -821,9 +835,10 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
       &lt;h2 class=&quot;title&quot;&gt;[로그인] 토큰 요청&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
     &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;/h3&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;프로세스 고려사항&lt;br /&gt;&lt;/h3&gt;
       &lt;p&gt;1. 토큰 유효성 검사&lt;/p&gt;
-      &lt;p&gt;-&amp;gt; JWT 토큰이 유효한지 &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; JWT 토큰이 유효한지? &lt;/p&gt;
+      &lt;p&gt;-&amp;gt; JWT 토큰이 만료되었는지? &lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
       &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
@@ -838,7 +853,12 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
           &lt;div class=&quot;area&quot;&gt;
             &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/businessLogic/businessLogic07/ch07_tokenFilter01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;header 토큰 확인, 토큰 검증, 만료 여부, refresh 로직 등등&lt;/span&gt;
+              &lt;span&gt;1. requset Header 토큰 확인&lt;br /&gt;
+                    2. 토큰 내 ID 값을 이용해 유효한 사용자 체크&lt;br /&gt;
+                    3. 토큰 만료 여부 확인&lt;br /&gt;
+                    -&amp;gt; 만약 만료되었지만, refresh 토큰이 살아있는 경우, 토큰 재발급 실시&lt;br /&gt;
+                    4. 모든 경우 확인 후 토큰이 정상인 경우 SecurityContext에 저장&lt;br /&gt;
+                    -&amp;gt; 세션기반이 아니기 때문에 Controller 등에서 사용자 정보를 사용하기 위함.  &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -865,7 +885,7 @@ IO 작업 후 s3 업로드 로직 추가&lt;br&gt;
       
 
       
-        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 토큰 요청 프로세스 고려사항 1. 토큰 유효성 검사 -&amp;gt; JWT 토큰이 유효한지 jwt 요청 순서도 header 토큰 확인, 토큰 검증, 만료 여부, refresh 로직 등등</summary>
+        <summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. BusinessLogic(1) AWS MIG BusinessLogic(2) 발주 프로세스 (1) BusinessLogic(3) 발주 프로세스 (2) BusinessLogic(4) 발주 프로세스 (3) BusinessLogic(5) 로그인 프로세스 (1) BusinessLogic(6) 로그인 프로세스 (2) BusinessLogic(7) 로그인 프로세스 (3) [로그인] 토큰 요청 프로세스 고려사항 1. 토큰 유효성 검사 -&amp;gt; JWT 토큰이 유효한지? -&amp;gt; JWT 토큰이 만료되었는지? jwt 요청 순서도 1. requset Header 토큰 확인 2. 토큰 내 ID 값을 이용해 유효한 사용자 체크 3. 토큰 만료 여부 확인 -&amp;gt; 만약 만료되었지만, refresh 토큰이 살아있는 경우, 토큰 재발급 실시 4. 모든 경우 확인 후 토큰이 정상인 경우 SecurityContext에 저장 -&amp;gt; 세션기반이 아니기 때문에 Controller 등에서 사용자 정보를 사용하기 위함.</summary>
       
 
       
