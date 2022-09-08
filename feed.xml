@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-30T17:40:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">junny blogs</title><subtitle>백엔드</subtitle><entry><title type="html">springBoot 시큐리티(1)</title><link href="http://localhost:4000/springBoot-03_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(1)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-03_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-03_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-07T14:12:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">junny blogs</title><subtitle>백엔드</subtitle><entry><title type="html">springBoot My Project(1)</title><link href="http://localhost:4000/springBoot-07_basic" rel="alternate" type="text/html" title="springBoot My Project(1)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-07_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-07_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -7,79 +7,105 @@
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- &lt;div&gt;
-&lt;br&gt;
-&lt;h2&gt;[스프링부트] Security &lt;/h2&gt;&lt;br&gt;
-
-&lt;p align = &quot;justify&quot;&gt;
-&lt;font size=3&gt;
-SpringBoot 에서 시큐리티 설정을 위해서 WebSecurityConfigurerAdapter 상속받아서 정의한다.
-
-기본적으로 configure(HttpSecurity) 재정의하며, http 요청에 대해서 처리가 가능하다.
-
-.antiMatchers
--&gt; 요청 경로마다 authenticated , hasRole 등 인증, 권한 여부로 제어가 가능하다.
-
-.loginPage
--&gt; 로그인 페이지 경로를 지정한다.
-
-.loginProcessingUrl 
--&gt; 로그인 요청 시 낚아채서 대신 로그인을 진행해준다.
-
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/springBoot/springBoot03/ch03_security_config01.PNG&apos; alt=&apos;absolute&apos;&gt;
-
-
-
-컨트롤러 단에서도 요청에 대해서 간단하게 권한을 걸어 줄 수도 있다.&lt;br&gt;
-@Secured&lt;br&gt;
-@PreAuthroize (표현식 사용 가능 and / or)
-
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/springBoot/springBoot03/ch03_security_config02.PNG&apos; alt=&apos;absolute&apos;&gt;
-
-&lt;/font&gt;
-&lt;/p&gt;
-&lt;/div&gt; --&gt;
-
 &lt;div&gt;
     &lt;header&gt;
-      &lt;h2 class=&quot;title&quot;&gt;[스프링부트] Security&lt;/h2&gt;&lt;br /&gt;
+      &lt;h2 class=&quot;title&quot;&gt;My Project(1) Entity 설계&lt;/h2&gt;&lt;br /&gt;
     &lt;/header&gt;
-    &lt;!-- &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;&lt;/h3&gt;
-      &lt;p&gt; -&gt;  &lt;/p&gt;
-    &lt;/div&gt; --&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;Entity 설계&lt;/h3&gt;
+      &lt;p&gt; -&amp;gt; Entity란 DB와 매칭될 클래스  &lt;/p&gt;
+      &lt;p&gt; -&amp;gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는&lt;br /&gt;
+             객체를 넣으며 JPA를 통해서 OOP(객체) 와 DB의 불일치성을 해결가능하다 (자동으로 FK 생성)  &lt;/p&gt;
+    &lt;/div&gt;
     &lt;div class=&quot;listWrapper&quot;&gt;
-      &lt;!-- &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt; --&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;OOP점 관점으로 먼저 클래스를 만들어서 DB설계를 진행한다.&lt;/span&gt;
       &lt;ul class=&quot;imageList&quot;&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot03/ch03_security_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;SpringBoot 에서 시큐리티 설정을 위해서 WebSecurityConfigurerAdapter 상속받아서 정의한다.&lt;br /&gt;
-                    기본적으로 configure(HttpSecurity) 재정의하며, http 요청에 대해서 처리가 가능하다.&lt;br /&gt;&lt;br /&gt;
-                    .antiMatchers&lt;br /&gt;
-                    -&amp;gt; 요청 경로마다 authenticated , hasRole 등 인증, 권한 여부로 제어가 가능하다.&lt;br /&gt;&lt;br /&gt;
-                    .loginPage&lt;br /&gt;
-                    -&amp;gt; 로그인 페이지 경로를 지정한다.&lt;br /&gt;&lt;br /&gt;
-                    .loginProcessingUrl &lt;br /&gt;
-                    -&amp;gt; 로그인 요청 시 낚아채서 대신 로그인을 진행해준다.&lt;/span&gt;
+              &lt;span&gt;
+                DB 기준에서는 User 내 teamId로 Team을 조회 할 수 있으며, &lt;br /&gt;
+                Team 역시 teamId로 User를 조회 할수 있다. 서로가 서로 조회 되는 양방향 관계 &lt;br /&gt;&lt;br /&gt;
+                하지만 객체관점에서는 DB 테이블 처럼 무조건 양방향일 필요가 없으며, &lt;br /&gt;
+                User N : Team 1 관계이다. &lt;br /&gt;
+                외래키는 N 쪽인 User에 둔다. (teamId)&lt;br /&gt;
+                &lt;br /&gt;
+                연관관계의 주인은 외래 키가 있는 곳!&lt;br /&gt;
+                주인은 mappedBy 속성을 사용하지 않는다.&lt;br /&gt;
+                항상 &apos;다(N)&apos;쪽이 외래 키를 가진다.&lt;br /&gt;
+                @ManyToOne은 항상 연관관계의 주인이 됨. mappedBy 속성이 없다.   &lt;br /&gt;
+                &lt;br /&gt;
+                @ManyToOne(fetch = FetchType.LAZY) &lt;br /&gt; 
+                -&amp;gt; ManyToOne 관계로 UserInfo가 다 쪽이며, TeamInfo 에서는 참조하지 않는다 (단방향) &lt;br /&gt;
+                &lt;br /&gt;
+                EAGER 전략과 LAZY 전략 2개가 있으며,&lt;br /&gt;
+                EAGER 전략은 연관관계 있는 Entity를 조인해서 무조건 들고온다&lt;br /&gt;
+                LAZY  전략은 연관관계 있는 Entity를 가져오지 않고 getter 등으로 접근시에 가져완다&lt;br /&gt;
+                &lt;br /&gt;
+                @JoinColumn(name=&quot;컬럼명&quot;) 으로 Fk를 지정한다. &lt;br /&gt;
+                @JoinColumn(name=&quot;teamId&quot;)&lt;br /&gt;
+                private TeamInfo teamInfo;&lt;br /&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot07/ch07_JPA_UserInfo01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;
+              @NoArgsConstructor &lt;br /&gt;
+              -&amp;gt; 기본 생성자 생성 &lt;br /&gt;&lt;br /&gt;
+              @AllArgsConstructor&lt;br /&gt;
+              -&amp;gt; 전체 필드 생성자 생성&lt;br /&gt;&lt;br /&gt;
+              @Builder &lt;br /&gt;
+              -&amp;gt; 빌더 패턴을 사용한다 (데이터 순서에 상관없이 객체 생성가능, setter 메서드 없음 변경불가, 이해쉬움)&lt;br /&gt;&lt;br /&gt;
+              @Entity &lt;br /&gt;
+              -&amp;gt; 해당 클래스를 Entity라고 선언, JPA에서 관리, 테이블 매핑&lt;br /&gt;&lt;br /&gt;
+              @Getter&lt;br /&gt;
+              -&amp;gt; 롬복에서 지원하는 get메서드 생성&lt;br /&gt;
+              -&amp;gt; Entity는 setter 생성하면 안된다 (객체의 값 변경으로 인한 일관성 보장x)&lt;br /&gt;&lt;br /&gt;
+              @DynamicInsert&lt;br /&gt;
+              -&amp;gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며&lt;br /&gt;
+                 insert 시 null이 아닌 필드만 포함시킨다&lt;br /&gt;&lt;br /&gt;
+              @DynamicUpdate&lt;br /&gt;
+              -&amp;gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며&lt;br /&gt;
+                 update 시 null이 아닌 필드만 포함시킨다&lt;br /&gt;&lt;br /&gt;
+              @Where(clause = &quot;delYn = &apos;N&apos;&quot;)&lt;br /&gt;
+              -&amp;gt; 쿼리 실행시 일괄적으로 where delYn =&apos;N&apos; 조건문 추가 &lt;br /&gt;
+                 논리적 삭제로 인한 삭제 플래그 적용&lt;br /&gt;&lt;br /&gt;
+              @SQLDelete(sql =&quot;UPDATE USERINFO SET DELYN = &apos;Y&apos; WHERE USERID = ?&quot;)&lt;br /&gt;
+              -&amp;gt; JpaRepository delete() 실행시 delete 문구가 아닌 update 삭제플래그 처리를 위함&lt;br /&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+         &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot07/ch07_JPA_TeamInfo01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;TeamInfo Entity로서 TeamId로 UserInfo Entity와 관계가 형성이 된다.&lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;div class=&quot;area&quot;&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot03/ch03_security_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot07/ch07_JPA_CommonEntity.PNG&quot; alt=&quot;absolute&quot; /&gt;
             &lt;div&gt;
-              &lt;span&gt;컨트롤러 단에서도 요청에 대해서 간단하게 권한을 걸어 줄 수도 있다.&lt;br /&gt;
-                    @Secured&lt;br /&gt;
-                    @PreAuthroize (표현식 사용 가능 and / or)&lt;/span&gt;
+              &lt;span&gt;
+              @MappedSuperclass&lt;br /&gt;
+              -&amp;gt; 생성ID, 생성시간, 수정ID, 수정시간등 여러 Entity에서 공통적으로 사용하는 부분을 따로 뺸 클래스로서&lt;br /&gt;
+              객체의 입장에서 공통 매핑 정보가 필요할 때 사용한다&lt;br /&gt;
+              DB 테이블과는 상관없으며, 각 테이블마다 따로 사용한다.&lt;br /&gt;&lt;br /&gt;
+              @EntityListeners(AuditingEntityListener.class)&lt;br /&gt;
+              -&amp;gt; Entity 를 DB에 적용하기 전/후에 커스텀 콜백을 요청&lt;br /&gt;
+              영속성 컨텍스트 저장 후  Auditing 기능으로 인해서 트랜잭션 커밋 시점에 플러시가 호출할 때 &lt;br /&gt;
+              하이버네이트가 자동으로 시간 값을 채워준다. &lt;br /&gt;&lt;br /&gt;
+              &lt;/span&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security</summary></entry><entry><title type="html">springBoot JPA 전략(1)</title><link href="http://localhost:4000/springBoot-06_basic" rel="alternate" type="text/html" title="springBoot JPA 전략(1)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-06_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-06_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) My Project(1) Entity 설계 Entity 설계 -&amp;gt; Entity란 DB와 매칭될 클래스 -&amp;gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는 객체를 넣으며 JPA를 통해서 OOP(객체) 와 DB의 불일치성을 해결가능하다 (자동으로 FK 생성) OOP점 관점으로 먼저 클래스를 만들어서 DB설계를 진행한다. DB 기준에서는 User 내 teamId로 Team을 조회 할 수 있으며, Team 역시 teamId로 User를 조회 할수 있다. 서로가 서로 조회 되는 양방향 관계 하지만 객체관점에서는 DB 테이블 처럼 무조건 양방향일 필요가 없으며, User N : Team 1 관계이다. 외래키는 N 쪽인 User에 둔다. (teamId) 연관관계의 주인은 외래 키가 있는 곳! 주인은 mappedBy 속성을 사용하지 않는다. 항상 &apos;다(N)&apos;쪽이 외래 키를 가진다. @ManyToOne은 항상 연관관계의 주인이 됨. mappedBy 속성이 없다. @ManyToOne(fetch = FetchType.LAZY) -&amp;gt; ManyToOne 관계로 UserInfo가 다 쪽이며, TeamInfo 에서는 참조하지 않는다 (단방향) EAGER 전략과 LAZY 전략 2개가 있으며, EAGER 전략은 연관관계 있는 Entity를 조인해서 무조건 들고온다 LAZY 전략은 연관관계 있는 Entity를 가져오지 않고 getter 등으로 접근시에 가져완다 @JoinColumn(name=&quot;컬럼명&quot;) 으로 Fk를 지정한다. @JoinColumn(name=&quot;teamId&quot;) private TeamInfo teamInfo; @NoArgsConstructor -&amp;gt; 기본 생성자 생성 @AllArgsConstructor -&amp;gt; 전체 필드 생성자 생성 @Builder -&amp;gt; 빌더 패턴을 사용한다 (데이터 순서에 상관없이 객체 생성가능, setter 메서드 없음 변경불가, 이해쉬움) @Entity -&amp;gt; 해당 클래스를 Entity라고 선언, JPA에서 관리, 테이블 매핑 @Getter -&amp;gt; 롬복에서 지원하는 get메서드 생성 -&amp;gt; Entity는 setter 생성하면 안된다 (객체의 값 변경으로 인한 일관성 보장x) @DynamicInsert -&amp;gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며 insert 시 null이 아닌 필드만 포함시킨다 @DynamicUpdate -&amp;gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며 update 시 null이 아닌 필드만 포함시킨다 @Where(clause = &quot;delYn = &apos;N&apos;&quot;) -&amp;gt; 쿼리 실행시 일괄적으로 where delYn =&apos;N&apos; 조건문 추가 논리적 삭제로 인한 삭제 플래그 적용 @SQLDelete(sql =&quot;UPDATE USERINFO SET DELYN = &apos;Y&apos; WHERE USERID = ?&quot;) -&amp;gt; JpaRepository delete() 실행시 delete 문구가 아닌 update 삭제플래그 처리를 위함 TeamInfo Entity로서 TeamId로 UserInfo Entity와 관계가 형성이 된다. @MappedSuperclass -&amp;gt; 생성ID, 생성시간, 수정ID, 수정시간등 여러 Entity에서 공통적으로 사용하는 부분을 따로 뺸 클래스로서 객체의 입장에서 공통 매핑 정보가 필요할 때 사용한다 DB 테이블과는 상관없으며, 각 테이블마다 따로 사용한다. @EntityListeners(AuditingEntityListener.class) -&amp;gt; Entity 를 DB에 적용하기 전/후에 커스텀 콜백을 요청 영속성 컨텍스트 저장 후 Auditing 기능으로 인해서 트랜잭션 커밋 시점에 플러시가 호출할 때 하이버네이트가 자동으로 시간 값을 채워준다.</summary></entry><entry><title type="html">springBoot JPA 전략(1)</title><link href="http://localhost:4000/springBoot-06_basic" rel="alternate" type="text/html" title="springBoot JPA 전략(1)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-06_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-06_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -88,6 +114,7 @@ SpringBoot 에서 시큐리티 설정을 위해서 WebSecurityConfigurerAdapter 
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div&gt;
 &lt;br /&gt;
@@ -195,7 +222,7 @@ Many to one LAZY 전략 &lt;br /&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) [스프링부트] JPA 전략</summary></entry><entry><title type="html">springBoot 시큐리티(3)</title><link href="http://localhost:4000/springBoot-05_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(3)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-05_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-05_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) [스프링부트] JPA 전략</summary></entry><entry><title type="html">springBoot 시큐리티(3)</title><link href="http://localhost:4000/springBoot-05_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(3)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-05_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-05_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -204,6 +231,7 @@ Many to one LAZY 전략 &lt;br /&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- &lt;div&gt;
 &lt;br&gt;
@@ -318,7 +346,7 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security Jwt</summary></entry><entry><title type="html">springBoot 시큐리티(2)</title><link href="http://localhost:4000/springBoot-04_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(2)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-04_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-04_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security Jwt</summary></entry><entry><title type="html">springBoot 시큐리티(2)</title><link href="http://localhost:4000/springBoot-04_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(2)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-04_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-04_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -327,6 +355,7 @@ header 에 bearer 값을 추출 후 해당값내 userid를 추출해서 loadUser
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- &lt;div&gt;
 &lt;br&gt;
@@ -384,7 +413,174 @@ Authentication 안에 User정보는 UserDetails 타입이여야 한다.
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security Service</summary></entry><entry><title type="html">spring 시작하기(8) Spring Profile</title><link href="http://localhost:4000/spring-08_basic" rel="alternate" type="text/html" title="spring 시작하기(8) Spring Profile" /><published>2022-08-22T03:00:00+09:00</published><updated>2022-08-22T03:00:00+09:00</updated><id>http://localhost:4000/spring-08_basic</id><content type="html" xml:base="http://localhost:4000/spring-08_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security Service</summary></entry><entry><title type="html">springBoot 시큐리티(1)</title><link href="http://localhost:4000/springBoot-03_basic" rel="alternate" type="text/html" title="springBoot 시큐리티(1)" /><published>2022-08-22T13:00:00+09:00</published><updated>2022-08-22T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-03_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-03_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-02_basic&quot;&gt;springBoot 시작하기(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-03_basic&quot;&gt;springBoot 시큐리티(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- &lt;div&gt;
+&lt;br&gt;
+&lt;h2&gt;[스프링부트] Security &lt;/h2&gt;&lt;br&gt;
+
+&lt;p align = &quot;justify&quot;&gt;
+&lt;font size=3&gt;
+SpringBoot 에서 시큐리티 설정을 위해서 WebSecurityConfigurerAdapter 상속받아서 정의한다.
+
+기본적으로 configure(HttpSecurity) 재정의하며, http 요청에 대해서 처리가 가능하다.
+
+.antiMatchers
+-&gt; 요청 경로마다 authenticated , hasRole 등 인증, 권한 여부로 제어가 가능하다.
+
+.loginPage
+-&gt; 로그인 페이지 경로를 지정한다.
+
+.loginProcessingUrl 
+-&gt; 로그인 요청 시 낚아채서 대신 로그인을 진행해준다.
+
+&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/springBoot/springBoot03/ch03_security_config01.PNG&apos; alt=&apos;absolute&apos;&gt;
+
+
+
+컨트롤러 단에서도 요청에 대해서 간단하게 권한을 걸어 줄 수도 있다.&lt;br&gt;
+@Secured&lt;br&gt;
+@PreAuthroize (표현식 사용 가능 and / or)
+
+&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/springBoot/springBoot03/ch03_security_config02.PNG&apos; alt=&apos;absolute&apos;&gt;
+
+&lt;/font&gt;
+&lt;/p&gt;
+&lt;/div&gt; --&gt;
+
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[스프링부트] Security&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;!-- &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;&lt;/h3&gt;
+      &lt;p&gt; -&gt;  &lt;/p&gt;
+    &lt;/div&gt; --&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;!-- &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt; --&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot03/ch03_security_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;SpringBoot 에서 시큐리티 설정을 위해서 WebSecurityConfigurerAdapter 상속받아서 정의한다.&lt;br /&gt;
+                    기본적으로 configure(HttpSecurity) 재정의하며, http 요청에 대해서 처리가 가능하다.&lt;br /&gt;&lt;br /&gt;
+                    .antiMatchers&lt;br /&gt;
+                    -&amp;gt; 요청 경로마다 authenticated , hasRole 등 인증, 권한 여부로 제어가 가능하다.&lt;br /&gt;&lt;br /&gt;
+                    .loginPage&lt;br /&gt;
+                    -&amp;gt; 로그인 페이지 경로를 지정한다.&lt;br /&gt;&lt;br /&gt;
+                    .loginProcessingUrl &lt;br /&gt;
+                    -&amp;gt; 로그인 요청 시 낚아채서 대신 로그인을 진행해준다.&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/springBoot/springBoot03/ch03_security_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;컨트롤러 단에서도 요청에 대해서 간단하게 권한을 걸어 줄 수도 있다.&lt;br /&gt;
+                    @Secured&lt;br /&gt;
+                    @PreAuthroize (표현식 사용 가능 and / or)&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] Security</summary></entry><entry><title type="html">infra 시작하기(1)</title><link href="http://localhost:4000/infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기(1)" /><published>2022-08-22T03:00:00+09:00</published><updated>2022-08-22T03:00:00+09:00</updated><id>http://localhost:4000/infra-01_basic</id><content type="html" xml:base="http://localhost:4000/infra-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- &lt;div&gt;
+&lt;br&gt;
+&lt;h2&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;&lt;br&gt;
+
+&lt;p align = &quot;justify&quot;&gt;
+&lt;font size=3&gt;
+/etc/nginx 아래는 conf.d , nginx.conf 존재
+
+vi nginx.conf &lt;br&gt;
+로그,에러로그 경로&lt;br&gt;
+버퍼 사이즈 설정&lt;br&gt;
+첨부파일 용량 설정&lt;br&gt;
+추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br&gt;
+&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config01.PNG&apos; alt=&apos;absolute&apos;&gt;
+
+vi /etc/nginx/conf.d/xxx.conf&lt;br&gt;
+client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br&gt;
+80,443 포트에 대해서 서버 포트로 설정 &lt;br&gt;
+80접속 시 443으로 redirect 설정&lt;br&gt;
+443대한 SSL 인증서 적용&lt;br&gt;
+SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br&gt;
+CORS 정책 적용 가능&lt;br&gt;
+Static 파일에 대한 설정 가능 &lt;br&gt;
+&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config02.PNG&apos; alt=&apos;absolute&apos;&gt;
+
+&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config03.PNG&apos; alt=&apos;absolute&apos;&gt;
+
+&lt;/font&gt;
+&lt;/p&gt;
+&lt;/div&gt; --&gt;
+
+&lt;div&gt;
+    &lt;header&gt;
+      &lt;h2 class=&quot;title&quot;&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;&lt;br /&gt;
+    &lt;/header&gt;
+    &lt;div&gt;
+      &lt;h3 class=&quot;subTitle&quot;&gt;NGINX&lt;/h3&gt;
+      &lt;p&gt; -&amp;gt; Nginx는 경량 웹 서버   &lt;/p&gt;
+      &lt;p&gt; -&amp;gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listWrapper&quot;&gt;
+      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
+      &lt;ul class=&quot;imageList&quot;&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;div&gt;
+              &lt;span&gt;Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재&lt;br /&gt;
+                    vi nginx.conf 설정파일 편집 &lt;br /&gt;
+                    로그 및 에러로그 경로 설정 가능&lt;br /&gt;
+                    버퍼 사이즈 설정&lt;br /&gt;
+                    첨부파일 용량 설정&lt;br /&gt;
+                    -&amp;gt; 웹 경로에 첨부파일 업로드 시 사이즈 설정 가능&lt;br /&gt;
+                    추가 설정파일 include 경로&lt;br /&gt; 
+                    -&amp;gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br /&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class=&quot;area&quot;&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
+            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config03.PNG&quot; alt=&quot;absolute&quot; /&gt;      
+            &lt;div&gt;
+              &lt;span&gt;vi /etc/nginx/conf.d/xxx.conf 편집&lt;br /&gt;
+                    client - server 가 각 개별 서버로 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br /&gt;
+                    80, 443 포트에 대해서 서버 포트로 설정 &lt;br /&gt;
+                    80 포트 접속 시 443 포트로 redirect 설정&lt;br /&gt;
+                    -&amp;gt; http://도메인 요청 시 https://도메인으로 자동 리디렉션&lt;br /&gt;
+                    &lt;br /&gt;
+                    https 요청 SSL 인증서 적용&lt;br /&gt;
+                    SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br /&gt;
+                    CORS 정책 적용 가능&lt;br /&gt;
+                    Static 파일에 대한 설정 가능&lt;br /&gt;
+                    -&amp;gt; /static/upload 경로로 지정 &lt;br /&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="infra" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx &amp;lt;!– &amp;lt;div&amp;gt; [Nginx] Nginx 설정하기</summary></entry><entry><title type="html">spring 시작하기(8) Spring Profile</title><link href="http://localhost:4000/spring-08_basic" rel="alternate" type="text/html" title="spring 시작하기(8) Spring Profile" /><published>2022-08-22T03:00:00+09:00</published><updated>2022-08-22T03:00:00+09:00</updated><id>http://localhost:4000/spring-08_basic</id><content type="html" xml:base="http://localhost:4000/spring-08_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
@@ -535,92 +731,7 @@ cat cert.pem ThawteDigiCert-Newchain.pem ThawteDigiCert-Root-sha1.pem union-cert
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="infra" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx &amp;lt;!– &amp;lt;div&amp;gt; [Nginx] Nginx SSL 인증서 적용하기</summary></entry><entry><title type="html">infra 시작하기(1)</title><link href="http://localhost:4000/infra-01_basic" rel="alternate" type="text/html" title="infra 시작하기(1)" /><published>2022-08-22T03:00:00+09:00</published><updated>2022-08-22T03:00:00+09:00</updated><id>http://localhost:4000/infra-01_basic</id><content type="html" xml:base="http://localhost:4000/infra-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
-    &lt;li&gt;&lt;a href=&quot;./infra-01_basic&quot;&gt;Infra (1) Nginx&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./infra-02_basic&quot;&gt;Infra (2) Nginx&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- &lt;div&gt;
-&lt;br&gt;
-&lt;h2&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;&lt;br&gt;
-
-&lt;p align = &quot;justify&quot;&gt;
-&lt;font size=3&gt;
-/etc/nginx 아래는 conf.d , nginx.conf 존재
-
-vi nginx.conf &lt;br&gt;
-로그,에러로그 경로&lt;br&gt;
-버퍼 사이즈 설정&lt;br&gt;
-첨부파일 용량 설정&lt;br&gt;
-추가 설정파일 include 경로 -&gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br&gt;
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config01.PNG&apos; alt=&apos;absolute&apos;&gt;
-
-vi /etc/nginx/conf.d/xxx.conf&lt;br&gt;
-client - server 가 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br&gt;
-80,443 포트에 대해서 서버 포트로 설정 &lt;br&gt;
-80접속 시 443으로 redirect 설정&lt;br&gt;
-443대한 SSL 인증서 적용&lt;br&gt;
-SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br&gt;
-CORS 정책 적용 가능&lt;br&gt;
-Static 파일에 대한 설정 가능 &lt;br&gt;
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config02.PNG&apos; alt=&apos;absolute&apos;&gt;
-
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&apos;/assets/images/infra/infra01/ch01_nginx_config03.PNG&apos; alt=&apos;absolute&apos;&gt;
-
-&lt;/font&gt;
-&lt;/p&gt;
-&lt;/div&gt; --&gt;
-
-&lt;div&gt;
-    &lt;header&gt;
-      &lt;h2 class=&quot;title&quot;&gt;[Nginx] Nginx 설정하기&lt;/h2&gt;&lt;br /&gt;
-    &lt;/header&gt;
-    &lt;div&gt;
-      &lt;h3 class=&quot;subTitle&quot;&gt;NGINX&lt;/h3&gt;
-      &lt;p&gt; -&amp;gt; Nginx는 경량 웹 서버   &lt;/p&gt;
-      &lt;p&gt; -&amp;gt; Reverse Proxy Server로 활용하여 WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용 &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;listWrapper&quot;&gt;
-      &lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;/span&gt;
-      &lt;ul class=&quot;imageList&quot;&gt;
-        &lt;li&gt;
-          &lt;div class=&quot;area&quot;&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config01.PNG&quot; alt=&quot;absolute&quot; /&gt;
-            &lt;div&gt;
-              &lt;span&gt;Linux 서버 Nginx 설치 후 /etc/nginx 아래 conf.d, nginx.conf 등 설정파일 존재&lt;br /&gt;
-                    vi nginx.conf 설정파일 편집 &lt;br /&gt;
-                    로그 및 에러로그 경로 설정 가능&lt;br /&gt;
-                    버퍼 사이즈 설정&lt;br /&gt;
-                    첨부파일 용량 설정&lt;br /&gt;
-                    -&amp;gt; 웹 경로에 첨부파일 업로드 시 사이즈 설정 가능&lt;br /&gt;
-                    추가 설정파일 include 경로&lt;br /&gt; 
-                    -&amp;gt; /etc/nginx/conf.d/*.conf  (아래 .conf로 끝나는 파일 모두 읽음)&lt;br /&gt;&lt;/span&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;div class=&quot;area&quot;&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config02.PNG&quot; alt=&quot;absolute&quot; /&gt;
-            &lt;img data-action=&quot;zoom&quot; src=&quot;/assets/images/infra/infra01/ch01_nginx_config03.PNG&quot; alt=&quot;absolute&quot; /&gt;      
-            &lt;div&gt;
-              &lt;span&gt;vi /etc/nginx/conf.d/xxx.conf 편집&lt;br /&gt;
-                    client - server 가 각 개별 서버로 분리되어 운영 시 3000 포트에 대해서 client 서버 포트로 설정&lt;br /&gt;
-                    80, 443 포트에 대해서 서버 포트로 설정 &lt;br /&gt;
-                    80 포트 접속 시 443 포트로 redirect 설정&lt;br /&gt;
-                    -&amp;gt; http://도메인 요청 시 https://도메인으로 자동 리디렉션&lt;br /&gt;
-                    &lt;br /&gt;
-                    https 요청 SSL 인증서 적용&lt;br /&gt;
-                    SSL 인증서 경로 및 TLS1.2 등 알고리즘 적용&lt;br /&gt;
-                    CORS 정책 적용 가능&lt;br /&gt;
-                    Static 파일에 대한 설정 가능&lt;br /&gt;
-                    -&amp;gt; /static/upload 경로로 지정 &lt;br /&gt;&lt;/span&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="infra" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx &amp;lt;!– &amp;lt;div&amp;gt; [Nginx] Nginx 설정하기</summary></entry><entry><title type="html">springBoot 시작하기(1)</title><link href="http://localhost:4000/springBoot-01_basic" rel="alternate" type="text/html" title="springBoot 시작하기(1)" /><published>2022-07-11T13:00:00+09:00</published><updated>2022-07-11T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-01_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="infra" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. Infra (1) Nginx Infra (2) Nginx &amp;lt;!– &amp;lt;div&amp;gt; [Nginx] Nginx SSL 인증서 적용하기</summary></entry><entry><title type="html">springBoot 시작하기(1)</title><link href="http://localhost:4000/springBoot-01_basic" rel="alternate" type="text/html" title="springBoot 시작하기(1)" /><published>2022-07-11T13:00:00+09:00</published><updated>2022-07-11T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-01_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-01_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -629,6 +740,7 @@ Static 파일에 대한 설정 가능 &lt;br&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- &lt;div&gt;
 &lt;br&gt;
@@ -695,7 +807,7 @@ JPA, Spring security 등 여러가지 설정이 가능하다.
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] yml 설정파일</summary></entry><entry><title type="html">springBoot 시작하기(2)</title><link href="http://localhost:4000/springBoot-02_basic" rel="alternate" type="text/html" title="springBoot 시작하기(2)" /><published>2022-07-11T13:00:00+09:00</published><updated>2022-07-11T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-02_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] yml 설정파일</summary></entry><entry><title type="html">springBoot 시작하기(2)</title><link href="http://localhost:4000/springBoot-02_basic" rel="alternate" type="text/html" title="springBoot 시작하기(2)" /><published>2022-07-11T13:00:00+09:00</published><updated>2022-07-11T13:00:00+09:00</updated><id>http://localhost:4000/springBoot-02_basic</id><content type="html" xml:base="http://localhost:4000/springBoot-02_basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-01_basic&quot;&gt;springBoot 시작하기(1)&lt;/a&gt;&lt;/li&gt;
@@ -704,6 +816,7 @@ JPA, Spring security 등 여러가지 설정이 가능하다.
     &lt;li&gt;&lt;a href=&quot;./springBoot-04_basic&quot;&gt;springBoot 시큐리티(2)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-05_basic&quot;&gt;springBoot 시큐리티(3)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./springBoot-06_basic&quot;&gt;springBoot JPA 전략(1)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./springBoot-07_basic&quot;&gt;springBoot JPA My Project(1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- &lt;div&gt;
 &lt;br&gt;
@@ -813,43 +926,4 @@ name으로 선언된 필드를 FK로 설정한다. (자동생성)
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] model</summary></entry><entry><title type="html">spring 시작하기(1) bean 생성</title><link href="http://localhost:4000/spring-01_basic_bak" rel="alternate" type="text/html" title="spring 시작하기(1) bean 생성" /><published>2022-06-12T03:00:00+09:00</published><updated>2022-06-12T03:00:00+09:00</updated><id>http://localhost:4000/spring-01_basic_bak</id><content type="html" xml:base="http://localhost:4000/spring-01_basic_bak">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명--&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-01_basic&quot;&gt;spring 시작하기(1) bean 생성&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-02_basic&quot;&gt;spring 시작하기(2) @annotation&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-03_basic&quot;&gt;spring 시작하기(3) @datasource&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-04_basic&quot;&gt;spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-05_basic&quot;&gt;spring 시작하기(5) DI 3가지 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-06_basic&quot;&gt;spring 시작하기(6) AOP&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-07_basic&quot;&gt;spring 시작하기(7) AOP PointCut&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-08_basic&quot;&gt;spring 시작하기(8) Spring Profile&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;
-&lt;br /&gt;
-&lt;h2&gt;[스프링] Bean 개념 및 생성&lt;/h2&gt;&lt;br /&gt;
-&lt;p&gt;스프링 빈이란?&lt;/p&gt;
-&lt;p align=&quot;justify&quot;&gt;
-&lt;font size=&quot;3&quot;&gt;
--&amp;gt;  스프링 IOC 컨테이너가 관리하는 자바객체&lt;br /&gt;
--&amp;gt;  New로 생성한 객체가 아님&lt;br /&gt;
--&amp;gt;  ApplicationContext 로 얻을 수 있음
-&lt;/font&gt;&lt;/p&gt;
-
-스프링 빈 xml 등록 방법
-&lt;p&gt;&lt;font size=&quot;3&quot;&gt;
-xml 파일에서 빈으로 등록 할 id , 빈 클래스 경로 선언&lt;br /&gt;
-bean 태그 내 property 를 통해서 setter method 이용한 주입이 가능하다.
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&quot;/assets/images/spring/spring01/ch01_bean_xml_01.PNG&quot; alt=&quot;absolute&quot; /&gt;
-setter 메서드 동작 방식 : set메서드명 -&amp;gt; name값으로 치환 되며&lt;br /&gt;
-ex) setFormat -&amp;gt; format 으로 set 생략 + 첫글자 대-&amp;gt;소 로 인식한다.&lt;br /&gt;
-
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&quot;/assets/images/spring/spring01/ch01_bean_class_01.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;br /&gt;
-DAO &amp;lt;-&amp;gt; Service 간 의존관계가 존재할시 DI(Dependency Injection (의존관계 주입))이 가능하다.&lt;br /&gt;
-Dao 클래스를 빈으로 생성 후 Service 빈에 constructor-arg ref= 빈id를 통해서 넘겨 줄 수 있다.&lt;br /&gt;
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&quot;/assets/images/spring/spring01/ch01_bean_xml_02.PNG&quot; alt=&quot;absolute&quot; /&gt;&lt;br /&gt;
-Service 클래스 생성자에 dao를 넘겨 받아 생성한다.&lt;br /&gt;
-&lt;img style=&quot;margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;&quot; data-action=&quot;zoom&quot; src=&quot;/assets/images/spring/spring01/ch01_bean_class_02.PNG&quot; alt=&quot;absolute&quot; /&gt;
-
-&lt;/font&gt;&lt;/p&gt;
-&lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="spring" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] Bean 개념 및 생성 스프링 빈이란? -&amp;gt; 스프링 IOC 컨테이너가 관리하는 자바객체 -&amp;gt; New로 생성한 객체가 아님 -&amp;gt; ApplicationContext 로 얻을 수 있음</summary></entry></feed>
+  &lt;/div&gt;</content><author><name>BBInJunHwang</name></author><category term="springBoot" /><summary type="html">Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) &amp;lt;!– &amp;lt;div&amp;gt; [스프링부트] model</summary></entry></feed>

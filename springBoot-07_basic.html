@@ -11,7 +11,7 @@
 
 
 
-    <title>spring 시작하기(5) DI 3가지 방법</title>
+    <title>springBoot My Project(1)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -40,30 +40,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="백엔드" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/blog/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/spring-05_basic" />
+    <link rel="canonical" href="http://localhost:4000/springBoot-07_basic" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="junny blogs" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="spring 시작하기(5) DI 3가지 방법" />
-    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] DI 3가지 방법 DI 3가지 방법을 설명한다. -&gt;" />
-    <meta property="og:url" content="http://localhost:4000/spring-05_basic" />
-    <meta property="og:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
+    <meta property="og:title" content="springBoot My Project(1)" />
+    <meta property="og:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) My Project(1) Entity 설계 Entity 설계 -&gt; Entity란 DB와 매칭될 클래스 -&gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는 객체를 넣으며" />
+    <meta property="og:url" content="http://localhost:4000/springBoot-07_basic" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-06-12T03:00:00+09:00" />
-    <meta property="article:modified_time" content="2022-06-12T03:00:00+09:00" />
-    <meta property="article:tag" content="Spring" />
+    <meta property="article:published_time" content="2022-08-22T13:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-08-22T13:00:00+09:00" />
+    <meta property="article:tag" content="Springboot" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="spring 시작하기(5) DI 3가지 방법" />
-    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] DI 3가지 방법 DI 3가지 방법을 설명한다. -&gt;" />
+    <meta name="twitter:title" content="springBoot My Project(1)" />
+    <meta name="twitter:description" content="Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) My Project(1) Entity 설계 Entity 설계 -&gt; Entity란 DB와 매칭될 클래스 -&gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는 객체를 넣으며" />
     <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="junny blogs" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Spring" />
+    <meta name="twitter:data2" content="Springboot" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -78,18 +78,18 @@
         "name": "junny blogs",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/spring-05_basic",
+    "url": "http://localhost:4000/springBoot-07_basic",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/images/spring/2022-06-12-spring-01_basic.jpg",
+        "url": "http://localhost:4000/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/spring-05_basic"
+        "@id": "http://localhost:4000/springBoot-07_basic"
     },
-    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP spring 시작하기(7) AOP PointCut spring 시작하기(8) Spring Profile [스프링] DI 3가지 방법 DI 3가지 방법을 설명한다. -&gt;"
+    "description": "Spring 강좌는 여러 절로 구성되어 있습니다. springBoot 시작하기(1) springBoot 시작하기(2) springBoot 시큐리티(1) springBoot 시큐리티(2) springBoot 시큐리티(3) springBoot JPA 전략(1) springBoot JPA My Project(1) My Project(1) Entity 설계 Entity 설계 -&gt; Entity란 DB와 매칭될 클래스 -&gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는 객체를 넣으며"
 }
     </script>
 
@@ -102,7 +102,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="spring 시작하기(5) DI 3가지 방법" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="springBoot My Project(1)" href="/feed.xml" />
 
 
 </head>
@@ -164,28 +164,28 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-spring post tag-spring ">
+        <article class="post-full  tag-springboot post tag-springBoot ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="12 June 2022">12 June 2022</time>
+                    <time class="post-full-meta-date" datetime="22 August 2022">22 August 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/spring/'>SPRING</a>
+                               <a href='/tag/springboot/'>SPRINGBOOT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">spring 시작하기(5) DI 3가지 방법</h1>
+                <h1 class="post-full-title">springBoot My Project(1)</h1>
             </header>
 
             <!-- 글 상세 들어갈 때 맨처음 나오는 이미지
             가독성을 위해서 없애주자 -->
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg)">
             </figure>
             
             -->
@@ -195,188 +195,105 @@ into the {body} of the default.hbs template -->
                     <p><span class="table-of-contents-list">Spring 강좌는 여러 절로 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
     <!-- _posts/spring/포스트날짜, md 확장자 제외한 파일명-->
-    <li><a href="./spring-01_basic">spring 시작하기(1) bean 생성</a></li>
-    <li><a href="./spring-02_basic">spring 시작하기(2) @annotation</a></li>
-    <li><a href="./spring-03_basic">spring 시작하기(3) @datasource</a></li>
-    <li><a href="./spring-04_basic">spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</a></li>
-    <li><a href="./spring-05_basic">spring 시작하기(5) DI 3가지 방법</a></li>
-    <li><a href="./spring-06_basic">spring 시작하기(6) AOP</a></li>
-    <li><a href="./spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
-    <li><a href="./spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
+    <li><a href="./springBoot-01_basic">springBoot 시작하기(1)</a></li>
+    <li><a href="./springBoot-02_basic">springBoot 시작하기(2)</a></li>
+    <li><a href="./springBoot-03_basic">springBoot 시큐리티(1)</a></li>
+    <li><a href="./springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+    <li><a href="./springBoot-05_basic">springBoot 시큐리티(3)</a></li>
+    <li><a href="./springBoot-06_basic">springBoot JPA 전략(1)</a></li>
+    <li><a href="./springBoot-07_basic">springBoot JPA My Project(1)</a></li>
 </ul>
-<!-- <div>
-<h2>[스프링] DI 3가지 방법</h2><br>
-
-DI 3가지 방법을 설명한다.<br>
-
-
-<p align = "justify">
-<font size=3>
-아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등<br>
-빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.<br><br>
-context:annotation-config 과 다른점은 annotation-config은 xml 등 이미 선언된 빈에 대해서
-@Autowired 등 자동 주입을 진행해주기 떄문에 반드시 미리 빈을 선언 해놓아야 한다.<br>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_xml_01.PNG' alt='absolute'>
-
-1. 필드주입 <br>
--> dao 클래스에서 @Autowired private List userList 필드부분에 선언<br>
--> service 클래스에 @Autowired private CommonDao commonDao 필드부분에 선언<br>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_dao_class_field_01.PNG' alt='absolute'>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_field_01.PNG' alt='absolute'>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_main_class_01.PNG' alt='absolute'>
-
-
-2. setter 주입 <br>
--> dao 클래스에서 @Autowired setUserList 부분에 선언 <br>
--> service 클래스에서 @Autowired setCommonDao 부분에 선언 <br>
-※ dao 클래스에서 @Autowired 대신 @Resource 사용해도 동일하며 <br>
-@Autowired는 타입 > name 순서,
-@Resource는 name > 타입 순서로 탐색하며 @Resource 사용시 빈 name을 명시해주는게 좋다.
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_dao_class_setter_01.PNG' alt='absolute'>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_setter_01.PNG' alt='absolute'>
-
-3. 생성자 주입<br>
--> dao 클래스에서 생성자로 userList를 받은 후 설정한다. <br>
--> service 클래스에서 생성자로 commonDao를 받은 후 설정한다. <br>
-※ 생성자 주입에서는 @Autowired, @Resource 등 어노테이션 생략이 가능하다. (단 반드시 단일생성자일때만 )
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_dao_class_constructor_01.PNG' alt='absolute'>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_constructor_01.PNG' alt='absolute'>
-
-
-필드주입 vs setter 주입 vs 생성자 주입
-
-필드 주입<br>
-장점 - 코드양이 적다.<br>
-단점 - final 키워드 사용 불가, 의존관계 파악 불가, 순환참조 탐지불가 (서버 정상기동, 호출시 stackOverFlowError 발생)<br>
-     - 순환참조 방지 패치 -> 기존에 호출 시 A빈이 B빈을 참조하고, B빈이 A빈을 참조할 시 호출되는 시점에서 무한참조로 에러가 발생했지만,<br>
-       후에 스프링 부트2.6에서는 서버 기동시 cycle형성으로 기동 실패로 나온다.<br>
-
-setter 주입<br>
-장점 - ??<br>
-단점 - final 키워드 사용 불가<br>
-
-생성자 주입<br>
-장점 -  final 키워드 사용 가능 -> 다른 클래스에서 호출시 불변적용 가능<br>
-    -  ※NPE 방지
-     - 보통 필드에 @Autowired를 붙이는 경우가 많지만, 생성자 주입을 사용하도록 노력하자<br>
-단점 - 코드가 조금 길어진다.<br>
-
-생성자 주입을 통한 NPE 방지란?
-
-먼저 아래와 같이 setter 주입을 예시로 했으며, 필드주입도 동일한 현상이 일어난다.<br>
-dao 클래스 @Repository 주석 처리를 통한 빈등록 x <br>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_dao_class_notBean_01.PNG' alt='absolute'>
-service 클래스 setCommonDao를 통한 dao 주입<br>
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_setter_02.PNG' alt='absolute'>
-기동 시 dao 클래스는 null 인상태로 주입되며, service 클래스에서 호출되기 전까지 null인지 알 수 없음<br>
-실제 서버 기동 후 해당 클래스가 호출될 때 알 수 있다.(런타임 에러시 발견)
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_setter_NPE_01.PNG' alt='absolute'>
-
-생성자 주입 시 아래와 같이 생성과 동시에 주입 되며, 컴파일 시 에러 발생을 통한 미리 알 수 있다.<br>
-실제로 서비스를 운영하는 시점에서 서버가 정상기동되면 놓칠 수 있는 부분이기 때문에, 컴파일 자체에서 에러가 나면 바로 인지 및 패치가 가능하다.
-<img style="margin-left:0; margin-bottom: 25px;border: 2px outset gray; border-radius:10px;"  data-action="zoom" src='/assets/images/spring/spring05/ch05_bean_service_class_constructor_02.PNG' alt='absolute'>
-</font>
-</p>
-</div> -->
-
 <div>
     <header>
-      <h2 class="title">[스프링] DI 3가지 방법</h2><br />
+      <h2 class="title">My Project(1) Entity 설계</h2><br />
     </header>
     <div>
-      <h3 class="subTitle">DI 3가지 방법을 설명한다.</h3>
-      <p> -&gt;  필드주입</p>
-      <p> -&gt;  setter 주입</p>
-      <p> -&gt;  생성자 주입</p>
+      <h3 class="subTitle">Entity 설계</h3>
+      <p> -&gt; Entity란 DB와 매칭될 클래스  </p>
+      <p> -&gt; DB에는 객체를 저장 할 수 없기 떄문에 id 등 key값을 이용하지만 ORM 관점에서는<br />
+             객체를 넣으며 JPA를 통해서 OOP(객체) 와 DB의 불일치성을 해결가능하다 (자동으로 FK 생성)  </p>
     </div>
     <div class="listWrapper">
-      <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_xml_01.PNG" alt="absolute" />
-      <span style="font-size: 20px;">아래와 같이 Component-scan 과 base package 를 설정해주면 @Component, @Service, @Repository 등<br />
-                                   빈으로 선언한 클래스를 스캔 후 빈으로 등록한다.<br /><br />
-                                   context:annotation-config 과 다른점은 annotation-config은 xml 등 이미 선언된 빈에 대해서
-                                   @Autowired 등 자동 주입을 진행해주기 떄문에 반드시 미리 빈을 선언 해놓아야 한다.</span>
+      <span style="font-size: 20px;">OOP점 관점으로 먼저 클래스를 만들어서 DB설계를 진행한다.</span>
       <ul class="imageList">
         <li>
           <div class="area">
-            <span>1. 필드주입 <br /></span> 
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_dao_class_field_01.PNG" alt="absolute" />
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_field_01.PNG" alt="absolute" />
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_main_class_01.PNG" alt="absolute" />
             <div>
-              <span>-&gt; dao 클래스에서 @Autowired private List userList 필드부분에 선언<br />
-                    -&gt; service 클래스에 @Autowired private CommonDao commonDao 필드부분에 선언</span>
+              <span>
+                DB 기준에서는 User 내 teamId로 Team을 조회 할 수 있으며, <br />
+                Team 역시 teamId로 User를 조회 할수 있다. 서로가 서로 조회 되는 양방향 관계 <br /><br />
+                하지만 객체관점에서는 DB 테이블 처럼 무조건 양방향일 필요가 없으며, <br />
+                User N : Team 1 관계이다. <br />
+                외래키는 N 쪽인 User에 둔다. (teamId)<br />
+                <br />
+                연관관계의 주인은 외래 키가 있는 곳!<br />
+                주인은 mappedBy 속성을 사용하지 않는다.<br />
+                항상 '다(N)'쪽이 외래 키를 가진다.<br />
+                @ManyToOne은 항상 연관관계의 주인이 됨. mappedBy 속성이 없다.   <br />
+                <br />
+                @ManyToOne(fetch = FetchType.LAZY) <br /> 
+                -&gt; ManyToOne 관계로 UserInfo가 다 쪽이며, TeamInfo 에서는 참조하지 않는다 (단방향) <br />
+                <br />
+                EAGER 전략과 LAZY 전략 2개가 있으며,<br />
+                EAGER 전략은 연관관계 있는 Entity를 조인해서 무조건 들고온다<br />
+                LAZY  전략은 연관관계 있는 Entity를 가져오지 않고 getter 등으로 접근시에 가져완다<br />
+                <br />
+                @JoinColumn(name="컬럼명") 으로 Fk를 지정한다. <br />
+                @JoinColumn(name="teamId")<br />
+                private TeamInfo teamInfo;<br />
+              </span>
+            </div>
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot07/ch07_JPA_UserInfo01.PNG" alt="absolute" />
+            <div>
+              <span>
+              @NoArgsConstructor <br />
+              -&gt; 기본 생성자 생성 <br /><br />
+              @AllArgsConstructor<br />
+              -&gt; 전체 필드 생성자 생성<br /><br />
+              @Builder <br />
+              -&gt; 빌더 패턴을 사용한다 (데이터 순서에 상관없이 객체 생성가능, setter 메서드 없음 변경불가, 이해쉬움)<br /><br />
+              @Entity <br />
+              -&gt; 해당 클래스를 Entity라고 선언, JPA에서 관리, 테이블 매핑<br /><br />
+              @Getter<br />
+              -&gt; 롬복에서 지원하는 get메서드 생성<br />
+              -&gt; Entity는 setter 생성하면 안된다 (객체의 값 변경으로 인한 일관성 보장x)<br /><br />
+              @DynamicInsert<br />
+              -&gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며<br />
+                 insert 시 null이 아닌 필드만 포함시킨다<br /><br />
+              @DynamicUpdate<br />
+              -&gt; 기본적으로 hibernate에서는 insert/update 시 모든 컬럼을 사용하며<br />
+                 update 시 null이 아닌 필드만 포함시킨다<br /><br />
+              @Where(clause = "delYn = 'N'")<br />
+              -&gt; 쿼리 실행시 일괄적으로 where delYn ='N' 조건문 추가 <br />
+                 논리적 삭제로 인한 삭제 플래그 적용<br /><br />
+              @SQLDelete(sql ="UPDATE USERINFO SET DELYN = 'Y' WHERE USERID = ?")<br />
+              -&gt; JpaRepository delete() 실행시 delete 문구가 아닌 update 삭제플래그 처리를 위함<br />
+              </span>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="area">
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot07/ch07_JPA_TeamInfo01.PNG" alt="absolute" />
+            <div>
+              <span>TeamInfo Entity로서 TeamId로 UserInfo Entity와 관계가 형성이 된다.</span>
             </div>
           </div>
         </li>
         <li>
           <div class="area">
-            <span>2. setter 주입 <br /></span> 
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_dao_class_setter_01.PNG" alt="absolute" />
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_setter_01.PNG" alt="absolute" />
+            <img data-action="zoom" src="/assets/images/springBoot/springBoot07/ch07_JPA_CommonEntity.PNG" alt="absolute" />
             <div>
-              <span>-&gt; dao 클래스에서 @Autowired setUserList 부분에 선언 <br />
-                    -&gt; service 클래스에서 @Autowired setCommonDao 부분에 선언 <br />
-                    ※ dao 클래스에서 @Autowired 대신 @Resource 사용해도 동일하며 <br />
-                    @Autowired는 타입 &gt; name 순서,
-                    @Resource는 name &gt; 타입 순서로 탐색하며 @Resource 사용시 빈 name을 명시해주는게 좋다.</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="area">
-            <span>3. 생성자 주입 <br /></span> 
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_dao_class_constructor_01.PNG" alt="absolute" />
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_constructor_01.PNG" alt="absolute" />
-            <div>
-              <span>-&gt; dao 클래스에서 생성자로 userList를 받은 후 설정한다. <br />
-                    -&gt; service 클래스에서 생성자로 commonDao를 받은 후 설정한다. <br />
-                    ※ 생성자 주입에서는 @Autowired, @Resource 등 어노테이션 생략이 가능하다. (단 반드시 단일생성자일때만 )</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="area">
-            <div>
-              <span>필드주입 vs setter 주입 vs 생성자 주입<br />
-               1. 필드 주입<br />
-               장점 - 코드양이 적다.<br />
-               단점 - final 키워드 사용 불가, 의존관계 파악 불가, 순환참조 탐지불가 (서버 정상기동, 호출시 stackOverFlowError 발생)<br />
-                    - 순환참조 방지 패치 -&gt; 기존에 호출 시 A빈이 B빈을 참조하고, B빈이 A빈을 참조할 시 호출되는 시점에서 무한참조로 에러가 발생했지만,<br />
-                    후에 스프링 부트2.6에서는 서버 기동시 cycle형성으로 기동 실패로 나온다.<br />
-               <br />
-               2. setter 주입<br />
-               장점 - ??<br />
-               단점 - final 키워드 사용 불가<br />
-               <br />
-               3. 생성자 주입<br />
-               장점 -  final 키워드 사용 가능 -&gt; 다른 클래스에서 호출시 불변적용 가능<br />
-               -  ※NPE 방지
-                    - 보통 필드에 @Autowired를 붙이는 경우가 많지만, 생성자 주입을 사용하도록 노력하자<br />
-               단점 - 코드가 조금 길어진다.<br />
-               <br />
-               생성자 주입을 통한 NPE 방지란?
-               <br />
-               먼저 아래와 같이 setter 주입을 예시로 했으며, 필드주입도 동일한 현상이 일어난다.<br />
-               dao 클래스 @Repository 주석 처리를 통한 빈등록 x </span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="area">
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_dao_class_notBean_01.PNG" alt="absolute" />
-            <div>
-              <span>service 클래스 setCommonDao를 통한 dao 주입</span>
-            </div>
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_setter_02.PNG" alt="absolute" />
-            <div>
-              <span>기동 시 dao 클래스는 null 인상태로 주입되며, service 클래스에서 호출되기 전까지 null인지 알 수 없음<br />
-                    실제 서버 기동 후 해당 클래스가 호출될 때 알 수 있다.(런타임 에러시 발견)</span>
-            </div>
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_setter_NPE_01.PNG" alt="absolute" />
-            <img data-action="zoom" src="/assets/images/spring/spring05/ch05_bean_service_class_constructor_02.PNG" alt="absolute" />  
-            <div>
-              <span>생성자 주입 시 아래와 같이 생성과 동시에 주입 되며, 컴파일 시 에러 발생을 통한 미리 알 수 있다.<br />
-                    실제로 서비스를 운영하는 시점에서 서버가 정상기동되면 놓칠 수 있는 부분이기 때문에, 컴파일 자체에서 에러가 나면 바로 인지 및 패치가 가능하다.</span>
+              <span>
+              @MappedSuperclass<br />
+              -&gt; 생성ID, 생성시간, 수정ID, 수정시간등 여러 Entity에서 공통적으로 사용하는 부분을 따로 뺸 클래스로서<br />
+              객체의 입장에서 공통 매핑 정보가 필요할 때 사용한다<br />
+              DB 테이블과는 상관없으며, 각 테이블마다 따로 사용한다.<br /><br />
+              @EntityListeners(AuditingEntityListener.class)<br />
+              -&gt; Entity 를 DB에 적용하기 전/후에 커스텀 콜백을 요청<br />
+              영속성 컨텍스트 저장 후  Auditing 기능으로 인해서 트랜잭션 커밋 시점에 플러시가 호출할 때 <br />
+              하이버네이트가 자동으로 시간 값을 채워준다. <br /><br />
+              </span>
             </div>
           </div>
         </li>
@@ -441,9 +358,9 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'http://localhost:4000/spring-05_basic';
-                            var this_page_identifier = '/spring-05_basic';
-                            var this_page_title = 'spring 시작하기(5) DI 3가지 방법';
+                            var this_page_url = 'http://localhost:4000/springBoot-07_basic';
+                            var this_page_identifier = '/springBoot-07_basic';
+                            var this_page_title = 'springBoot My Project(1)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -477,7 +394,7 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; junny blogs &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/spring/">Spring</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/springboot/">Springboot</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -487,37 +404,14 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
+                                    
                                   
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/spring-08_basic">spring 시작하기(8) Spring Profile</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/spring-07_basic">spring 시작하기(7) AOP PointCut</a></li>
+                                            <li><a href="/springBoot-06_basic">springBoot JPA 전략(1)</a></li>
                                         
                                     
                                   
@@ -526,13 +420,31 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                                     
                                         
                                         
-                                            <li><a href="/spring-06_basic">spring 시작하기(6) AOP</a></li>
+                                            <li><a href="/springBoot-05_basic">springBoot 시큐리티(3)</a></li>
                                         
                                     
                                   
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/springBoot-04_basic">springBoot 시큐리티(2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -550,24 +462,19 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -589,9 +496,9 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/spring/">
+                            <a href="/tag/springboot/">
                                 
-                                    See all 8 posts  →
+                                    See all 6 posts  →
                                 
                             </a>
                         </footer>
@@ -601,55 +508,6 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/spring-06_basic">
-                <div class="post-card-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-06_basic">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Spring</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">spring 시작하기(6) AOP</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/user/user.jpg" alt="BBInJunHwang" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/BBInJunHwang/">BBInJunHwang</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -657,26 +515,42 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/spring-04_basic">
-                <div class="post-card-image" style="background-image: url(/assets/images/spring/2022-06-12-spring-01_basic.jpg)"></div>
+            <a class="post-card-image-link" href="/springBoot-06_basic">
+                <div class="post-card-image" style="background-image: url(/assets/images/springBoot/2022-07-11-springBoot-01_basic.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-04_basic">
+            <a class="post-card-content-link" href="/springBoot-06_basic">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Spring</span>
+                                <span class="post-card-tags">Springboot</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI</h2>
+                    <h2 class="post-card-title">springBoot JPA 전략(1)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. spring 시작하기(1) bean 생성 spring 시작하기(2) @annotation spring 시작하기(3) @datasource spring 시작하기(4) ArrayList 빈생성 및 component 스캔과 Service-dao간 DI spring 시작하기(5) DI 3가지 방법 spring 시작하기(6) AOP</p>
+                        <p>Spring 강좌는 여러 절로 구성되어 있습니다. 
+
+    
+    springBoot 시작하기(1)
+    springBoot 시작하기(2)
+    springBoot 시큐리티(1)
+    springBoot 시큐리티(2)
+    springBoot 시큐리티(3)
+    springBoot JPA 전략(1)
+    springBoot JPA My Project(1)
+
+
+
+[스프링부트] JPA 전략 
+
+
+</p>
                     
                 </section>
             </a>
@@ -694,7 +568,7 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
                 <span class="reading-time">
                     
                     
-                      1 min read
+                      3 min read
                     
                 </span>
             </footer>
@@ -716,18 +590,18 @@ service 클래스 setCommonDao를 통한 dao 주입<br>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">spring 시작하기(5) DI 3가지 방법</div>
+    <div class="floating-header-title">springBoot My Project(1)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=spring+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%285%29+DI+3%EA%B0%80%EC%A7%80+%EB%B0%A9%EB%B2%95&amp;url=https://bbinjunhwang.github.io/spring-05_basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=springBoot+My+Project%281%29&amp;url=https://bbinjunhwang.github.io/springBoot-07_basic"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://bbinjunhwang.github.io/spring-05_basic"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://bbinjunhwang.github.io/springBoot-07_basic"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
